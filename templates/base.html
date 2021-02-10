@@ -3,7 +3,7 @@
 <!doctype html>
 <html lang="en">
 
-  <head>
+<head>
 
     {% block meta %}
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -15,8 +15,10 @@
     {% endblock %}
 
     {% block corecss %}
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Marck+Script&display=swap" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Marck+Script&display=swap" />
     <link rel="stylesheet" href="{% static 'css/base.css' %}" />
     [% endblock %]
 
@@ -25,9 +27,15 @@
 
     [% block corejs %]
     <script src="https://kit.fontawesome.com/f42aa17828.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
     {% endblock %}
 
     {% block extrajs %}
@@ -35,23 +43,146 @@
 
     <title>Florescence Flowers</title>
 
-  </head>
+</head>
 
-  <body>
+<body>
 
-    <header class="container-fluid fixed-top"></header>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <img src="florescence-logo-2.png" class="img-fluid d-block mx-auto mb-2 logo" />
+                </div>
+            </div>
+        </div>
 
-{% if messages %}
-{% endif %}
+        <nav class="navbar navbar-expand-lg sticky-top">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-{% block page_header %}
-{% endblock %}
 
-{% block content %}
-{% endblock %}
 
-{% block postloadjs %}
-{% endblock %}
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
 
-  </body>
+                <ul class="navbar-nav ml-auto mt-2">
+                    <li class="nav-item">
+                        <a class="nav-link mr-3 ml-13 hvr-hang" href="#">Home</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link mr-3 hvr-hang" href="#" id="varieties-drop" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Varieties
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="varieties-drop">
+                            <a class="dropdown-item" href="#">Roses</a>
+                            <a class="dropdown-item" href="#">Lilies</a>
+                            <a class="dropdown-item" href="#">Gerbera</a>
+                            <a class="dropdown-item" href="#">Carnations</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link mr-3 hvr-hang" href="#" id="occasions-drop" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Occasions
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="occasions-drop">
+                            <a class="dropdown-item" href="#">Birthday</a>
+                            <a class="dropdown-item" href="#">Romantic</a>
+                            <a class="dropdown-item" href="#">Sympathy</a>
+                            <a class="dropdown-item" href="#">Get Well</a>
+                            <a class="dropdown-item" href="#">Thank You</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link mr-3 hvr-hang" href="#" id="colours-drop" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Colours
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="colours-drop">
+                            <a class="dropdown-item" href="#">Pink</a>
+                            <a class="dropdown-item" href="#">White</a>
+                            <a class="dropdown-item" href="#">Blue</a>
+                            <a class="dropdown-item" href="#">Orange</a>
+                            <a class="dropdown-item" href="#">Red</a>
+                            <a class="dropdown-item" href="#">Yellow</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link hvr-hang" href="#" id="search-drop" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Search
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="search-drop">
+                            <form class="form-inline" method="GET" action="">
+                                <input class="form-control mx-2 mb-2" type="text" name="q" placeholder="Search"
+                                    aria-label="Search">
+                                <button class="btn mx-auto border pink-btn" type="submit"><i
+                                        class="fas fa-search"></i></button>
+                            </form>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav ml-auto mt-2">
+                    {% if request.user.is_authenticated %}
+                    {% if request.user.is_superuser %}
+                    <li class="nav-item">
+                        <a class="nav-link hvr-hang" href="#">Manage</a>
+                    </li>
+                    {% endif %}
+                    <li class="nav-item">
+                        <a class="nav-link hvr-hang" href="#">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hvr-hang" href="#">Log Out</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link hvr-hang" href="#">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hvr-hang" href="#">Register</a>
+                    </li>
+                    {% endif %}
+                    <li class="nav-item">
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link hvr-hang mr-3"
+                            href="">
+                            <div class="text-center">
+                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                                <p class="my-0">
+                                    {% if grand_total %}
+                                    ${{ grand_total|floatformat:2 }}
+                                    {% else %}
+                                    $0.00
+                                    {% endif %}
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+    {% if messages %}
+    {% endif %}
+
+    {% block page_header %}
+    {% endblock %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% block postloadjs %}
+    {% endblock %}
+
+</body>
+
 </html>
