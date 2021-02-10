@@ -48,140 +48,139 @@
 <body>
 
     <header>
-        <div class="container">
+
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-12">
-                    <img src="{{ url_for('media', filename='florescence-logo.png') }}" class="img-fluid d-block mx-auto mb-2 logo" />
+                <div class="col-12 my-auto py-1 py-lg-0 text-center text-lg-right">
+                    <ul class="list-inline ml-auto mt-2 mb-0">
+                        <li class="nav-item list-inline-item dropdown">
+                            <a class="nav-link mr-3 hvr-hang" href="#" id="account-dropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Account
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="account-dropdown">
+                                {% if request.user.is_authenticated %}
+                                {% if request.user.is_superuser %}
+                                <a class="dropdown-item" href="#">Manage</a>
+                                {% endif %}
+                                <a class="dropdown-item" href="#">Profile</a>
+                                <a class="dropdown-item" href="#">Log Out</a>
+                                {% else %}
+                                <a class="dropdown-item" href="#">Log In</a>
+                                <a class="dropdown-item" href="#">Register</a>
+                                {% endif %}
+                            </div>
+                        </li>
+                        <li class="nav-item list-inline-item">
+                            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link hvr-hang mr-3"
+                                href="">
+                                <div class="text-center">
+                                    <p class="my-0">
+                                        <i class="fas fa-shopping-bag fa-lg mr-1"></i>
+                                        {% if grand_total %}
+                                        ${{ grand_total|floatformat:2 }}
+                                        {% else %}
+                                        £0.00
+                                        {% endif %}
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
 
-        <nav class="navbar navbar-expand-lg sticky-top">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
 
-
-
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-
-                <ul class="navbar-nav ml-auto mt-2">
-                    <li class="nav-item">
-                        <a class="nav-link mr-3 ml-13 hvr-hang" href="#">Home</a>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link mr-3 hvr-hang" href="#" id="varieties-drop" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Varieties
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="varieties-drop">
-                            <a class="dropdown-item" href="#">Roses</a>
-                            <a class="dropdown-item" href="#">Lilies</a>
-                            <a class="dropdown-item" href="#">Gerbera</a>
-                            <a class="dropdown-item" href="#">Carnations</a>
-                        </div>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link mr-3 hvr-hang" href="#" id="occasions-drop" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Occasions
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="occasions-drop">
-                            <a class="dropdown-item" href="#">Birthday</a>
-                            <a class="dropdown-item" href="#">Romantic</a>
-                            <a class="dropdown-item" href="#">Sympathy</a>
-                            <a class="dropdown-item" href="#">Get Well</a>
-                            <a class="dropdown-item" href="#">Thank You</a>
-                        </div>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link mr-3 hvr-hang" href="#" id="colours-drop" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Colours
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="colours-drop">
-                            <a class="dropdown-item" href="#">Pink</a>
-                            <a class="dropdown-item" href="#">White</a>
-                            <a class="dropdown-item" href="#">Blue</a>
-                            <a class="dropdown-item" href="#">Orange</a>
-                            <a class="dropdown-item" href="#">Red</a>
-                            <a class="dropdown-item" href="#">Yellow</a>
-                        </div>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link hvr-hang" href="#" id="search-drop" role="button" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                            Search
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="search-drop">
-                            <form class="form-inline" method="GET" action="">
-                                <input class="form-control mx-2 mb-2" type="text" name="q" placeholder="Search"
-                                    aria-label="Search">
-                                <button class="btn mx-auto border pink-btn" type="submit"><i
-                                        class="fas fa-search"></i></button>
-                            </form>
-                        </div>
-                    </li>
-                </ul>
-
-                <ul class="navbar-nav ml-auto mt-2">
-                    {% if request.user.is_authenticated %}
-                    {% if request.user.is_superuser %}
-                    <li class="nav-item">
-                        <a class="nav-link hvr-hang" href="#">Manage</a>
-                    </li>
-                    {% endif %}
-                    <li class="nav-item">
-                        <a class="nav-link hvr-hang" href="#">Profile</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link hvr-hang" href="#">Log Out</a>
-                    </li>
-                    {% else %}
-                    <li class="nav-item">
-                        <a class="nav-link hvr-hang" href="#">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link hvr-hang" href="#">Register</a>
-                    </li>
-                    {% endif %}
-                    <li class="nav-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link hvr-hang mr-3"
-                            href="">
-                            <div class="text-center">
-                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                                <p class="my-0">
-                                    {% if grand_total %}
-                                    ${{ grand_total|floatformat:2 }}
-                                    {% else %}
-                                    $0.00
-                                    {% endif %}
-                                </p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <img src="media/florescence-logo.png" class="img-fluid d-block mx-auto logo" />
+                </div>
             </div>
-        </nav>
+        </div>
 
+        <div class="container-fluid p-0 m-0">
+            <div class="row mx-auto">
+                <div class="col-12">
+                    <ul class="list-inline mt-2 text-center">
+                        <li class="nav-item list-inline-item">
+                            <a class="nav-link mr-3 hvr-hang" href="#">Home</a>
+                        </li>
+
+                        <li class="nav-item list-inline-item dropdown">
+                            <a class="nav-link mr-3 hvr-hang" href="#" id="varieties-drop" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Varieties
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="varieties-drop">
+                                <a class="dropdown-item" href="#">Roses</a>
+                                <a class="dropdown-item" href="#">Lilies</a>
+                                <a class="dropdown-item" href="#">Gerbera</a>
+                                <a class="dropdown-item" href="#">Carnations</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item list-inline-item dropdown">
+                            <a class="nav-link mr-3 hvr-hang" href="#" id="occasions-drop" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Occasions
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="occasions-drop">
+                                <a class="dropdown-item" href="#">Birthday</a>
+                                <a class="dropdown-item" href="#">Romantic</a>
+                                <a class="dropdown-item" href="#">Sympathy</a>
+                                <a class="dropdown-item" href="#">Get Well</a>
+                                <a class="dropdown-item" href="#">Thank You</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item list-inline-item dropdown">
+                            <a class="nav-link mr-3 hvr-hang" href="#" id="colours-drop" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Colours
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="colours-drop">
+                                <a class="dropdown-item" href="#">Pink</a>
+                                <a class="dropdown-item" href="#">White</a>
+                                <a class="dropdown-item" href="#">Blue</a>
+                                <a class="dropdown-item" href="#">Orange</a>
+                                <a class="dropdown-item" href="#">Red</a>
+                                <a class="dropdown-item" href="#">Yellow</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item list-inline-item dropdown">
+                            <a class="nav-link hvr-hang" href="#" id="search-drop" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                Search
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="search-drop">
+                                <form class="form-inline" method="GET" action="">
+                                    <input class="form-control mx-2 mb-2" type="text" name="q" placeholder="Search"
+                                        aria-label="Search">
+                                    <button class="btn mx-auto border pink-btn" type="submit"><i
+                                            class="fas fa-search"></i></button>
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </header>
 
-    {% if messages %}
-    {% endif %}
+        {% if messages %}
+        {% endif %}
 
-    {% block page_header %}
-    {% endblock %}
+        {% block page_header %}
+        {% endblock %}
 
-    {% block content %}
-    {% endblock %}
+        {% block content %}
+        {% endblock %}
 
-    {% block postloadjs %}
-    {% endblock %}
+        {% block postloadjs %}
+        {% endblock %}
 
 </body>
 

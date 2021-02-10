@@ -1,0 +1,41 @@
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #FAFAF0;
+  font-family: 'Cinzel', serif;
+  color: #000;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+.nav-item a i {
+  color: #C5C508;
+}
+
+.nav-link {
+  color: #000;
+}
+
+.hvr-hang:hover, .hvr-hang:focus, .hvr-hang:active {
+    text-shadow: 0.125rem 0.125rem 0.125rem rgba(15, 9, 1, 0.5);
+    background-color: rgba(0, 0, 0, 0.0);
+    color: #0F0901;
+}
+
+.marckFont {
+  font-family: 'Marck Script', cursive;
+  color: #878DAD;
+}
+
+.pink-btn {
+  background: #878DAD;
+  color: #FFF;
+}
+
+.logo {
+  width: 35rem;
+}
