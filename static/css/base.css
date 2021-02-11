@@ -8,8 +8,8 @@ body {
   color: #000;
 }
 
-h1 {
-  font-size: 3rem;
+.nav-bg {
+    background-color: #FAFAF0;
 }
 
 .nav-item a i {
@@ -26,16 +26,12 @@ h1 {
     color: #0F0901;
 }
 
-.marckFont {
-  font-family: 'Marck Script', cursive;
-  color: #878DAD;
-}
-
-.pink-btn {
-  background: #878DAD;
-  color: #FFF;
-}
-
 .logo {
   width: 35rem;
+}
+
+.flower-banner {
+  margin-top: 19.2rem;
+  height: 50%;
+  width: 100%;
 }
