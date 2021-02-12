@@ -30,8 +30,23 @@ body {
   width: 35rem;
 }
 
-.flower-banner {
-  margin-top: 19.2rem;
-  height: 50%;
-  width: 100%;
+.pink-btn {
+  background: #878DAD;
+  color: #FFF;
+}
+
+.icon {
+    color: #878DAD!important;
+}
+
+.bag {
+    color: #C5C508!important;
+}
+
+@media (min-width: 992px) {
+        .flower-banner {
+        margin-top: 18rem;
+        max-height: 26rem;
+        width: 100%;
+    }
 }
