@@ -48,6 +48,10 @@ body {
     color: #C5C508!important;
 }
 
+.text-black {
+    color: #000!important;
+}
+
 .flower-banner {
     max-height: 26rem;
     width: 100%;
@@ -60,3 +64,13 @@ body {
         width: 100%;
     }
 } */
+
+.social-btn a {
+    font-size: 3rem;
+    color: #000;
+    text-decoration: none;
+}
+
+.footer-bg {
+    background-image: linear-gradient(to bottom, rgba(250,250,242,1), rgba(135, 141, 173, 1));
+}

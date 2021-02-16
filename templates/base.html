@@ -19,6 +19,8 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Marck+Script&display=swap" />
+        <!--Hover CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" />
     <link rel="stylesheet" href="{% static 'css/base.css' %}" />
     {% endblock %}
 
@@ -107,6 +109,8 @@
                             Varieties
                         </a>
                         <div class="dropdown-menu" aria-labelledby="varieties-drop">
+                            <a class="dropdown-item" href="{% url 'products' %}">All Flowers</a>
+                            <hr>
                             <a class="dropdown-item" href="#">Roses</a>
                             <a class="dropdown-item" href="#">Lilies</a>
                             <a class="dropdown-item" href="#">Gerbera</a>
@@ -164,9 +168,9 @@
         <!-- Mobile Top Navigation -->
         <div class="row d-lg-none justify-content-center">
 
-            <div class="row pl-4">
-                <a class="d-block d-lg-none p-0" href="">
-                    <img src="{{ MEDIA_URL }}florescence-logo.png" class="img-fluid logo" />
+            <div class="row no-gutters">
+                <a class="d-block d-lg-none pl-4" href="">
+                    <img src="{{ MEDIA_URL }}florescence-logo.png" class="img-fluid d-block mx-auto logo" />
                 </a>
             </div>
 
@@ -183,17 +187,68 @@
 
     </header>
 
-    {% if messages %}
-    {% endif %}
+    <main>
+        {% if messages %}
+        {% endif %}
 
-    {% block page_header %}
-    {% endblock %}
+        {% block page_header %}
+        {% endblock %}
 
-    {% block content %}
-    {% endblock %}
+        {% block content %}
+        {% endblock %}
 
-    {% block postloadjs %}
-    {% endblock %}
+        {% block postloadjs %}
+        {% endblock %}
+    </main>
+
+    <footer class="container-fluid p-0 footer-bg">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="flore-font text-center text-black mt-5">Developer Information</h2>
+                    <p class="text-center">Lewis Wheeler is a full stack web developer, with expertise in both front &
+                        backend design. Lewis lives in the heart of Devon, England, and is keen to hear about any
+                        business or personal software development project opportunity.
+                        Contact Lewis now using the links provided if you have a project in mind.</p>
+                </div>
+            </div>
+        </div>
+
+        <!--Social Links Header-->
+        <div class="col-sm-12">
+            <h2 class="flore-font text-center text-black">Social Links</h2>
+
+            <ul class="list-unstyled">
+                <li>
+                    <div class="col-sm-12">
+                        <!--Developer LinkedIn Button-->
+                        <div class="text-center social-btn">
+                            <a href="https://www.linkedin.com/in/lewis-wheeler-aa91791a0/" target="_blank">
+                                <i class="fab fa-linkedin hvr-grow"></i>
+                            </a>
+                            <!--Developer Github Button-->
+                            <a href="https://github.com/WebSlinger88" target="_blank">
+                                <i class="fab fa-github hvr-grow"></i>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+
+        <!--Developer Copyright Information-->
+        <div class="footer-copyright bg-transparent">
+            <div class="container">
+                <p class="footer-text text-center mt-3 mb-2">
+                    Copyright - All Rights Reserved - Lewis Wheeler - Full Stack Web Developer ©
+                    <!--javaScript date generated via id-->
+                    <span id="copyright"></span></p>
+            </div>
+        </div>
+
+    </footer>
 
 </body>
 
