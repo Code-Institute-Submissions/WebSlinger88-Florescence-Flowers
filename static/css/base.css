@@ -8,6 +8,11 @@ body {
   color: #000;
 }
 
+.flore-font {
+    font-family: 'Marck Script', cursive;
+    color: #878DAD;
+}
+
 .nav-bg {
     background-color: #FAFAF0;
 }
@@ -43,10 +48,15 @@ body {
     color: #C5C508!important;
 }
 
-@media (min-width: 992px) {
+.flower-banner {
+    max-height: 26rem;
+    width: 100%;
+}
+
+/* @media (min-width: 992px) {
         .flower-banner {
         margin-top: 18rem;
         max-height: 26rem;
         width: 100%;
     }
-}
+} */

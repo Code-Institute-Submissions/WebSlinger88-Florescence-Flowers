@@ -20,12 +20,12 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Marck+Script&display=swap" />
     <link rel="stylesheet" href="{% static 'css/base.css' %}" />
-    [% endblock %]
+    {% endblock %}
 
     {% block extracss %}
     {% endblock %}
 
-    [% block corejs %]
+    {% block corejs %}
     <script src="https://kit.fontawesome.com/f42aa17828.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -47,7 +47,7 @@
 
 <body>
 
-    <header class="container-fluid fixed-top nav-bg">
+    <header class="container-fluid nav-bg">
 
         <div id="topnav" class="row d-none d-lg-flex">
             <div class="col-12 my-auto py-1 py-lg-0 text-center text-lg-right">
@@ -92,7 +92,7 @@
             </div>
 
             <div class="col-12">
-                <img src="media/florescence-logo.png" class="img-fluid d-block mx-auto logo" />
+                <img src="{{ MEDIA_URL }}florescence-logo.png" class="img-fluid d-block mx-auto logo" />
             </div>
 
             <div class="col-12">
@@ -166,7 +166,7 @@
 
             <div class="row pl-4">
                 <a class="d-block d-lg-none p-0" href="">
-                    <img src="media/florescence-logo.png" class="img-fluid logo" />
+                    <img src="{{ MEDIA_URL }}florescence-logo.png" class="img-fluid logo" />
                 </a>
             </div>
 
@@ -178,14 +178,6 @@
                 {% include 'includes/mobile-top-header.html' %}
                 {% include 'includes/main-nav.html' %}
             </nav>
-
-            <div class="container-fluid p-0">
-                <div class="row d-block d-lg-none">
-                    <div class="col-12 p-0">
-                        <img src="/media/flower-banner.jpg" class="img-fluid flower-banner" />
-                    </div> 
-                </div>
-            </div>
 
         </div>
 
