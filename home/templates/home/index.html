@@ -4,16 +4,39 @@
 {% block content %}
 
 <div class="container-fluid p-0">
-    <div class="row d-none d-lg-block">
-        <div class="col-12 p-0">
-            <img src="{{ MEDIA_URL }}flower-banner.jpg" class="img-fluid flower-banner" />
+    <div class="row no-gutters">
+        <div class="col-12">
+            <img src="{{ MEDIA_URL }}flower-banner.jpg" class="img-fluid d-block mx-auto flower-banner" />
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 class="flore-font mt-5 text-center">Order Flowers online, delivered straight to your door!</h1>
+            <hr class="w-50 mb-1" />
+            <p class="mt-3 text-justify">
+                Blooms, baskets, arrangements and gorgeous bouquets! At Florescence Flowers, an established British
+                online florist, we are helping you turn everyday moments into memorable floral occasions full of joy
+                and cheer thanks to fresh flowers. If you need flowers to order online in the UK, be it London or
+                Glasgow, you can count on us to deliver both beautiful flower bouquets and a smile.
+
+                We source fresh flowers from growers and farms all over the world to bring you the best quality,
+                freshest stems and blooms at the best possible prices. Our beautiful flower bouquets are handcrafted by
+                our own professional UK florists and delivered by a courier. Express your emotions and sentiments on
+                occasions like birthday, anniversary or birth of new baby with a handcrafted bouquet, sent with love.
+                Let roses, lilies, anemones, freesia or carnations whisper the sweet sentiments that words cannot
+                describe. Sending flowers in UK is now both affordable and convenient, thanks to florists online like
+                Florescence Flowers.
+            </p>
         </div>
     </div>
 </div>
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col text-center mt-5">
+        <div class="col text-center mt-3">
             <h1 class="flore-font">Popular Bouquets</h1>
             <hr class="w-50 mb-1" />
         </div>
@@ -26,43 +49,22 @@
                 {% for product in products %}
 
                 {% if product.popular %}
-                <div class="col-sm-6 col-md-6 col-lg-3">
-                    <div class="card h-100 border-0">
+                <div class="col-sm-6 col-md-6 col-lg-3 mb-5">
+                    <div class="card h-100">
                         <a href="">
                             <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                         </a>
                         <div class="card-body pb-0">
-                            <p class="mb-0">{{ product.name }}</p>
+                            <p class="text-center mb-0">{{ product.name }}</p>
                         </div>
-                        <div class="card-footer bg-white pt-0 border-0 text-left">
+                        <div class="card-footer bg-white pt-0 border-0">
                             <div class="row">
                                 <div class="col">
-                                    <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
+                                    <p class="lead mb-0 font-weight-bold text-center">£{{ product.price }}</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                {% endif %}
-
-                {% if forloop.counter|divisibleby:1 %}
-                <div class="col-12 d-sm-none mb-5">
-                    <hr>
-                </div>
-                {% endif %}
-                {% if forloop.counter|divisibleby:2 %}
-                <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
-                    <hr>
-                </div>
-                {% endif %}
-                {% if forloop.counter|divisibleby:3 %}
-                <div class="col-12 d-none d-lg-block d-xl-none mb-5">
-                    <hr>
-                </div>
-                {% endif %}
-                {% if forloop.counter|divisibleby:4 %}
-                <div class="col-12 d-none d-xl-block mb-5">
-                    <hr>
                 </div>
                 {% endif %}
                 {% endfor %}
