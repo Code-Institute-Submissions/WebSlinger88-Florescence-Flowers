@@ -31,6 +31,8 @@ class Product(models.Model):
     occasion = models.ForeignKey(
         'Occasion', null=True, blank=True, on_delete=models.SET_NULL)
     popular = models.BooleanField(default=False)
+    rating = models.DecimalField(
+        max_digits=6, decimal_places=2, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
 
     def __str__(self):

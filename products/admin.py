@@ -10,6 +10,7 @@ class ProductAdmin(admin.ModelAdmin):
         'colour',
         'occasion',
         'popular',
+        'rating',
         'image',
     )
 
