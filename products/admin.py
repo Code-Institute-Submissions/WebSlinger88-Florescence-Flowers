@@ -23,6 +23,7 @@ class CategoryAdmin(admin.ModelAdmin):
         'name',
     )
 
+    ordering = ('name',)
 
 class ColourAdmin(admin.ModelAdmin):
     list_display = (
@@ -30,6 +31,7 @@ class ColourAdmin(admin.ModelAdmin):
         'name',
     )
 
+    ordering = ('name',)
 
 class OccasionAdmin(admin.ModelAdmin):
     list_display = (
@@ -37,6 +39,7 @@ class OccasionAdmin(admin.ModelAdmin):
         'name',
     )
 
+    ordering = ('name',)
 
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)
