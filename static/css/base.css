@@ -1,11 +1,21 @@
-html {
-  height: 100%;
+/*-------------------------------------------------*/
+/*** UNIVERSAL STYLES THAT EFFECT WHOLE WEBSITE ***/
+/*-------------------------------------------------*/
+
+body, html {
+    background-color: #FAFAF0;
+    font-family: 'Cinzel', serif;
+    color: #000;
+    height: 100%;
+    /* Code to keep footer fixed at bottom */
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
-body {
-  background-color: #FAFAF0;
-  font-family: 'Cinzel', serif;
-  color: #000;
+main {
+    /* Code to keep footer fixed at bottom */
+    flex: 1 0 auto;
 }
 
 .flore-font {
@@ -13,8 +23,29 @@ body {
     color: #878DAD;
 }
 
+.icon {
+    color: #878DAD!important;
+}
+
+.bag {
+    color: #C5C508!important;
+}
+
+.text-black {
+    color: #000!important;
+}
+
+
+/*-----------------------------*/
+/*** NAVIGATION BAR STYLES ***/
+/*----------------------------*/
+
 .nav-bg {
     background-color: #FAFAF0;
+}
+
+.logo {
+  width: 35rem;
 }
 
 .nav-item a i {
@@ -30,14 +61,11 @@ body {
     color: #FFF;
 }
 
+/* Hover.css animations */
 .hvr-hang:hover, .hvr-hang:focus, .hvr-hang:active {
     text-shadow: 0.125rem 0.125rem 0.125rem rgba(15, 9, 1, 0.5);
     background-color: rgba(0, 0, 0, 0.0);
     color: #0F0901;
-}
-
-.logo {
-  width: 35rem;
 }
 
 .pink-btn {
@@ -45,30 +73,16 @@ body {
   color: #FFF;
 }
 
-.icon {
-    color: #878DAD!important;
-}
 
-.bag {
-    color: #C5C508!important;
-}
+/*---------------------------*/
+/*** PRODUCT PAGE STYLES ***/
+/*--------------------------*/
 
-.text-black {
-    color: #000!important;
-}
 
-.flower-banner {
-    max-height: 26rem;
-    width: 100%;
-}
 
-/* @media (min-width: 992px) {
-        .flower-banner {
-        margin-top: 18rem;
-        max-height: 26rem;
-        width: 100%;
-    }
-} */
+/*---------------------*/
+/*** FOOTER STYLES ***/
+/*--------------------*/
 
 .social-btn a {
     font-size: 3rem;
@@ -78,8 +92,4 @@ body {
 
 .footer-bg {
     background-image: linear-gradient(to bottom, rgba(250,250,242,1), rgba(135, 141, 173, 1));
-}
-
-.card-img-top {
-    width: 40rem;
 }
