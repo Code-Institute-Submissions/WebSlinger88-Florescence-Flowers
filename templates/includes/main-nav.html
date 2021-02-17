@@ -13,10 +13,10 @@
             <div class="dropdown-menu" aria-labelledby="varieties-drop">
                 <a class="dropdown-item" href="{% url 'products' %}">All Flowers</a>
                 <hr>
-                <a class="dropdown-item" href="#">Roses</a>
-                <a class="dropdown-item" href="#">Lilies</a>
-                <a class="dropdown-item" href="#">Gerbera</a>
-                <a class="dropdown-item" href="#">Carnations</a>
+                <a class="dropdown-item" href="{% url 'products' %}?category=roses">Roses</a>
+                <a class="dropdown-item" href="{% url 'products' %}?category=lilies">Lilies</a>
+                <a class="dropdown-item" href="{% url 'products' %}?category=gerbera">Gerbera</a>
+                <a class="dropdown-item" href="{% url 'products' %}?category=carnations">Carnations</a>
             </div>
         </li>
 
@@ -27,11 +27,11 @@
             </a>
 
             <div class="dropdown-menu" aria-labelledby="occasions-drop">
-                <a class="dropdown-item" href="#">Birthday</a>
-                <a class="dropdown-item" href="#">Romantic</a>
-                <a class="dropdown-item" href="#">Sympathy</a>
-                <a class="dropdown-item" href="#">Celebration</a>
-                <a class="dropdown-item" href="#">Thank You</a>
+                <a class="dropdown-item" href="{% url 'products' %}?occasion=birthday">Birthday</a>
+                <a class="dropdown-item" href="{% url 'products' %}?occasion=romantic">Romantic</a>
+                <a class="dropdown-item" href="{% url 'products' %}?occasion=sympathy">Sympathy</a>
+                <a class="dropdown-item" href="{% url 'products' %}?occasion=celebration">Celebration</a>
+                <a class="dropdown-item" href="{% url 'products' %}?occasion=thankyou">Thank You</a>
             </div>
         </li>
 
@@ -42,12 +42,12 @@
             </a>
 
             <div class="dropdown-menu" aria-labelledby="colours-drop">
-                <a class="dropdown-item" href="#">Pink</a>
-                <a class="dropdown-item" href="#">White</a>
-                <a class="dropdown-item" href="#">Blue</a>
-                <a class="dropdown-item" href="#">Orange</a>
-                <a class="dropdown-item" href="#">Red</a>
-                <a class="dropdown-item" href="#">Yellow</a>
+                <a class="dropdown-item" href="{% url 'products' %}?colour=pink">Pink</a>
+                <a class="dropdown-item" href="{% url 'products' %}?colour=white">White</a>
+                <a class="dropdown-item" href="{% url 'products' %}?colour=blue">Blue</a>
+                <a class="dropdown-item" href="{% url 'products' %}?colour=orange">Orange</a>
+                <a class="dropdown-item" href="{% url 'products' %}?colour=red">Red</a>
+                <a class="dropdown-item" href="{% url 'products' %}?colour=yellow">Yellow</a>
             </div>
         </li>
     </ul>
