@@ -73,6 +73,11 @@ main {
   color: #FFF;
 }
 
+/* Width of dropdown menu in mobile view */
+#drop-width {
+    width: 25%;
+}
+
 
 /*---------------------------*/
 /*** PRODUCT PAGE STYLES ***/

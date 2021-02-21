@@ -1,54 +1,72 @@
 <div class="collapse navbar-collapse" id="main-nav">
-    <ul class="navbar-nav w-auto mx-auto">
-        <li class="nav-item">
-            <a class="nav-link" href="{% url 'home' %}">Home</a>
-        </li>
+    <div id="drop-width">
+        <ul class="navbar-nav w-auto mx-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'home' %}">Home</a>
+            </li>
 
-        <li class="nav-item dropdown">
-            <a class="nav-link" href="#" id="varieties-drop" role="button" data-toggle="dropdown" aria-haspopup="true"
-                aria-expanded="false">
-                Varieties
-            </a>
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#" id="varieties-drop" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Varieties
+                </a>
 
-            <div class="dropdown-menu" aria-labelledby="varieties-drop">
-                <a class="dropdown-item" href="{% url 'products' %}">All Flowers</a>
-                <hr>
-                <a class="dropdown-item" href="{% url 'products' %}?category=Carnations">Carnations</a>
-                <a class="dropdown-item" href="{% url 'products' %}?category=Gerbera">Gerbera</a>
-                <a class="dropdown-item" href="{% url 'products' %}?category=Lilies">Lilies</a>
-                <a class="dropdown-item" href="{% url 'products' %}?category=Roses">Roses</a>
-            </div>
-        </li>
+                <div class="dropdown-menu" aria-labelledby="varieties-drop">
+                    <a class="dropdown-item" href="{% url 'products' %}">All Flowers</a>
+                    <hr>
+                    <a class="dropdown-item" href="{% url 'products' %}?category=Carnations">Carnations</a>
+                    <a class="dropdown-item" href="{% url 'products' %}?category=Gerbera">Gerbera</a>
+                    <a class="dropdown-item" href="{% url 'products' %}?category=Lilies">Lilies</a>
+                    <a class="dropdown-item" href="{% url 'products' %}?category=Roses">Roses</a>
+                </div>
+            </li>
 
-        <li class="nav-item dropdown">
-            <a class="nav-link" href="#" id="occasions-drop" role="button" data-toggle="dropdown" aria-haspopup="true"
-                aria-expanded="false">
-                Occasions
-            </a>
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#" id="occasions-drop" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Occasions
+                </a>
 
-            <div class="dropdown-menu" aria-labelledby="occasions-drop">
-                <a class="dropdown-item" href="{% url 'products' %}?occasion=Birthday">Birthday</a>
-                <a class="dropdown-item" href="{% url 'products' %}?occasion=Celebration">Celebration</a>
-                <a class="dropdown-item" href="{% url 'products' %}?occasion=Romantic">Romantic</a>
-                <a class="dropdown-item" href="{% url 'products' %}?occasion=Sympathy">Sympathy</a>
-                <a class="dropdown-item" href="{% url 'products' %}?occasion=Thankyou">Thank You</a>
-            </div>
-        </li>
+                <div class="dropdown-menu" aria-labelledby="occasions-drop">
+                    <a class="dropdown-item" href="{% url 'products' %}?occasion=Birthday">Birthday</a>
+                    <a class="dropdown-item" href="{% url 'products' %}?occasion=Celebration">Celebration</a>
+                    <a class="dropdown-item" href="{% url 'products' %}?occasion=Romantic">Romantic</a>
+                    <a class="dropdown-item" href="{% url 'products' %}?occasion=Sympathy">Sympathy</a>
+                    <a class="dropdown-item" href="{% url 'products' %}?occasion=Thankyou">Thank You</a>
+                </div>
+            </li>
 
-        <li class="nav-item dropdown">
-            <a class="nav-link mr-3 hvr-hang" href="#" id="colours-drop" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                Colours
-            </a>
+            <li class="nav-item dropdown">
+                <a class="nav-link mr-3" href="#" id="colours-drop" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Colours
+                </a>
 
-            <div class="dropdown-menu" aria-labelledby="colours-drop">
-                <a class="dropdown-item" href="{% url 'products' %}?colour=Blue">Blue</a>
-                <a class="dropdown-item" href="{% url 'products' %}?colour=Orange">Orange</a>
-                <a class="dropdown-item" href="{% url 'products' %}?colour=Pink">Pink</a>
-                <a class="dropdown-item" href="{% url 'products' %}?colour=Red">Red</a>
-                <a class="dropdown-item" href="{% url 'products' %}?colour=White">White</a>
-                <a class="dropdown-item" href="{% url 'products' %}?colour=Yellow">Yellow</a>
-            </div>
-        </li>
-    </ul>
+                <div class="dropdown-menu" aria-labelledby="colours-drop">
+                    <a class="dropdown-item" href="{% url 'products' %}?colour=Blue">Blue</a>
+                    <a class="dropdown-item" href="{% url 'products' %}?colour=Orange">Orange</a>
+                    <a class="dropdown-item" href="{% url 'products' %}?colour=Pink">Pink</a>
+                    <a class="dropdown-item" href="{% url 'products' %}?colour=Red">Red</a>
+                    <a class="dropdown-item" href="{% url 'products' %}?colour=White">White</a>
+                    <a class="dropdown-item" href="{% url 'products' %}?colour=Yellow">Yellow</a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link mr-3" href="#" id="sort-drop" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Sort
+                </a>
+
+                <div class="dropdown-menu" aria-labelledby="sort-drop">
+                    <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc">By Price</a>
+                    <a class="dropdown-item" href="{% url 'products' %}?sort=rating&direction=desc">By Rating</a>
+                    <a class="dropdown-item" href="{% url 'products' %}?sort=category&direction=desc">By Variety</a>
+                    <a class="dropdown-item" href="{% url 'products' %}?sort=occasion&direction=asc">By Occasion</a>
+                    <a class="dropdown-item" href="{% url 'products' %}?sort=colour&direction=asc">By Colour</a>
+                </div>
+            </li>
+
+        </ul>
+    </div>
 </div>

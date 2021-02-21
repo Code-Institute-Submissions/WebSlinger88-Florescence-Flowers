@@ -19,7 +19,7 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Marck+Script&display=swap" />
-        <!--Hover CSS-->
+    <!--Hover CSS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" />
     <link rel="stylesheet" href="{% static 'css/base.css' %}" />
     {% endblock %}
@@ -146,6 +146,21 @@
                             <a class="dropdown-item" href="{% url 'products' %}?colour=Red">Red</a>
                             <a class="dropdown-item" href="{% url 'products' %}?colour=White">White</a>
                             <a class="dropdown-item" href="{% url 'products' %}?colour=Yellow">Yellow</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item list-inline-item dropdown">
+                        <a class="nav-link mr-3 hvr-hang" href="#" id="sort-drop" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Sort
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="sort-drop">
+                            <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc">By Price</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?sort=rating&direction=desc">By Rating</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?sort=category&direction=desc">By Variety</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?sort=occasion&direction=asc">By Occasion</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?sort=colour&direction=asc">By Colour</a>
                         </div>
                     </li>
 
