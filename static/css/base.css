@@ -83,7 +83,9 @@ main {
 /*** PRODUCT PAGE STYLES ***/
 /*--------------------------*/
 
-
+.sort-box {
+    border-radius: 5rem;
+}
 
 /*---------------------*/
 /*** FOOTER STYLES ***/
