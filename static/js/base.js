@@ -21,4 +21,7 @@ $(document).ready(function () {
             window.location.replace(currentUrl);
         }
     })
+
+    // Copyright date will be automatically updated every year without user input.
+    $("#copyright").text(new Date().getFullYear());
 })
