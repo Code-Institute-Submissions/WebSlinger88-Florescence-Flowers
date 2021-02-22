@@ -24,4 +24,19 @@ $(document).ready(function () {
 
     // Copyright date will be automatically updated every year without user input.
     $("#copyright").text(new Date().getFullYear());
+
+    // When 'To Top Button' is clicked: Scroll to top of page in 800ms.
+    $("a[href='#top']").click(function () {
+        $("html, body").animate({ scrollTop: 0 }, 800);
+        return false;
+    });
+
+    // If position of vertical scroll is above 200px, to top button will disappear.
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 200) {
+            $('.to-top').fadeIn();
+        } else {
+            $('.to-top').fadeOut();
+        }
+    });
 })

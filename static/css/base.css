@@ -100,3 +100,25 @@ main {
 .footer-bg {
     background-image: linear-gradient(to bottom, rgba(250,250,242,1), rgba(135, 141, 173, 1));
 }
+
+/* To Top Button position */
+.to-top {
+    z-index: 100;
+	position: fixed;
+	bottom: 2.5rem;
+    right: 2.5rem;
+    display: none;
+}
+
+/* To Top Button style */
+.btn-top {
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    background-color: #878DAD;
+    color: #FFF;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1.5rem;
+    position: fixed;
+}
