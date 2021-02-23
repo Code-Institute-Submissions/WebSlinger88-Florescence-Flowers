@@ -5,7 +5,6 @@
 body, html {
     background-color: #FAFAF0;
     font-family: 'Cinzel', serif;
-    color: #000;
     height: 100%;
     /* Code to keep footer fixed at bottom */
     display: flex;
@@ -85,6 +84,7 @@ main {
 
 .sort-box {
     border-radius: 5rem;
+    border: 1px solid #878DAD!important;
 }
 
 
@@ -144,4 +144,16 @@ main {
     text-align: center;
     font-size: 1.5rem;
     position: fixed;
+}
+
+.free-delivery {
+    width: calc(20rem + 0.4rem + 0.125rem);
+    height: calc(1.5rem + 0.5rem + 0.125rem);
+    padding-top: 0.4rem;
+    padding-bottom: 0.25rem;
+    padding-left: 0.25rem;
+    font-size: 0.875rem;
+    border: 1px solid #878DAD;
+    background-color: #FAFAF0;
+    border-radius: 5rem;
 }
