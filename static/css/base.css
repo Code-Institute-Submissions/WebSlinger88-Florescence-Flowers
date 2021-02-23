@@ -12,6 +12,10 @@ body, html {
     flex-direction: column;
 }
 
+* {
+    color: #000;
+}
+
 main {
     /* Code to keep footer fixed at bottom */
     flex: 1 0 auto;
