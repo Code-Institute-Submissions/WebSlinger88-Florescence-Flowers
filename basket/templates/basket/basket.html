@@ -3,11 +3,11 @@
 
 {% block content %}
 
-<!--Shopping Bag Header-->
+<!--Shopping Basket Header-->
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-3">
-            <h1 class="flore-font">Shopping Bag</h1>
+            <h1 class="flore-font">Shopping Basket</h1>
             <hr class="w-50 mb-2">
         </div>
     </div>
@@ -16,15 +16,15 @@
         <div class="row">
             <div class="col">
 
-                {% if bag_items %}
+                {% if Basket_items %}
 
                     <div class="table-responsive rounded"></div>
 
                 {% else %}
 
-                    <!--Empty Bag Notice & Button-->
+                    <!--Empty Basket Notice & Button-->
                     <div class="text-center">
-                        <h3 class="mt-5 mb-3">Your shopping bag is currently empty.</h3>
+                        <h3 class="mt-5 mb-3">Your shopping basket is currently empty.</h3>
                         <a href="{% url 'products' %}" class="btn btn-lg bag-btn hvr-grow">
                             <span><i class="fas fa-hand-point-left icon mr-1"></i></span>
                             <span>Keep browsing flowers</span>
