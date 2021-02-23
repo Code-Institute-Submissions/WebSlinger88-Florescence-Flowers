@@ -87,6 +87,29 @@ main {
     border-radius: 5rem;
 }
 
+
+/*---------------------------*/
+/*** SHOPPING BAG STYLES ***/
+/*--------------------------*/
+
+.bag-btn {
+    border: 2px solid #C5C508;
+    background-color: #FFF;
+    color: #878DAD;
+}
+
+.hvr-grow:hover {
+    color: #878DAD;
+    text-shadow: 1px 1px #878DAD;
+}
+
+/* Adds gap between empty bag content and footer */
+.bag-gap {
+    height: 20rem;
+}
+
+
+
 /*---------------------*/
 /*** FOOTER STYLES ***/
 /*--------------------*/
