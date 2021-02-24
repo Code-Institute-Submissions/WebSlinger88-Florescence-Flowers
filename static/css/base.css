@@ -38,6 +38,10 @@ main {
     color: #000!important;
 }
 
+.rounded-corners {
+    border-radius: 5rem;
+}
+
 
 /*-----------------------------*/
 /*** NAVIGATION BAR STYLES ***/
@@ -91,6 +95,31 @@ main {
     border: 1px solid #878DAD!important;
 }
 
+.back-btn {
+    border: 1px solid #878DAD;
+}
+
+.back-btn:hover {
+    text-shadow: 0.5px 0.5px #878DAD;
+}
+
+.add-btn {
+    background-color: #878DAD;
+    color: #FFF;
+}
+
+.visa-master {
+    width: 35%;
+}
+
+.product-img {
+display: block;
+position: relative;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+max-width: 40rem;
+}
 
 /*---------------------------*/
 /*** SHOPPING BAG STYLES ***/
