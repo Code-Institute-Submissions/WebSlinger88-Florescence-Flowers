@@ -142,6 +142,11 @@ max-width: 40rem;
     color: #000!important;
 }
 
+.update-basket,
+.remove-flowers {
+    cursor: pointer;
+}
+
 /*---------------------*/
 /*** FOOTER STYLES ***/
 /*--------------------*/
