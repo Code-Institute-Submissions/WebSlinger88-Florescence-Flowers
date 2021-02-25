@@ -126,6 +126,10 @@ max-width: 40rem;
     height: 20rem;
 }
 
+.checkout-btn:hover {
+    color: #000!important;
+}
+
 /*---------------------*/
 /*** FOOTER STYLES ***/
 /*--------------------*/

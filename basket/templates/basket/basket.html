@@ -18,25 +18,87 @@
 
                 {% if basket_items %}
 
-                    <div class="table-responsive rounded">
-                        {{ basket_items }}
-                    </div>
+                <div class="table-responsive rounded">
+                    <table class="table table-sm table-borderless">
+                        <thead class="black-text">
+                            <tr>
+                                <th scope="col ml-3">Order Information:</th>
+                                <th scope="col"></th>
+                                <th scope="col">Price:</th>
+                                <th scope="col">Quantity:</th>
+                                <th scope="col">Subtotal:</th>
+                            </tr>
+                        </thead>
+
+                        {% for item in basket_items %}
+                        <tr>
+                            <td class="py-3 pr-3 w-25">
+                                <img class="img-fluid rounded" src="{{ item.product.image.url }}">
+                            </td>
+                            <td class="py-3">
+                                <p class="my-0 lead font-weight-bold">{{ item.product.name }}</p>
+                                <p class="my-0">Variety: {{ item.product.category }}</p>
+                                <p class="my-0">Colour: {{ item.product.colour }}</p>
+
+                            </td>
+                            <td class="py-3">
+                                <p class="my-0">${{ item.product.price }}</p>
+                            </td>
+                            <td class="py-3 w-25">
+                                <p class="my-0">{{ item.quantity }}</p>
+                            </td>
+                            <td class="py-3">
+                                <p class="my-0">${{ item.product.price }}</p>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                        <tr>
+                            <td colspan="5" class="pt-5 text-right">
+                                <h6><strong>Basket Total: £{{ total|floatformat:2 }}</strong></h6>
+                                <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
+                                <h4 class="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
+                                {% if free_delivery_delta > 0 %}
+                                <p class="mb-1 text-danger">
+                                    You almost qualify for free delivery! Just spend
+                                    <strong>£{{ almost_free_delivery }}</strong> more!
+                                </p>
+                                {% endif %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="5" class="text-right">
+                                <a href="{% url 'products' %}" class="btn rounded-corners mt-3 back-btn">
+                                    <span>
+                                        <i class="far fa-arrow-alt-circle-left purple-text"></i>
+                                    </span>
+                                    <span>Keep Browsing</span>
+                                </a>
+                                <a href="" class="btn rounded-corners mt-3 add-btn">
+                                    <span>
+                                        <i class="fas fa-lock gold-text"></i>
+                                    </span>
+                                    <span class="text-white checkout-btn">Secure Checkout</span>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
 
                 {% else %}
 
-                    <!--Empty Basket Notice & Button-->
-                    <div class="text-center">
-                        <h3 class="mt-5 mb-3">Your shopping basket is currently empty.</h3>
-                        <a href="{% url 'products' %}" class="btn btn-lg basket-btn hvr-grow">
-                            <span><i class="far fa-arrow-alt-circle-left purple-text mr-1"></i></span>
-                            <span>Keep browsing flowers</span>
-                        </a>
-                    </div>
+                <!--Empty Basket Notice & Button-->
+                <div class="text-center">
+                    <h3 class="mt-5 mb-3">Your shopping basket is currently empty.</h3>
+                    <a href="{% url 'products' %}" class="btn btn-lg basket-btn hvr-grow">
+                        <span><i class="far fa-arrow-alt-circle-left purple-text mr-1"></i></span>
+                        <span>Keep browsing flowers</span>
+                    </a>
+                </div>
 
-                    <div class="basket-gap"></div>
-                    
+                <div class="basket-gap"></div>
+
                 {% endif %}
             </div>
         </div>
 
-{% endblock %}
+        {% endblock %}
