@@ -22,11 +22,11 @@
                     <table class="table table-sm table-borderless">
                         <thead class="black-text">
                             <tr>
-                                <th scope="col ml-3">Order Information:</th>
+                                <th scope="col">Order Information:</th>
                                 <th scope="col"></th>
-                                <th scope="col">Price:</th>
-                                <th scope="col">Quantity:</th>
-                                <th scope="col">Subtotal:</th>
+                                <th scope="col" class="text-center">Price:</th>
+                                <th scope="col" class="text-center">Quantity:</th>
+                                <th scope="col" class="text-center">Subtotal:</th>
                             </tr>
                         </thead>
 
@@ -42,13 +42,42 @@
 
                             </td>
                             <td class="py-3">
-                                <p class="my-0">${{ item.product.price }}</p>
+                                <p class="my-0 text-center">${{ item.product.price }}</p>
                             </td>
                             <td class="py-3 w-25">
-                                <p class="my-0">{{ item.quantity }}</p>
+                                <form class="form update-form text-center" method="POST" action="">
+
+                                    {% csrf_token %}
+
+                                    <div class="form-group">
+                                        <div class="input-group">
+
+                                            <div class="input-group-prepend">
+                                                <button class="dec-quantity btn btn-sm back-btn"
+                                                    data-item_id="{{ item.item_id }}"
+                                                    id="dec-quantity_{{ item.item_id }}">
+                                                    <i class="fas fa-minus purple-text hvr-pulse-grow fa-sm"></i>
+                                                </button>
+                                            </div>
+
+                                            <input class="form-control form-control-sm qty_input rounded-corners"
+                                                type="number" name="quantity" value="{{ item.quantity }}" min="1"
+                                                max="99" data-item_id="{{ item.item_id }}"
+                                                id="id_qty_{{ item.item_id }}" />
+
+                                            <div class="input-group-append">
+                                                <button class="inc-quantity btn btn-sm add-btn"
+                                                    data-item_id="{{ item.item_id }}"
+                                                    id="inc-quantity_{{ item.item_id }}">
+                                                    <i class="fas fa-plus text-white hvr-pulse-grow fa-sm"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
                             </td>
                             <td class="py-3">
-                                <p class="my-0">${{ item.product.price }}</p>
+                                <p class="my-0 text-center">${{ item.product.price }}</p>
                             </td>
                         </tr>
                         {% endfor %}

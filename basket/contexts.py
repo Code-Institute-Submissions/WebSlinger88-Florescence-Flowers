@@ -35,7 +35,7 @@ def basket_contents(request):
         'product_count': product_count,
         'total': total,
         'delivery': delivery,
-        'free_delivery_delta': almost_free_delivery,
+        'almost_free_delivery': almost_free_delivery,
         'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
         'grand_total': grand_total,
     }
