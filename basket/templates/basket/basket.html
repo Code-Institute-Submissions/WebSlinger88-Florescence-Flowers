@@ -75,7 +75,14 @@
                                         </div>
                                     </div>
                                 </form>
+                                <div class="text-center">
+                                    <a class="remove-flowers" id="remove_{{ item.item_id }}"
+                                        data-size="{{ item.size }}"><small class="mr-1">Remove</small></a>
+                                    <span><i class="fas fa-grip-lines-vertical purple-text"></i></span>
+                                    <a class="update-basket"><small class="ml-1">Update</small></a>
+                                </div>
                             </td>
+
                             <td class="py-3">
                                 <p class="my-0 text-center">${{ item.product.price }}</p>
                             </td>
