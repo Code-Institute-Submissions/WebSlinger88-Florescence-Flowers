@@ -51,7 +51,7 @@
             <div class="col-12 col-md-4 order-md-first">
                 <p class="mt-3 text-center text-md-left">
                     {% if search_term or current_categories or current_occasions or current_colours or current_sorting != 'None_None' %}
-                    <span class="small"><a href="{% url 'products' %}" class="text-decoration-none hvr-backward bag">All Flowers</a> | </span>
+                    <span class="small"><a href="{% url 'products' %}" class="text-decoration-none hvr-backward gold-text">All Flowers</a> | </span>
                     {% endif %}
                     {{ products|length }} Flowers{% if search_term %} found for
                     <strong>"{{ search_term }}"</strong>{% endif %}
@@ -73,9 +73,9 @@
                             <div class="col">
                                 <p class="mb-0 text-center font-weight-bold">£{{ product.price }}</p>
                                 <p class="mb-0 text-center">
-                                    <i class="fas fa-star icon mr-1"></i>
+                                    <i class="fas fa-star purple-text mr-1"></i>
                                     {{ product.rating }} / 5.00
-                                    <i class="fas fa-star icon ml-1"></i>
+                                    <i class="fas fa-star purple-text ml-1"></i>
                                 </p>
                             </div>
                         </div>

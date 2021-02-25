@@ -26,15 +26,15 @@ main {
     color: #878DAD;
 }
 
-.icon {
+.purple-text {
     color: #878DAD!important;
 }
 
-.bag {
+.gold-text {
     color: #C5C508!important;
 }
 
-.text-black {
+.black-text {
     color: #000!important;
 }
 
@@ -55,14 +55,6 @@ main {
   width: 35rem;
 }
 
-.nav-item a i {
-  color: #C5C508;
-}
-
-.nav-link {
-  color: #000;
-}
-
 .navbar-toggler, .navbar-toggler-icon {
     background-color: #878DAD;
     color: #FFF;
@@ -70,9 +62,7 @@ main {
 
 /* Hover.css animations */
 .hvr-hang:hover, .hvr-hang:focus, .hvr-hang:active {
-    text-shadow: 0.125rem 0.125rem 0.125rem rgba(15, 9, 1, 0.5);
-    background-color: rgba(0, 0, 0, 0.0);
-    color: #0F0901;
+    text-shadow: 0.5px 0.5px #878DAD;
 }
 
 .pink-btn {
@@ -121,27 +111,20 @@ transform: translate(-50%, -50%);
 max-width: 40rem;
 }
 
-/*---------------------------*/
-/*** SHOPPING BAG STYLES ***/
-/*--------------------------*/
+/*-----------------------------*/
+/*** SHOPPING BASKET STYLES ***/
+/*----------------------------*/
 
-.bag-btn {
+.basket-btn {
     border: 2px solid #C5C508;
     background-color: #FFF;
     color: #878DAD;
 }
 
-.hvr-grow:hover {
-    color: #878DAD;
-    text-shadow: 1px 1px #878DAD;
-}
-
-/* Adds gap between empty bag content and footer */
-.bag-gap {
+/* Adds gap between empty basket content and footer */
+.basket-gap {
     height: 20rem;
 }
-
-
 
 /*---------------------*/
 /*** FOOTER STYLES ***/

@@ -45,7 +45,7 @@
                         <a class="nav-link mr-3 hvr-hang" href="#" id="account-dropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <p class="my-0">
-                                <i class="fas fa-user fa-lg icon mr-1"></i>
+                                <i class="fas fa-user fa-lg purple-text mr-1"></i>
                                 Account
                             </p>
                         </a>
@@ -63,11 +63,11 @@
                         </div>
                     </li>
                     <li class="nav-item list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link hvr-hang mr-3"
+                        <a class="{% if grand_total %}font-weight-bold{% else %}black-text{% endif %} nav-link hvr-hang mr-3"
                             href="{% url 'view_basket' %}">
                             <div class="text-center">
                                 <p class="my-0">
-                                    <i class="fas fa-shopping-bag fa-lg mr-1"></i>
+                                    <i class="fas fa-shopping-basket fa-lg gold-text mr-1"></i>
                                     {% if grand_total %}
                                     ${{ grand_total|floatformat:2 }}
                                     {% else %}
@@ -87,11 +87,11 @@
             <div class="col-12">
                 <ul class="list-inline mt-2 text-center">
                     <li class="nav-item list-inline-item">
-                        <a class="nav-link mr-3 hvr-hang" href="{% url 'home' %}">Home</a>
+                        <a class="nav-link black-text mr-3 hvr-hang" href="{% url 'home' %}">Home</a>
                     </li>
 
                     <li class="nav-item list-inline-item dropdown">
-                        <a class="nav-link mr-3 hvr-hang" href="#" id="varieties-drop" role="button"
+                        <a class="nav-link black-text mr-3 hvr-hang" href="#" id="varieties-drop" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Varieties
                         </a>
@@ -106,7 +106,7 @@
                     </li>
 
                     <li class="nav-item list-inline-item dropdown">
-                        <a class="nav-link mr-3 hvr-hang" href="#" id="occasions-drop" role="button"
+                        <a class="nav-link black-text mr-3 hvr-hang" href="#" id="occasions-drop" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Occasions
                         </a>
@@ -121,7 +121,7 @@
                     </li>
 
                     <li class="nav-item list-inline-item dropdown">
-                        <a class="nav-link mr-3 hvr-hang" href="#" id="colours-drop" role="button"
+                        <a class="nav-link black-text mr-3 hvr-hang" href="#" id="colours-drop" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Colours
                         </a>
@@ -137,7 +137,7 @@
                     </li>
 
                     <li class="nav-item list-inline-item dropdown">
-                        <a class="nav-link mr-3 hvr-hang" href="#" id="sort-drop" role="button"
+                        <a class="nav-link black-text mr-3 hvr-hang" href="#" id="sort-drop" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Sort
                         </a>
@@ -152,7 +152,7 @@
                     </li>
 
                     <li class="nav-item list-inline-item dropdown">
-                        <a class="nav-link hvr-hang" href="#" id="search-drop" role="button" data-toggle="dropdown"
+                        <a class="nav-link black-text hvr-hang" href="#" id="search-drop" role="button" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
                             Search
                         </a>
@@ -210,7 +210,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <h2 class="flore-font text-center mt-5 text-black">Developer Information</h2>
+                    <h2 class="flore-font text-center mt-5 black-text">Developer Information</h2>
                     <p class="text-center">Lewis Wheeler is a full stack web developer, with expertise in both front &
                         backend design. Lewis lives in the heart of Devon, England, and is keen to hear about any
                         business or personal software development project opportunity.
@@ -221,7 +221,7 @@
 
         <!--Social Links Header-->
         <div class="col-sm-12">
-            <h2 class="flore-font text-center text-black">Social Links</h2>
+            <h2 class="flore-font text-center black-text">Social Links</h2>
 
             <ul class="list-unstyled">
                 <li>
