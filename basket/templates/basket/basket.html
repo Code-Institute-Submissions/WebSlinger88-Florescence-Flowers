@@ -42,10 +42,11 @@
 
                             </td>
                             <td class="py-3">
-                                <p class="my-0 text-center">${{ item.product.price }}</p>
+                                <p class="my-0 text-center">£{{ item.product.price }}</p>
                             </td>
-                            <td class="py-3 w-25">
-                                <form class="form update-form text-center" method="POST" action="">
+                            <td class="py-3 w-25 text-center">
+                                <form class="form update-form text-center" method="POST"
+                                    action="{% url 'update_basket' item.item_id %}">
 
                                     {% csrf_token %}
 
@@ -75,16 +76,16 @@
                                         </div>
                                     </div>
                                 </form>
-                                <div class="text-center">
-                                    <a class="remove-flowers" id="remove_{{ item.item_id }}"
-                                        data-size="{{ item.size }}"><small class="mr-1">Remove</small></a>
-                                    <span><i class="fas fa-grip-lines-vertical purple-text"></i></span>
-                                    <a class="update-basket"><small class="ml-1">Update</small></a>
-                                </div>
+
+                                <!--Update and Remove Flower Basket Links-->
+                                <a class="update-flowers mr-1"><small>Update</small></a>
+                                <span><i class="fas fa-grip-lines-vertical purple-text"></i></span>
+                                <a class="remove-flowers ml-1" id="remove_{{ item.item_id }}"><small>Remove</small></a>
+
                             </td>
 
                             <td class="py-3">
-                                <p class="my-0 text-center">${{ item.product.price }}</p>
+                                <p class="my-0 text-center">£{{ item.product.price }}</p>
                             </td>
                         </tr>
                         {% endfor %}
@@ -136,5 +137,7 @@
                 {% endif %}
             </div>
         </div>
+    </div>
+</div>
 
-        {% endblock %}
+{% endblock %}
