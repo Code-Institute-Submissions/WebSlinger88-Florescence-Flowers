@@ -51,34 +51,41 @@ $(document).ready(function () {
 
     // Make sure proper enabling/disabling of inputs on page load
     var allQuantityInputs = $('.qty_input');
-    for(var i = 0; i < allQuantityInputs.length; i++){
+    for (var i = 0; i < allQuantityInputs.length; i++) {
         var itemId = $(allQuantityInputs[i]).data('item_id');
         manageEnableDisable(itemId);
     }
 
     // Check enable/disable every time input changed
-    $('.qty_input').change(function() {
+    $('.qty_input').change(function () {
         var itemId = $(this).data('item_id');
         manageEnableDisable(itemId);
     });
 
     // Increment quantity of flowers
-    $('.inc-quantity').click(function(e) {
-       e.preventDefault();
-       var closeInput = $(this).closest('.input-group').find('.qty_input')[0];
-       var currValue = parseInt($(closeInput).val());
-       $(closeInput).val(currValue + 1);
-       var itemId = $(this).data('item_id');
-       manageEnableDisable(itemId);
+    $('.inc-quantity').click(function (e) {
+        e.preventDefault();
+        var closeInput = $(this).closest('.input-group').find('.qty_input')[0];
+        var currValue = parseInt($(closeInput).val());
+        $(closeInput).val(currValue + 1);
+        var itemId = $(this).data('item_id');
+        manageEnableDisable(itemId);
     });
 
     // Decrement quantity of flowers
-    $('.dec-quantity').click(function(e) {
-       e.preventDefault();
-       var closeInput = $(this).closest('.input-group').find('.qty_input')[0];
-       var currValue = parseInt($(closeInput).val());
-       $(closeInput).val(currValue - 1);
-       var itemId = $(this).data('item_id');
-       manageEnableDisable(itemId);
+    $('.dec-quantity').click(function (e) {
+        e.preventDefault();
+        var closeInput = $(this).closest('.input-group').find('.qty_input')[0];
+        var currValue = parseInt($(closeInput).val());
+        $(closeInput).val(currValue - 1);
+        var itemId = $(this).data('item_id');
+        manageEnableDisable(itemId);
     });
+
+
+    // Update quantity of flowers in basket
+    $('.update-flowers').click(function(e) {
+        var form = $(this).prev('.update-form');
+        form.submit();
+    })
 })
