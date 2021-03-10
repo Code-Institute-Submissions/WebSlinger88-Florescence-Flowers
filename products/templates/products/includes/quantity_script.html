@@ -1,0 +1,47 @@
+<!--This script enables & disables quantity buttons-->
+<!--This script allows user to increase and decrease quantity of items-->
+<script type="text/javascript">
+
+    // Disable -/+ buttons outside 1-99 range
+    function manageEnableDisable(itemId) {
+        var currValue = parseInt($(`#id_qty_${itemId}`).val());
+        var removeDisabled = currValue < 2;
+        var addDisabled = currValue > 98;
+        $(`#dec-quantity_${itemId}`).prop('disabled', removeDisabled);
+        $(`#inc-quantity_${itemId}`).prop('disabled', addDisabled);
+    }
+
+    // Make sure proper enabling/disabling of inputs on page load
+    var allQuantityInputs = $('.qty_input');
+    for (var i = 0; i < allQuantityInputs.length; i++) {
+        var itemId = $(allQuantityInputs[i]).data('item_id');
+        manageEnableDisable(itemId);
+    }
+
+    // Check enable/disable every time input changed
+    $('.qty_input').change(function () {
+        var itemId = $(this).data('item_id');
+        manageEnableDisable(itemId);
+    });
+
+    // Increment quantity of flowers
+    $('.inc-quantity').click(function (e) {
+        e.preventDefault();
+        var closeInput = $(this).closest('.input-group').find('.qty_input')[0];
+        var currValue = parseInt($(closeInput).val());
+        $(closeInput).val(currValue + 1);
+        var itemId = $(this).data('item_id');
+        manageEnableDisable(itemId);
+    });
+
+    // Decrement quantity of flowers
+    $('.dec-quantity').click(function (e) {
+        e.preventDefault();
+        var closeInput = $(this).closest('.input-group').find('.qty_input')[0];
+        var currValue = parseInt($(closeInput).val());
+        $(closeInput).val(currValue - 1);
+        var itemId = $(this).data('item_id');
+        manageEnableDisable(itemId);
+    });
+
+</script>
