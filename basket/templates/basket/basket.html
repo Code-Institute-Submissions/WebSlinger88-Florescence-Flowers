@@ -166,7 +166,10 @@
         </div>
     </div>
 </div>
+{% endblock %}
 
+{% block postloadjs %}
+{{ block.super }}
 {% include 'products/includes/quantity_script.html' %}
 
 <!--JavaScript for updating and removing flowers from basket-->
