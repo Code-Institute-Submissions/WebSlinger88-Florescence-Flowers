@@ -1,22 +1,24 @@
-<!--Toast for information messages-->
-<div class="toast custom-toast rounded-0 border-top-0" data-autohide="false">
+<!--Toast for success messages-->
+<div class="toast toast-overflow rounded-0 border-top-0" data-autohide="false">
 
     <div class="arrow-up arrow-info"></div>
 
-    <div class="w-100 toast-capper bg-info"></div>
+    <div class="w-100 toast-cap bg-info"></div>
 
     <div class="toast-header bg-white">
-
-        <strong class="mr-auto">Alert!</strong>
-
+        <strong class="mr-auto">Just saying...</strong>
         <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
-
     </div>
 
     <div class="toast-body bg-white">
-        {{ message }}        
+        <div class="row">
+            <div class="col">
+                <p>{{ message }}</p>
+                <hr class="mt-1 mb-3">
+            </div>
+        </div>
     </div>
-    
+
 </div>
