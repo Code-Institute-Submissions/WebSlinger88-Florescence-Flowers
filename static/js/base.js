@@ -39,4 +39,7 @@ $(document).ready(function () {
             $('.to-top').fadeOut();
         }
     });
+
+    // Enables toast messages to appear
+    $('.toast').toast('show');
 })
