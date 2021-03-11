@@ -247,3 +247,16 @@ max-width: 40rem;
     background-color: #FAFAF0;
     border-radius: 5rem;
 }
+
+
+
+/*--------------------*/
+/*** MEDIA QUERIES ***/
+/*--------------------*/
+
+/* Pushes toast down for mobile devices */
+@media only screen and (max-width: 600px) {
+.message-container {
+    top: 12.5rem;
+  }
+}
