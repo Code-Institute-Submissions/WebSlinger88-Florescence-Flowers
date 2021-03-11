@@ -5,7 +5,8 @@
 {% block content %}
 
 <!--Shopping Basket Header-->
-<div class="container-fluid">
+<div class="container">
+
     <div class="row">
         <div class="col text-center mt-3">
             <h1 class="flore-font">Shopping Basket</h1>
@@ -13,26 +14,25 @@
         </div>
     </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col">
+    <div class="row">
+        <div class="col">
 
-                {% if basket_items %}
+            {% if basket_items %}
 
-                <div class="table-responsive rounded">
-                    <table class="table table-sm table-borderless">
+            <div class="table-responsive rounded">
+                <table class="table table-sm table-borderless">
                         
-                        <thead class="black-text">
-                            <tr>
-                                <th scope="col">Order Information:</th>
-                                <th scope="col"></th>
-                                <th scope="col" class="text-center">Price:</th>
-                                <th scope="col" class="text-center">Quantity:</th>
-                                <th scope="col" class="text-center">Subtotal:</th>
-                            </tr>
-                        </thead>
+                    <thead class="black-text">
+                        <tr>
+                            <th scope="col">Order Information:</th>
+                            <th scope="col"></th>
+                            <th scope="col" class="text-center">Price:</th>
+                            <th scope="col" class="text-center">Quantity:</th>
+                            <th scope="col" class="text-center">Subtotal:</th>
+                        </tr>
+                    </thead>
 
-                        {% for item in basket_items %}
+                    {% for item in basket_items %}
 
                         <tr>
 
@@ -84,7 +84,7 @@
                                         </div>
                                     </div>
                                 </form>
-                                
+                                    
                                 <!--Update and Remove Flower Basket Links-->
                                 <a class="update-flowers mr-1"><small>Update</small></a>
 
@@ -100,7 +100,7 @@
 
                         </tr>
 
-                        {% endfor %}
+                    {% endfor %}
 
                         <tr>
                             <td colspan="5" class="pt-5 text-right">
@@ -141,28 +141,27 @@
 
                             </td>
                         </tr>
-                    </table>
-                </div>
+                </table>
+            </div>
 
-                {% else %}
+            {% else %}
 
-                <!--Empty Basket Notice & Button-->
-                <div class="text-center">
+            <!--Empty Basket Notice & Button-->
+            <div class="text-center">
 
-                    <h3 class="mt-5 mb-3">Your shopping basket is currently empty.</h3>
+                <h3 class="mt-5 mb-3">Your shopping basket is currently empty.</h3>
 
-                    <a href="{% url 'products' %}" class="btn btn-lg basket-btn hvr-grow">
-                        <span><i class="far fa-arrow-alt-circle-left purple-text mr-1"></i></span>
-                        <span>Keep browsing flowers</span>
-                    </a>
-
-                </div>
-
-                <div class="basket-gap"></div>
-
-                {% endif %}
+                <a href="{% url 'products' %}" class="btn btn-lg basket-btn hvr-grow">
+                    <span><i class="far fa-arrow-alt-circle-left purple-text mr-1"></i></span>
+                    <span>Keep browsing flowers</span>
+                </a>
 
             </div>
+
+            <div class="basket-gap"></div>
+
+            {% endif %}
+
         </div>
     </div>
 </div>
