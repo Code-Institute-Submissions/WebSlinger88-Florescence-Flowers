@@ -38,6 +38,10 @@ main {
     color: #000!important;
 }
 
+.gold-bg {
+    background-color: #C5C508;
+}
+
 .rounded-corners {
     border-radius: 5rem;
 }
@@ -51,12 +55,45 @@ main {
     z-index: 99999999999;
 }
 
-.custom-toast {
+.toast-overflow {
     overflow: visible;
 }
 
-.toast-capper {
+.toast-cap {
     height: 0.125rem;
+}
+
+.basket-toast-wrapper {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 6.25rem;
+}
+
+.arrow-up {
+    position: absolute;
+    top: -0.625rem;
+    right: 2.25rem;
+    width: 0; 
+    height: 0; 
+    border-left: 0.25rem solid transparent;
+    border-right: 0.25rem solid transparent; 
+    border-bottom: 0.625rem solid #000;
+}
+
+.arrow-success {
+    border-bottom-color: #28a745 !important;
+}
+
+.arrow-danger {
+    border-bottom-color: #dc3545 !important;
+}
+
+.arrow-warning {
+    border-bottom-color: #ffc107 !important;
+}
+
+.arrow-info {
+    border-bottom-color: #17a2b8 !important;
 }
 
 /*-----------------------------*/
