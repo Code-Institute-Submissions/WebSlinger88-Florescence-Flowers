@@ -1,3 +1,35 @@
 from django.contrib import admin
+from .models import Order, OrderLineItem
 
-# Register your models here.
+
+class OrderLineItemAdminInline(admin.TabularInline):
+    """Allows to add and edit line items in the admin interface"""
+    model = OrderLineItem
+    readonly_fields = ('lineitem_total',)
+
+
+class OrderAdmin(admin.ModelAdmin):
+    inlines = (OrderLineItemAdminInline,)
+
+    """Restricting the ability to edit fields"""
+    readonly_fields = ('order_number', 'date',
+                       'delivery_cost', 'order_total',
+                       'grand_total',)
+
+    """Specify order of fields within admin interface"""
+    fields = ('order_number', 'date', 'full_name',
+              'email', 'phone_number', 'country',
+              'postcode', 'town_or_city', 'street_address1',
+              'street_address2', 'county', 'delivery_cost',
+              'order_total', 'grand_total',)
+
+    """Restrict columns that show up in order list"""
+    list_display = ('order_number', 'date', 'full_name',
+                    'order_total', 'delivery_cost',
+                    'grand_total',)
+
+    """Sets order by date to most recent order first"""
+    ordering = ('-date',)
+
+
+admin.site.register(Order, OrderAdmin)
