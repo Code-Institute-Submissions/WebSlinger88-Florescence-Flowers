@@ -2,4 +2,93 @@
 {% load static %}
 
 {% block content %}
-{% endblock %}
+
+<div class="container">
+
+    <!--Checkout Header-->
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h1 class="flore-font">Checkout</h1>
+            <hr class="w-50 mb-2">
+        </div>
+    </div>
+
+    <!--Order summary-->
+    <div class="row">
+        <div class="col-12 col-lg-6 order-lg-last mb-5">
+
+            <!--Flower Basket Count-->
+            <p>Order Summary ({{ product_count }})</p>
+
+            <div class="row">
+
+                <!--Sub Column Headings-->
+                <div class="col-7 offset-2">
+                    <p class="mb-1 mt-0 small">Flowers</p>
+                </div>
+
+                <div class="col-3 text-right">
+                    <p class="mb-1 mt-0 small">Subtotal</p>
+                </div>
+
+            </div>
+
+            {% for item in basket_items %}
+
+            <div class="row">
+
+                <!--Flower Image-->
+                <div class="col-2 mb-1">
+                    <a href="{% url 'product_detail' item.product.id %}">
+                        <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
+                    </a>
+                </div>
+
+                <!--Flower Details-->
+                <div class="col-7">
+                    <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                    <p class="my-0 small">Variety: {{ item.product.category }}</p>
+                    <p class="my-0 small">Colour: {{ item.product.colour }}</p>
+                    <p class="my-0 small">Qty: {{ item.quantity }}</p>
+                </div>
+
+                <!--Flower Price-->
+                <div class="col-3 text-right">
+                    <p class="my-0 small">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+            <hr class="my-0">
+
+            <div class="row text-right">
+
+                <!--Sub Column Headings-->
+                <div class="col-7 offset-2">
+                    <p class="my-0">Order Total:</p>
+                    <p class="my-0">Delivery:</p>
+                    <p class="my-0">Grand Total:</p>
+                </div>
+
+                <!--Order Price-->
+                <div class="col-3">
+                    <p class="my-0">£{{ total | floatformat:2 }}</p>
+                    <p class="my-0">£{{ delivery | floatformat:2 }}</p>
+                    <p class="my-0"><strong>£{{ grand_total | floatformat:2 }}</strong></p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--User Guidance-->
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <p>Please complete this simple form to complete your order</p>
+            </div>
+        </div>
+
+    </div>
+
+    {% endblock %}
