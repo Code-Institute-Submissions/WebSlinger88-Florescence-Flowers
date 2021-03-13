@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load basket_tools %}
 
 {% block content %}
 
@@ -9,7 +10,7 @@
     <div class="row">
         <div class="col text-center mt-3">
             <h1 class="flore-font">Checkout</h1>
-            <hr class="w-50 mb-2">
+            <hr class="w-50 mb-4">
         </div>
     </div>
 
@@ -18,17 +19,17 @@
         <div class="col-12 col-lg-6 order-lg-last mb-5">
 
             <!--Flower Basket Count-->
-            <p>Order Summary ({{ product_count }})</p>
+            <p class="font-weight-bold">Order Summary ({{ product_count }})</p>
 
             <div class="row">
 
                 <!--Sub Column Headings-->
                 <div class="col-7 offset-2">
-                    <p class="mb-1 mt-0 small">Flowers</p>
+                    <p class="mb-1 mt-0 small font-weight-bold"><u>Flowers:</u></p>
                 </div>
 
                 <div class="col-3 text-right">
-                    <p class="mb-1 mt-0 small">Subtotal</p>
+                    <p class="mb-1 mt-0 small font-weight-bold"><u>Subtotal:</u></p>
                 </div>
 
             </div>
@@ -38,57 +39,141 @@
             <div class="row">
 
                 <!--Flower Image-->
-                <div class="col-2 mb-1">
+                <div class="col-2 mt-3 mb-2">
                     <a href="{% url 'product_detail' item.product.id %}">
                         <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
                     </a>
                 </div>
 
                 <!--Flower Details-->
-                <div class="col-7">
-                    <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                <div class="col-7 mt-2 mb-2">
+                    <p class="my-0 font-weight-bold">{{ item.product.name }}</p>
                     <p class="my-0 small">Variety: {{ item.product.category }}</p>
                     <p class="my-0 small">Colour: {{ item.product.colour }}</p>
                     <p class="my-0 small">Qty: {{ item.quantity }}</p>
                 </div>
 
-                <!--Flower Price-->
-                <div class="col-3 text-right">
-                    <p class="my-0 small">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                <!--Flower Subtotal-->
+                <div class="col-3 text-right mt-2">
+                    <p class="my-0 small font-weight-bold">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
                 </div>
 
             </div>
 
-            {% endfor %}
+            <hr class="mt-3" />
 
-            <hr class="my-0">
+            {% endfor %}
 
             <div class="row text-right">
 
                 <!--Sub Column Headings-->
-                <div class="col-7 offset-2">
-                    <p class="my-0">Order Total:</p>
+                <div class="col-7 offset-2 mt-3">
+                    <p class="my-0 font-weight-bold">Order Total:</p>
                     <p class="my-0">Delivery:</p>
-                    <p class="my-0">Grand Total:</p>
+                    <p class="my-0 font-weight-bold">Grand Total:</p>
                 </div>
 
                 <!--Order Price-->
-                <div class="col-3">
-                    <p class="my-0">£{{ total | floatformat:2 }}</p>
+                <div class="col-3 mt-3">
+                    <p class="my-0 font-weight-bold">£{{ total | floatformat:2 }}</p>
                     <p class="my-0">£{{ delivery | floatformat:2 }}</p>
-                    <p class="my-0"><strong>£{{ grand_total | floatformat:2 }}</strong></p>
+                    <p class="my-0 font-weight-bold">£{{ grand_total | floatformat:2 }}</p>
                 </div>
 
             </div>
         </div>
 
-        <!--User Guidance-->
-        <div class="row">
-            <div class="col-12 col-lg-6">
-                <p>Please complete this simple form to complete your order</p>
-            </div>
+        <!--Payment Form-->
+        <div class="col-12 col-lg-6">
+
+            <!--User Guidance-->
+            <p class="pl-3 pr-3 text-center font-weight-bold">
+                Please fill out the fields below so that we can get your gorgeous flowers to you safely!
+            </p>
+
+            <form action="{% url 'checkout' %}" method="POST" id="payment-form">
+
+                {% csrf_token %}
+
+                <!--User Name & Email-->
+                <fieldset class="rounded px-3 mb-5">
+                    <legend class="fieldset-label small px-2 w-auto">Details</legend>
+                    {{ order_form.full_name | as_crispy_field }}
+                    {{ order_form.email | as_crispy_field }}
+                </fieldset>
+
+                <!--User Address & Contact-->
+                <fieldset class="rounded px-3 mb-5">
+                    <legend class="fieldset-label small px-2 w-auto">Delivery</legend>
+                    {{ order_form.phone_number | as_crispy_field }}
+                    {{ order_form.country | as_crispy_field }}
+                    {{ order_form.postcode | as_crispy_field }}
+                    {{ order_form.town_or_city | as_crispy_field }}
+                    {{ order_form.street_address1 | as_crispy_field }}
+                    {{ order_form.street_address2 | as_crispy_field }}
+                    {{ order_form.county | as_crispy_field }}
+
+                    <div class="form-check form-check-inline float-right mr-0">
+
+                        <!--User Save Checkbox-->
+                        {% if user.is_authenticated %}
+
+                            <label class="form-check-label" for="id-save-info">
+                                Save this delivery information to myprofile
+                            </label>
+
+                            <input class="form-check-input ml-2 mr-0" type="checkbox"
+                                id="id-save-info" name="save-info" checked />
+
+                        <!--Visitor Create & Login Links-->
+                        {% else %}
+                            <label class="form-check-label" for="id-save-info">
+                                <a href="{% url 'account_signup' %}">Create an account</a> or
+                                <a href="{% url 'account_login' %}">login</a> to save this information
+                            </label>
+                        {% endif %}
+
+                    </div>
+
+                </fieldset>
+
+                <!--Payment-->
+                <fieldset class="px-3">
+
+                    <legend class="fieldset-label small px-2 w-auto">Payment</legend>
+
+                    <!-- A Stripe card element will go here -->
+                    <div class="mb-3" id="card-element"></div>
+
+                    <!-- Used to display form errors -->
+                    <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+
+                </fieldset>
+
+                <div class="submit-button text-center text-lg-right mt-3 mb-2">
+
+                    <!--Update Basket Button-->
+                    <a href="{% url 'view_basket' %}" class="btn rounded-corners back-btn mt-2 mt-md-0">
+                        <span><i class="far fa-arrow-alt-circle-left purple-text"></i></span>
+                        <span>Update basket</span>
+                    </a>
+
+                    <!--Complete Order Button-->
+                    <button id="submit-button" class="btn rounded-corners add-btn mt-2 mt-md-0">
+                        <span class="mr-1"><i class="fas fa-lock gold-text"></i></span>
+                        <span class="text-white checkout-btn">Complete Order</span>
+                    </button>
+
+                    <!--User Payment Charge Notification-->
+                    <p class="my-0 mt-3">
+                        <span><i class="fas fa-exclamation-circle text-danger"></i></span>
+                        <span>Your card will be charged <strong>£{{ grand_total|floatformat:2 }}</strong></span>
+                    </p>
+
+                </div>
+            </form>
         </div>
-
     </div>
+</div>
 
-    {% endblock %}
+{% endblock %}
