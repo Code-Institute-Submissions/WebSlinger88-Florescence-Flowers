@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+    <!--Thank you message-->
+    <div class="row">
+        <div class="col text-center mt-3">
+
+            <h1 class="flore-font">Thank you very much</h1>
+
+            <hr class="w-50 mb-4">
+
+            <p>
+                Your order details are below and a confirmation e-mail has been sent to <strong>{{ order.email }}</strong>.
+                Thank you for your custom, we hope you absolutely love your flowers!
+            </p>
+
+        </div>
+    </div>
+
+    <!--Order summary-->
+    <div class="row">
+        <div class="col-12 col-lg-7"></div>
+    </div>
+</div>
+
+{% endblock %}
