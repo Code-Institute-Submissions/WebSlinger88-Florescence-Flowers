@@ -101,10 +101,10 @@ def checkout_complete(request, order_number):
         email will be sent to {order.email}. Thank you for \
         choosing our flowers! We are sure you will love them!')
 
-    if 'bag' in request.session:
-        del request.session['bag']
+    if 'basket' in request.session:
+        del request.session['basket']
 
-    template = 'checkout/checkout_success.html'
+    template = 'checkout/checkout_complete.html'
     context = {
         'order': order,
     }
