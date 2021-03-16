@@ -1,12 +1,12 @@
 .StripeElement,
 .stripe-style-input {
   box-sizing: border-box;
-  height: 40px;
-  padding: 10px 12px;
+  height: 2.5rem;
+  padding: 0.625rem 0.75rem;
   border: 1px solid transparent;
-  border-radius: 0px;
-  background-color: white;
-  box-shadow: 0 1px 3px 0 #e6ebf1;
+  border-radius: 5rem;
+  background-color: #FFF;
+  box-shadow: 0 1px 3px 0 #878DAD;
   -webkit-transition: box-shadow 150ms ease;
   transition: box-shadow 150ms ease;
 }
@@ -14,15 +14,15 @@
 .StripeElement--focus,
 .stripe-style-input:focus,
 .stripe-style-input:active {
-  box-shadow: 0 1px 3px 0 #cfd7df;
+  box-shadow: 0 1px 3px 0 #878DAD;
 }
 
 .StripeElement--webkit-autofill {
-  background-color: #fefde5 !important;
+  background-color: #98FB98 !important;
 }
 
 .stripe-style-input::placeholder {
-    color: #aab7c4;
+    color: #878DAD;
 }
 
 .fieldset-label {
@@ -34,4 +34,12 @@
 #card-element {
     color: #000;
     border: 0.111rem solid #878DAD;
+}
+
+li {
+    list-style-type: none;
+}
+
+.break {
+    word-wrap: break-word;
 }
