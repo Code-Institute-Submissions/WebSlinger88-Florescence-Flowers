@@ -29,28 +29,28 @@
 
                 <!--Sub Column Headings-->
                 <div class="col-7 offset-2">
-                    <p class="mb-1 mt-0 small font-weight-bold"><u>Flowers:</u></p>
+                    <p class="mb-1 ml-1 mt-0 small font-weight-bold">Flowers:</p>
                 </div>
 
                 <div class="col-3 text-right">
-                    <p class="mb-1 mt-0 small font-weight-bold"><u>Subtotal:</u></p>
+                    <p class="mb-1 mr-1 mt-0 small font-weight-bold">Subtotal:</p>
                 </div>
 
             </div>
 
             {% for item in basket_items %}
 
-            <div class="row">
+            <div class="row border bg-white p-2">
 
                 <!--Flower Image-->
-                <div class="col-2 mt-3 mb-2">
+                <div class="col-3 mt-3 mb-2">
                     <a href="{% url 'product_detail' item.product.id %}">
                         <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
                     </a>
                 </div>
 
                 <!--Flower Details-->
-                <div class="col-7 mt-2 mb-2">
+                <div class="col-6 mt-2 mb-2">
                     <p class="my-0 font-weight-bold">{{ item.product.name }}</p>
                     <p class="my-0 small">Variety: {{ item.product.category }}</p>
                     <p class="my-0 small">Colour: {{ item.product.colour }}</p>
@@ -68,7 +68,7 @@
 
             {% endfor %}
 
-            <div class="row text-right">
+            <div class="row text-right border bg-white pb-3">
 
                 <!--Sub Column Headings-->
                 <div class="col-7 offset-2 mt-3">
@@ -101,7 +101,7 @@
 
                 <!--User Name & Email-->
                 <fieldset class="rounded px-3 mb-5">
-                    <legend class="fieldset-label small px-2 w-auto font-weight-bold"><u>Your Details:</u></legend>
+                    <legend class="fieldset-label small px-2 w-auto font-weight-bold">Your Details:</legend>
                     {{ order_form.full_name | as_crispy_field }}
                     {{ order_form.email | as_crispy_field }}
                     {{ order_form.phone_number | as_crispy_field }}
@@ -109,7 +109,7 @@
 
                 <!--User Address & Contact-->
                 <fieldset class="rounded px-3 mb-5">
-                    <legend class="fieldset-label small px-2 w-auto font-weight-bold"><u>Delivery Details:</u></legend>
+                    <legend class="fieldset-label small px-2 w-auto font-weight-bold">Delivery Details:</legend>
                     {{ order_form.street_address1 | as_crispy_field }}
                     {{ order_form.street_address2 | as_crispy_field }}
                     {{ order_form.town_or_city | as_crispy_field }}
@@ -154,7 +154,7 @@
 
                 </fieldset>
 
-                <div class="submit-button text-center text-lg-right mt-3 mb-2">
+                <div class="submit-button text-center text-lg-right mt-3 mb-2 px-3">
 
                     <!--Update Basket Button-->
                     <a href="{% url 'view_basket' %}" class="btn rounded-corners back-btn mt-2 mt-md-0">
