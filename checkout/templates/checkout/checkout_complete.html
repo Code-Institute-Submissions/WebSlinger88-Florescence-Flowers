@@ -2,32 +2,120 @@
 {% load static %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+<link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
 
 {% block content %}
 
-<div class="container">
+<div class="container p-5">
 
-    <!--Thank you message-->
     <div class="row">
-        <div class="col text-center mt-3">
-
-            <h1 class="flore-font">Thank you very much</h1>
-
-            <hr class="w-50 mb-4">
-
-            <p>
-                Your order details are below and a confirmation e-mail has been sent to <strong>{{ order.email }}</strong>.
-                Thank you for your custom, we hope you absolutely love your flowers!
-            </p>
-
+        <div class="col">
+            <h1 class="flore-font text-center mb-5">Thank you for your order!</h1>
         </div>
     </div>
 
-    <!--Order summary-->
+    <div class="row border bg-white">
+
+        <div class="col-12 col-md-6">
+            <div class="pt-3 pl-md-3">
+                <p class=" text-md-left">
+                    <strong>Order Number:</strong>
+                    <span class="ml-2 break">{{ order.order_number }}</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+            <div class="pt-3 pr-3">
+                <p class="text-md-right">
+                    <strong>Order Date:</strong>
+                    <span class="ml-2">{{ order.date }}</span>
+                </p>
+            </div>
+        </div>
+
+    </div>
+
     <div class="row">
-        <div class="col-12 col-lg-7"></div>
+
+        <div class="col-12 col-md-6 border bg-white mt-4">
+            <div class=" pt-3 pl-3">
+
+                <p><i class="fas fa-home purple-text mr-2"></i><strong>Your Details</strong></p>
+                <small class="font-weight-bold">Name:</small>
+                <li>{{ order.full_name }}</li>
+                <small class="font-weight-bold">Number:</small>
+                <li>{{ order.phone_number }}</li>
+                <small class="font-weight-bold">Address:</small>
+                <li>{{ order.street_address1 }}</li>
+                {% if order.street_address2 %}
+                <li>{{ order.street_address2 }}</li>
+                {% endif %}
+                <li>{{ order.town_or_city }}</li>
+                {% if order.county %}
+                <li>{{ order.county }}</li>
+                {% endif %}
+                {% if order.postcode %}
+                <li>{{ order.postcode }}</li>
+                {% endif %}
+                <li class="mb-4">{{ order.country }}</li>
+
+            </div>
+        </div>
+
+        <div class="col-12 col-md-5 offset-md-1 border bg-white mt-4">
+
+            <p class="pt-3 pl-2">
+                <i class="fas fa-shopping-basket purple-text mr-2"></i>
+                <strong>Your Order:</strong>
+            </p>
+
+            <div class="row">
+                {% for item in order.lineitems.all %}
+                <div class="col-4 pl-4 mb-3">
+                    <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}" />
+                </div>
+
+                <div class="col-8 p-md-3 mb-2">
+                    <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                    <p class="my-0 small">Qty: {{ item.quantity }}</p>
+                    <p class="my-0 small">Price: £{{ item.product.price }}</p>
+                </div>
+
+                <hr class="mt-3" />
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-12 col-md-6 border bg-white mt-4">
+
+            <p class="pt-4 pl-3"><strong>Order Total:</strong><span class="ml-2">£{{ order.order_total }}</span></p>
+            <p class="pl-3"><strong>Delivery:</strong><span class="ml-2">£{{ order.delivery_cost }}</span></p>
+            <p class="pl-3"><strong>Grand Total:</strong><span class="ml-2">£{{ order.grand_total }}</span></p>
+
+        </div>
+
+        <div class="col-12 col-md-5 offset-md-1 border bg-white mt-4">
+            <p class="text-justify pt-3">We post all of our flowers via Royal Mail Next Day Delivery so you can expect
+                your gorgeous bouquet to arrive tomorrow!
+                Thanks again for choosing Florescence Flowers! We can't wait to see you again!
+            </p>
+        </div>
+    </div>
+
+    <!--Shopping button-->
+    <div class="text-center mt-5">
+
+        <a href="{% url 'products' %}" class="btn btn-lg basket-btn rounded-corners hvr-grow">
+            <span><i class="far fa-arrow-alt-circle-left purple-text mr-1"></i></span>
+            <span>Back to Flowers</span>
+        </a>
+
     </div>
 </div>
 
