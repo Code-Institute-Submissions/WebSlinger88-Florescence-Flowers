@@ -128,6 +128,10 @@ main {
     width: 25%;
 }
 
+input[name='q']::placeholder {
+    color: #878DAD;
+}
+
 
 /*---------------------------*/
 /*** PRODUCT PAGE STYLES ***/
@@ -174,6 +178,7 @@ max-width: 40rem;
 
 .form-control {
     border: 1px solid #878DAD;
+    border-radius: 5rem;
 }
 
 /*-----------------------------*/
@@ -259,4 +264,32 @@ max-width: 40rem;
 .message-container {
     top: 12.5rem;
   }
+}
+
+/* input {
+    border: 1px solid #878DAD;
+    border-radius: 5rem;
+    width: 100%;
+    padding-left: 0.5rem;
+    color: #878DAD;
+    height: 2.5rem;
+} */
+
+.allauth-form-inner-content p {
+    margin-top: 1rem;
+    color: #878DAD;
+}
+
+.allauth-form-inner-content input {
+    border: 1px solid #878DAD;
+    border-radius: 5rem;
+    padding: 0.4rem;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #aab7c4;
 }
