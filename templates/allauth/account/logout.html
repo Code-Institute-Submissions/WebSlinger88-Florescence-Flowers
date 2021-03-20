@@ -2,20 +2,31 @@
 
 {% load i18n %}
 
-{% block head_title %}{% trans "Sign Out" %}{% endblock %}
+{% block head_title %}{% trans "Log Out" %}{% endblock %}
 
-{% block content %}
-<h1>{% trans "Sign Out" %}</h1>
+{% block inner_content %}
 
-<p>{% trans 'Are you sure you want to sign out?' %}</p>
+    <h1 class="flore-font mb-4 mt-md-4">{% trans "Log Out" %}</h1>
 
-<form method="post" action="{% url 'account_logout' %}">
-  {% csrf_token %}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
-  {% endif %}
-  <button type="submit">{% trans 'Sign Out' %}</button>
-</form>
+    <p>{% trans 'Are you sure you want to log out?' %}</p>
 
+    <form method="POST" action="{% url 'account_logout' %}">
+
+        {% csrf_token %}
+
+        {% if redirect_field_value %}
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+        {% endif %}
+
+        <a href="{% url 'home' %}" class="btn rounded-corners back-btn mr-1">
+            <span><i class="fas fa-home purple-text"></i></span>
+            <span>No</span>
+        </a>
+
+        <button class="primaryAction btn rounded-corners add-btn ml-1" type="submit">
+            <span class="mr-1"><i class="fas fa-sign-out-alt gold-text"></i></span>
+            <span class="text-white checkout-btn">{% trans "Yes" %}</span>
+        </button>
+    </form>
 
 {% endblock %}
