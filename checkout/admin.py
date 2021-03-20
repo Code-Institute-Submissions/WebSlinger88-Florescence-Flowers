@@ -14,14 +14,16 @@ class OrderAdmin(admin.ModelAdmin):
     """Restricting the ability to edit fields"""
     readonly_fields = ('order_number', 'date',
                        'delivery_cost', 'order_total',
-                       'grand_total',)
+                       'grand_total', 'original_basket',
+                       'stripe_pid')
 
     """Specify order of fields within admin interface"""
     fields = ('order_number', 'date', 'full_name',
               'email', 'phone_number', 'country',
               'postcode', 'town_or_city', 'street_address1',
               'street_address2', 'county', 'delivery_cost',
-              'order_total', 'grand_total',)
+              'order_total', 'grand_total', 'original_basket',
+              'stripe_pid')
 
     """Restrict columns that show up in order list"""
     list_display = ('order_number', 'date', 'full_name',
