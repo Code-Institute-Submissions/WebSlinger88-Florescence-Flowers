@@ -25,6 +25,16 @@
     color: #878DAD;
 }
 
+select,
+select option {
+    color: #000;
+}
+
+select:invalid,
+select option[value=""] {
+    color: #878DAD!important;
+}
+
 .fieldset-label {
     right: 0.5rem;
     position: relative;
