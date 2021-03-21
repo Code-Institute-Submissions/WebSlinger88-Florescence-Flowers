@@ -20,7 +20,7 @@
             </div>
         </div>
 
-        {% if grand_total %}
+        {% if grand_total and not on_profile_page %}
             <p class="bg-white py-1"><strong>Your basket ({{ product_count }})</strong></p>
             <div class="basket-toast-wrapper">
                 {% for item in basket_items %}
