@@ -110,11 +110,17 @@
 
     <!--Shopping button-->
     <div class="text-center mt-5">
-
+        {% if from_profile %}
+        <a href="{% url 'profile' %}" class="btn btn-lg basket-btn rounded-corners hvr-grow">
+            <span><i class="fas fa-user purple-text mr-1"></i></span>
+            <span>View Profile</span>
+        </a>
+        {% else %}
         <a href="{% url 'products' %}" class="btn btn-lg basket-btn rounded-corners hvr-grow">
             <span><i class="far fa-arrow-alt-circle-left purple-text mr-1"></i></span>
             <span>Back to Flowers</span>
         </a>
+        {% endif %}
 
     </div>
 </div>

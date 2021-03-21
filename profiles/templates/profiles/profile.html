@@ -28,11 +28,60 @@
         </div>
 
         <div class="col-12 col-md-6 offset-md-1 border bg-white mt-4">
-            <div class=" pt-3 pl-3">
-                <p><strong>Order #:</strong></p>
-                <p><strong>Date:</strong></p>
-                <p><strong>Flowers:</strong></p>
-                <p><strong>Cost:</strong></p>
+            <div class="p-3">
+
+                <p><i class="fas fa-shopping-basket purple-text mr-2"></i><strong>Order Details:</strong></p>
+
+                <div class="order-history table-responsive">
+                    <table class="table table-sm table-borderless">
+
+                        <thead>
+                            <tr>
+                                <th>Order #:</th>
+                                <th>Date:</th>
+                                <th>Flowers:</th>
+                                <th>Cost:</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            {% for order in orders %}
+
+                            <tr>
+
+                                <td>
+                                    <a href="{% url 'order_history' order.order_number %}"
+                                        title="{{ order.order_number }}">
+                                            {{ order.order_number|truncatechars:6 }}
+                                    </a>
+                                </td>
+
+                                <td>
+                                    {{ order.date }}
+                                </td>
+
+                                <td>
+                                    <ul class="list-unstyled">
+                                        {% for item in order.lineitems.all %}
+                                            <li class="small">
+                                                {{ item.product.name }} x{{ item.quantity }}
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                </td>
+
+                                <td>
+                                    £{{ order.grand_total }}
+                                </td>
+
+                            </tr>
+
+                            {% endfor %}
+                            
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
 
