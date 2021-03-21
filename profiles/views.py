@@ -39,7 +39,7 @@ def order_history(request, order_number):
         'A confirmation e-mail was sent on the order date.'
     ))
 
-    template = 'checkout/checkout_success.html'
+    template = 'checkout/checkout_complete.html'
     context = {
         'order': order,
         'from_profile': True,

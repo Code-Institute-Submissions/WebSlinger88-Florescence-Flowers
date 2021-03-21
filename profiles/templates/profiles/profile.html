@@ -3,11 +3,11 @@
 
 {% block content %}
 
-<div class="container p-5">
+<div class="container p-2">
 
     <div class="row">
         <div class="col">
-            <h1 class="flore-font text-center mb-5">{{ user }}'s Profile</h1>
+            <h1 class="flore-font text-center mb-2">{{ user }}'s Profile</h1>
         </div>
     </div>
 
@@ -28,7 +28,7 @@
         </div>
 
         <div class="col-12 col-md-6 offset-md-1 border bg-white mt-4">
-            <div class="p-3">
+            <div class="pt-3">
 
                 <p><i class="fas fa-shopping-basket purple-text mr-2"></i><strong>Order Details:</strong></p>
 
@@ -37,7 +37,7 @@
 
                         <thead>
                             <tr>
-                                <th>Order #:</th>
+                                <th>Order:</th>
                                 <th>Date:</th>
                                 <th>Flowers:</th>
                                 <th>Cost:</th>
@@ -49,15 +49,14 @@
                             {% for order in orders %}
 
                             <tr>
-
-                                <td>
+                                <td class="small">
                                     <a href="{% url 'order_history' order.order_number %}"
                                         title="{{ order.order_number }}">
                                             {{ order.order_number|truncatechars:6 }}
                                     </a>
                                 </td>
 
-                                <td>
+                                <td class="small">
                                     {{ order.date }}
                                 </td>
 
@@ -71,14 +70,14 @@
                                     </ul>
                                 </td>
 
-                                <td>
+                                <td class="small">
                                     £{{ order.grand_total }}
                                 </td>
 
                             </tr>
 
                             {% endfor %}
-                            
+
                         </tbody>
                     </table>
                 </div>
