@@ -74,7 +74,11 @@
             <div class="row">
                 {% for item in order.lineitems.all %}
                 <div class="col-4 pl-4 mb-3">
-                    <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}" />
+                    {% if item.product.image %}
+                        <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}" />
+                    {% else %}
+                        <img class="w-100" src="{{ MEDIA_URL }}no-image.png" alt="{{ product.name }}" />
+                    {% endif %}
                 </div>
 
                 <div class="col-8 p-md-3 mb-2">

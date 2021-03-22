@@ -9,7 +9,11 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-12 col-xl-4 offset-xl-2">
-            <img class="card-img-top img-fluid product-img" src="{{ product.image.url }}" alt="{{ product.name }}">
+            {% if product.image %}
+                <img class="card-img-top img-fluid product-img" src="{{ product.image.url }}" alt="{{ product.name }}" />
+            {% else %}
+                <img class="card-img-top img-fluid product-img" src="{{ MEDIA_URL }}no-image.png" alt="{{ product.name }}" />
+            {% endif %}
         </div>
 
         <div class="col-12 col-xl-4">

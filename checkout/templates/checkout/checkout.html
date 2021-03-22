@@ -44,9 +44,15 @@
 
                 <!--Flower Image-->
                 <div class="col-3 mt-3 mb-2">
-                    <a href="{% url 'product_detail' item.product.id %}">
-                        <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
-                    </a>
+                    {% if item.product.image %}
+                        <a href="{% url 'product_detail' item.product.id %}">
+                            <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
+                        </a>
+                    {% else %}
+                        <a href="{% url 'product_detail' item.product.id %}">
+                            <img class="w-100" src="{{ MEDIA_URL }}no-image.png" alt="{{ product.name }}">
+                        </a>
+                    {% endif %}
                 </div>
 
                 <!--Flower Details-->

@@ -91,8 +91,18 @@ def product_detail(request, product_id):
 
 def add_product(request):
     """ Add new flowers to the website """
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added new flowers!')
+            return redirect(reverse('add_product'))
+        else:
+            messages.error(
+                request, 'Failed to add flowers. Please check form.')
+    else:
+        form = ProductForm()
 
-    form = ProductForm()
     template = 'products/add_product.html'
     context = {
         'form': form,
