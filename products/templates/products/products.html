@@ -91,6 +91,16 @@
                                     {{ product.rating }} / 5.00
                                     <i class="fas fa-star purple-text ml-1"></i>
                                 </p>
+
+                                {% if request.user.is_superuser %}
+                                <div class="text-center">
+                                    <small>
+                                        <a href="{% url 'edit_product' product.id %}" class="mr-2">Update</a>
+                                        <span><i class="fas fa-grip-lines-vertical purple-text"></i></span>
+                                        <a href="{% url 'delete_product' product.id %}" class="ml-2">Remove</a>
+                                    </small>
+                                </div>
+                                {% endif %}
                             </div>
                         </div>
                     </div>
