@@ -1,1 +1,1 @@
-web: gunicorn florescence-flowers.wsgi:application
+web: gunicorn florescence.wsgi:application
