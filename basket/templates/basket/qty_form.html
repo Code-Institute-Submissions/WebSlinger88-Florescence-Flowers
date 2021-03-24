@@ -1,0 +1,39 @@
+<!--Form to allow user to change quantity of items in basket-->
+<form class="form update-form text-center" method="POST" action="{% url 'update_basket' item.item_id %}">
+
+    {% csrf_token %}
+
+    <div class="form-group">
+        <div class="input-group">
+
+            <!--Decrease quantity button-->
+            <div class="input-group-prepend">
+                <button class="dec-quantity btn btn-sm back-btn" data-item_id="{{ item.item_id }}"
+                    id="dec-quantity_{{ item.item_id }}">
+                    <i class="fas fa-minus purple-text hvr-pulse-grow fa-sm"></i>
+                </button>
+            </div>
+
+            <!--Quantity input form-->
+            <input class="form-control form-control-sm qty_input rounded-corners" type="number" name="quantity"
+                value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.item_id }}"
+                id="id_qty_{{ item.item_id }}" />
+
+            <!--Increase quantity button-->
+            <div class="input-group-append">
+                <button class="inc-quantity btn btn-sm add-btn" data-item_id="{{ item.item_id }}"
+                    id="inc-quantity_{{ item.item_id }}">
+                    <i class="fas fa-plus text-white hvr-pulse-grow fa-sm"></i>
+                </button>
+            </div>
+
+        </div>
+    </div>
+</form>
+
+<!--Update and Remove Flower Basket Links-->
+<a class="update-flowers mr-1"><small>Update</small></a>
+
+<span><i class="fas fa-grip-lines-vertical purple-text"></i></span>
+
+<a class="remove-flowers ml-1" id="remove_{{ item.item_id }}"><small>Remove</small></a>

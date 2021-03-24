@@ -1,0 +1,18 @@
+<!--Basket Total Cost Information-->
+<h6><strong>Basket Total: £{{ total|floatformat:2 }}</strong></h6>
+
+<h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
+
+<h4 class="mt-4">
+    <strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong>
+</h4>
+
+<!--Free Delivery Information-->
+{% if free_delivery_delta > 0 %}
+
+    <p class="mb-1 text-danger">
+        You almost qualify for free delivery! Just spend
+        <strong>£{{ almost_free_delivery }}</strong> more!
+    </p>
+
+{% endif %}
