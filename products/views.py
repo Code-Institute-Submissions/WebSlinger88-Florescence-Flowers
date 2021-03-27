@@ -196,3 +196,28 @@ def add_review(request, product_id):
                             'Please ensure the form is valid.'))
 
     return redirect(reverse('product_details', args=[product_id]))
+
+
+@login_required
+@require_POST
+def update_review(request, review_id, rating_id):
+    # Update User Reivew
+
+    try:
+        updated_review = request.POST['content']
+        updated_rating = request.POST['rating']
+        review = get_object_or_404(ProductReview, pk=review_id)
+        rating = get_object_or_404(ProductRating, pk=rating_id)
+        product = get_object_or_404(Product, pk=rating.product_id)
+        if review.author == request.user:
+            review.content = updated_review
+            review.save()
+            rating.rating = updated_rating
+            rating.save()
+            set_rating(product)
+            return JsonResponse({'updated_rating': updated_rating, })
+        else:
+            return HttpResponse(status=403)
+
+    except Exception as e:
+        return HttpResponse(content=e, status=403)
