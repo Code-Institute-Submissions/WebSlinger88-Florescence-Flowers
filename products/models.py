@@ -36,6 +36,14 @@ class Product(models.Model):
         max_digits=6, decimal_places=2, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
 
+    def get_rating(self):
+        total = sum(int(review['stars']) for review in self.reviews.values())
+
+        if self.reviews.count() > 0:
+            return total / self.reviews.count()
+        else:
+            return 0
+
     def __str__(self):
         return self.name
 
@@ -71,15 +79,24 @@ class Occasion(models.Model):
 
 
 class ProductReview(models.Model):
-    product = models.ForeignKey(
-        Product, related_name='reviews', on_delete=models.CASCADE)
-    user = models.ForeignKey(
-        User, related_name='reviews', on_delete=models.CASCADE)
 
-    content = models.TextField(blank=True, null=True)
-    stars = models.IntegerField()
+    product = models.ForeignKey(
+        'Product', null=True, blank=True, on_delete=models.SET_NULL)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    content = models.TextField(max_length=2000, blank=True, null=True)
 
     date_added = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.product
+
+
+class ProductRating(models.Model):
+    product = models.ForeignKey(
+        'Product', null=True, blank=True, on_delete=models.SET_NULL)
+    rating = models.PositiveSmallIntegerField()
+    review = models.OneToOneField(
+        'ProductReview', null=True, blank=True, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.product
