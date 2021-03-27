@@ -1,11 +1,14 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.db.models import Q
+from django.views.decorators.http import require_POST
+from django.http import JsonResponse, HttpResponse
+from .forms import ProductForm, ReviewForm
+from django.db.models import Q, Avg
 from django.db.models.functions import Lower
 
-from .models import Product, Category, Colour, Occasion
-from .forms import ProductForm
+from .models import (
+    Product, Category, Colour, Occasion, ProductReview, ProductRating)
 
 
 def all_products(request):
@@ -82,9 +85,15 @@ def product_detail(request, product_id):
     """ A view to show individual flowers' details """
 
     product = get_object_or_404(Product, pk=product_id)
+    reviews = ProductReview.objects.filter(product=product)
+    ratings = ProductRating.objects.filter(product=product)
+    form = ReviewForm()
 
     context = {
         'product': product,
+        'reviews': reviews,
+        'ratings': ratings,
+        'form': form,
     }
 
     return render(request, 'products/product_detail.html', context)
@@ -161,3 +170,29 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Flowers have been successfully deleted!')
     return redirect(reverse('products'))
+
+
+@login_required
+def add_review(request, product_id):
+    """Add a review and rating"""
+
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+        product = ProductReview(pk=product_id)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.user = request.user
+            review.product = Product(pk=product_id)
+            form.save()
+            rating = ProductRating(
+                product=product, rating=request.POST['rating'], review=review)
+            rating.save()
+            set_rating(product)
+            messages.success(request, 'Successfully added review!')
+            return redirect(reverse('product_details', args=[product_id]))
+        else:
+            messages.error(request,
+                           ('Failed to add review.'
+                            'Please ensure the form is valid.'))
+
+    return redirect(reverse('product_details', args=[product_id]))
