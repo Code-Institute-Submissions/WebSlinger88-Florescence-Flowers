@@ -221,3 +221,18 @@ def update_review(request, review_id, rating_id):
 
     except Exception as e:
         return HttpResponse(content=e, status=403)
+
+
+@login_required
+def delete_review(request, review_id):
+    # Delete User Review
+
+    try:
+        review = get_object_or_404(ProductReview, pk=review_id)
+        product = get_object_or_404(Product, pk=review.product_id)
+        review.delete()
+        set_rating(product)
+        return HttpResponse(status=200)
+
+    except Exception as e:
+        return HttpResponse(content=e, status=404)
