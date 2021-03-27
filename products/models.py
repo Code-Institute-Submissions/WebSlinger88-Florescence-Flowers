@@ -32,17 +32,8 @@ class Product(models.Model):
     occasion = models.ForeignKey(
         'Occasion', null=True, blank=True, on_delete=models.SET_NULL)
     popular = models.BooleanField(default=False)
-    rating = models.DecimalField(
-        max_digits=6, decimal_places=2, null=True, blank=True)
+    avg_rating = models.FloatField(default=0)
     image = models.ImageField(null=True, blank=True)
-
-    def get_rating(self):
-        total = sum(int(review['stars']) for review in self.reviews.values())
-
-        if self.reviews.count() > 0:
-            return total / self.reviews.count()
-        else:
-            return 0
 
     def __str__(self):
         return self.name
