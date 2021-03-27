@@ -236,3 +236,15 @@ def delete_review(request, review_id):
 
     except Exception as e:
         return HttpResponse(content=e, status=404)
+
+
+def set_rating(product):
+    # Set User Rating
+    rating = ProductRating.objects.filter(product=product)
+    if rating.exists():
+        product.avg_rating = ProductRating.objects.filter(product=product)\
+            .aggregate(Avg('rating'))['rating__avg']
+        product.save(update_fields=['avg_rating'])
+    else:
+        product.avg_rating = 0
+        product.save()
