@@ -8,6 +8,8 @@
 
 <div class="container-fluid">
     <div class="row">
+
+        <!--Product Image-->
         <div class="col-12 col-xl-4 offset-xl-2">
             {% if product.image %}
                 <img class="card-img-top img-fluid product-img" src="{{ product.image.url }}" alt="{{ product.name }}" />
@@ -18,30 +20,78 @@
 
         <div class="col-12 col-xl-4">
             <div class="mb-5 mt-md-5">
+
+                <!--Product Name, Price & Rating-->
                 <h1 class="flore-font text-center d-none d-xl-block">{{ product.name }}</h1>
-                <p class="lead font-weight-bold text-center mt-3 mt-xl-0">£{{ product.price }}</p>
+
+                <p class="lead font-weight-bold text-center mt-3 mt-xl-0">
+                    £{{ product.price }}
+                </p>
+
                 <p class="mb-0 text-center">
                     <i class="fas fa-star purple-text mr-1"></i>
-                    {{ product.rating }} / 5.00
+                        {% if product.avg_rating == 0 %}No ratings{% else %}{{ product.avg_rating|floatformat:1 }} / 5.0{% endif %}
                     <i class="fas fa-star purple-text ml-1"></i>
                 </p>
 
                 {% if request.user.is_superuser %}
+
+                    <!--Update and Remove Buttons for Admin-->
                     <div class="text-center mt-3">
                         <small>
-                            <a href="{% url 'edit_product' product.id %}" class="mr-2">Update</a>
+                            <a href="{% url 'edit_product' product.id %}" class="mr-2 black-text update-remove">Update</a>
+
                             <span><i class="fas fa-grip-lines-vertical purple-text"></i></span>
-                            <a href="{% url 'delete_product' product.id %}" class="ml-2">Remove</a>
+
+                            <button data-toggle="modal" data-target="#a{{product.id}}" class="ml-2 border-0 bg-white update-remove">Remove</button>
                         </small>
+                    </div>
+
+                    <!--Remove Product Modal -->
+                    <div class="modal fade" id="a{{ product.id }}" 
+                        tabindex="-1" aria-labelledby="b{{ product.id }}" 
+                        aria-hidden="true">
+
+                        <div class="modal-dialog">
+                            <div class="modal-content pt-2">
+
+                                <!--Remove Modal Header-->
+                                <div class="modal-header">
+                                    <div class="row text-center d-block mx-auto">
+                                        <h1 class="modal-title flore-font" id="b{{ product.id }}">Remove "{{ product.name }}" from website?</h1>
+                                    </div>
+                                </div>
+
+                                <!--Remove Modal Content-->
+                                <div class="modal-body text-center">
+                                    These flowers will be removed from the database. Are you sure you want remove these flowers?
+                                </div>
+                                
+                                <!--Remove / Cancel Modal Buttons-->
+                                <div class="modal-footer">
+
+                                    <button type="button" class="btn rounded-corners back-btn" data-dismiss="modal">
+                                        <i class="fas fa-arrow-circle-left purple-text mr-1"></i>Cancel</button>
+
+                                    <a href="{% url 'delete_product' product.id %}" class="btn rounded-corners add-btn">
+                                        <i class="fas fa-trash-alt gold-text mr-1"></i>Delete</a>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
                 {% endif %}
 
+                <!--Product Description-->
                 <p class="text-justify mt-3 px-sm-5 px-xl-0">{{ product.description }}</p>
 
                 <div class="w-100">
 
+                    <!--Product Quantity Form-->
                     <form class="form" action="{% url 'add_to_basket' product.id %}" method="POST">
+
                         {% csrf_token %}
+
                         <div class="form-row">
 
                             <div class="col-12 text-center">
@@ -50,6 +100,7 @@
                                 <div class="form-group w-50 d-inline-block">
                                     <div class="input-group">
 
+                                        <!--Decrease Product Quantity-->
                                         <div class="input-group-prepend">
                                             <button class="dec-quantity btn back-btn" data-item_id="{{ product.id }}"
                                                 id="dec-quantity_{{ product.id }}">
@@ -57,10 +108,12 @@
                                             </button>
                                         </div>
 
+                                        <!--Quantity Input Field-->
                                         <input class="form-control qty_input rounded-corners" type="number"
                                             name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}"
                                             id="id_qty_{{ product.id }}" />
 
+                                        <!--Increase Product Quantity-->
                                         <div class="input-group-append">
                                             <button class="inc-quantity btn add-btn" data-item_id="{{ product.id }}"
                                                 id="inc-quantity_{{ product.id }}">
@@ -71,31 +124,41 @@
                                 </div>
                             </div>
 
+                            <!--Add to Basket Button-->
                             <div class="col-12 text-center">
-                                <input type="submit" class="btn rounded-corners mt-3 add-btn" value="Add to basket">
+                                <input type="submit" class="btn rounded-corners mt-3 add-btn" value="Add to basket" />
                             </div>
 
                             <div class="col-12 text-center">
+
+                                <!--View Products Page Button-->
                                 <a href="{% url 'products' %}" class="btn rounded-corners mt-3 back-btn">
                                     <span>
                                         <i class="far fa-arrow-alt-circle-left purple-text"></i>
                                     </span>
-                                    <span>Return</span>
+                                    <span>Go Back</span>
                                 </a>
+
+                                <!--View Basket Button-->
                                 <a href="{% url 'view_basket' %}" class="btn rounded-corners mt-3 back-btn">
                                     <span><i class="fas fa-shopping-basket fa-lg gold-text mr-1"></i>Basket</span>
                                 </a>
                             </div>
 
-                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}" />
 
                         </div>
                     </form>
                 </div>
 
-                <div class="text-center mt-3"><span>Free delivery on orders over £{{ free_delivery_threshold }}!</span>
+                <!--Free Delivery Notice-->
+                <div class="text-center mt-3">
+                    <span>
+                        Free delivery on orders over £{{ free_delivery_threshold }}!
+                    </span>
                 </div>
 
+                <!--Credit Card Information-->
                 <div class="image-container mt-3">
                     <img class="d-block mx-auto img-fluid visa-master" src="{{ MEDIA_URL }}visa-mastercard.png"
                         alt="Visa-Mastercard-Accepted">
@@ -105,10 +168,12 @@
         </div>
     </div>
 </div>
+
+
 {% endblock %}
 
+<!--Javascript for Functionality-->
 {% block postloadjs %}
 {{ block.super }}
 {% include 'products/includes/quantity_script.html' %}
-
 {% endblock %}
