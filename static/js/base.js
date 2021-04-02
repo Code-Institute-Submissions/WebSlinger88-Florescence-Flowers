@@ -39,4 +39,11 @@ $(document).ready(function () {
             $('.to-top').fadeOut();
         }
     });
+
+    // Hide toast messages after set period
+    $(document).ready(function () {
+        setTimeout(function () {
+            $('.toast').hide('fade');
+        }, 5000)
+    });
 })
