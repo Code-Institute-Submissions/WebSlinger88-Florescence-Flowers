@@ -84,6 +84,22 @@
             }
         }
     }
+
+    // Pre-select Current Rating Option
+    function setSelects() {
+        let currentWrapper = $(".rating-wrapper");
+        let currentSelect = $(".rating");
+        for (let i = 0; i < currentSelect.length; i++) {
+            let options = $(currentSelect[i]).children();
+            let ratingNumber = $(currentWrapper[i]).data("rating");
+            for (let j = 0; j < options.length; j++) {
+                if ($(options[j]).val() == ratingNumber) {
+                    $(options[j]).prop("selected", true);
+                }
+            }
+
+        }
+    }
 })();
 
 </script>
