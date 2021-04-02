@@ -88,7 +88,7 @@
                                 
                                 <p class="mb-0 text-center">
                                     <i class="fas fa-star purple-text mr-1"></i>
-                                    {{ product.rating }} / 5.00
+                                    {% if product.avg_rating == 0 %}No ratings{% else %}{{ product.avg_rating|floatformat:1 }} / 5.0{% endif %}
                                     <i class="fas fa-star purple-text ml-1"></i>
                                 </p>
 
