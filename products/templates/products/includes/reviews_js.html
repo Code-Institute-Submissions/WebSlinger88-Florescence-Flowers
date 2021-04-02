@@ -62,6 +62,16 @@
         $(".review-content").removeClass("d-none");
         $(".edit").addClass("d-none").unbind();
     }
+
+    // Reset Ratings Before Setting a New Rating
+    function resetRatings() {
+        let stars = $(".rating-icon");
+        for (let i = 0; i < stars.length; i++) {
+            if (!$(stars[i]).hasClass("text-white")) {
+                $(stars[i]).addClass("text-white");
+            }
+        }
+    }
 })();
 
 </script>
