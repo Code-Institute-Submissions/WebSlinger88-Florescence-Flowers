@@ -191,7 +191,7 @@ def add_review(request, product_id):
                 product=product, rating=request.POST['rating'], review=review)
             rating.save()
             set_rating(product)
-            messages.success(request, 'Successfully added review!')
+            messages.success(request, 'You Successfully added a review!')
             return redirect(reverse('product_detail', args=[product_id]))
         else:
             messages.error(request,
@@ -218,7 +218,8 @@ def update_review(request, review_id, rating_id):
             rating.rating = updated_rating
             rating.save()
             set_rating(product)
-            return JsonResponse({'updated_rating': updated_rating, })
+            messages.success(request, 'You Successfully updated your review!')
+            return redirect(reverse('product_detail', args=[review_id]))
         else:
             return HttpResponse(status=403)
 
@@ -235,7 +236,7 @@ def delete_review(request, review_id):
         product = get_object_or_404(Product, pk=review.product_id)
         review.delete()
         set_rating(product)
-        messages.success(request, 'Successfully deleted review!')
+        messages.info(request, 'You have deleted your review.')
         return redirect(reverse('product_detail', args=[review_id]))
 
     except Exception as e:
