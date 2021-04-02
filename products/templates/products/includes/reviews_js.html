@@ -1,0 +1,58 @@
+<script type="text/javascript">
+
+// Update a User Review / Rating using POST & AJAX
+(function () {
+    "use strict";
+
+    setRatings();
+
+    // Display and Hide Review Forms / Buttons
+    $(".fa-user-edit").click(function () {
+        hideFormAndButtons();
+        setSelects();
+        let productId = $(this).data("product-id");
+        let actionIcons = $(this).closest("div").addClass("d-none");
+        let ratingId = $(this).closest("div").siblings(".rating-wrapper").data("rating-id");
+        let ratingWrapper = $(this).closest("div").siblings(".rating-wrapper");
+        let reviewContent = $(this).closest(".review").children(".review-content").addClass("d-none");
+        let textArea = $(this).closest(".review").children("textarea").removeClass("d-none");
+        let ratingSelect = $(this).closest(".review").children("select").removeClass("d-none");
+        let editButton = $(this).closest(".review").children("button").removeClass("d-none");
+
+        // Click function for Adding Review / Rating
+        $(".edit").click(function () {
+            var newText = $(textArea).val();
+            var newRating = $(ratingSelect).val();
+            newText = $.trim(newText);
+            if (newText.length >= 4 && newText != "") {
+                let url = "/products/update_review/" + productId + "/" + ratingId;
+                let csrfToken = $('input[name="csrfmiddlewaretoken"]').val();
+                let postData = {
+                    "content": newText,
+                    "rating": newRating,
+                    "csrfmiddlewaretoken": csrfToken,
+                };
+
+                // Post Review / Rating
+                $.post(url, postData).done(function (success) {
+                    $(ratingWrapper).data("rating", success.updated_rating);
+                    $(reviewContent).text(newText).removeClass("d-none");
+                    $(textArea).addClass("d-none");
+                    $(editButton).addClass("d-none");
+                    $(ratingSelect).addClass("d-none");
+                    $(actionIcons).removeClass("d-none");
+                    resetRatings();
+                    setRatings();
+                }).fail(function () {
+                    location.reload();
+                });
+
+            } else {
+                alert("Your review must contain more words! Please try again.");
+            }
+        });
+
+    });
+})();
+
+</script>
