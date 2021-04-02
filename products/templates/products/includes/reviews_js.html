@@ -53,6 +53,15 @@
         });
 
     });
+
+    // Prevent Multiple Reviews to be Edited at the Same Time
+    function hideFormAndButtons() {
+        $(".rating").addClass("d-none");
+        $(".action-icons").removeClass("d-none");
+        $(".edit-review-content").addClass("d-none");
+        $(".review-content").removeClass("d-none");
+        $(".edit").addClass("d-none").unbind();
+    }
 })();
 
 </script>
