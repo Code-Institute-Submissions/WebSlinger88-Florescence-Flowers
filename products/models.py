@@ -79,7 +79,7 @@ class ProductReview(models.Model):
     date_added = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.product
+        return self.product.name
 
 
 class ProductRating(models.Model):
@@ -90,4 +90,4 @@ class ProductRating(models.Model):
         'ProductReview', null=True, blank=True, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.product
+        return self.product.name
