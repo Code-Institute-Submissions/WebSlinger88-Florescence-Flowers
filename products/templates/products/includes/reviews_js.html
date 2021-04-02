@@ -72,6 +72,18 @@
             }
         }
     }
+
+    // Display the Current Ratings
+    function setRatings() {
+        let currentWrapper = $(".rating-wrapper");
+        for (let i = 0; i < currentWrapper.length; i++) {
+            let ratingNumber = $(currentWrapper[i]).data("rating");
+            let stars = $(currentWrapper[i]).children();
+            for (let j = 0; j < ratingNumber; j++) {
+                $(stars[j]).removeClass("text-white");
+            }
+        }
+    }
 })();
 
 </script>
