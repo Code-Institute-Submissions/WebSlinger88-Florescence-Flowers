@@ -95,9 +95,9 @@
                                 {% if request.user.is_superuser %}
                                 <div class="text-center">
                                     <small>
-                                        <a href="{% url 'edit_product' product.id %}" class="mr-2">Update</a>
+                                        <a href="{% url 'edit_product' product.id %}" class="mr-2 black-text update-remove">Update</a>
                                         <span><i class="fas fa-grip-lines-vertical purple-text"></i></span>
-                                        <a href="{% url 'delete_product' product.id %}" class="ml-2">Remove</a>
+                                        <a href="{% url 'delete_product' product.id %}" class="ml-2 black-text update-remove">Remove</a>
                                     </small>
                                 </div>
                                 {% endif %}
