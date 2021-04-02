@@ -11,8 +11,8 @@ urlpatterns = [
     path('delete/<int:product_id>/', views.delete_product,
          name='delete_product'),
     path('add_review/<int:product_id>/', views.add_review, name='add_review'),
-    path('update_review/<int:review_id>/<int:rating_id>/', views.update_review,
+    path('update_review/<int:review_id>/<int:rating_id>', views.update_review,
          name='update_review'),
-    path('delete_review/<int:review_id>/', views.delete_review,
+    path('delete_review/<int:review_id>', views.delete_review,
          name='delete_review'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
