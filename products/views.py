@@ -112,7 +112,7 @@ def add_product(request):
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Successfully added new flowers!')
+            messages.info(request, 'You have successfully added new flowers!')
             return redirect(reverse('add_product'))
         else:
             messages.error(
@@ -191,7 +191,7 @@ def add_review(request, product_id):
                 product=product, rating=request.POST['rating'], review=review)
             rating.save()
             set_rating(product)
-            messages.success(request, 'You Successfully added a review!')
+            messages.info(request, 'You Successfully added a review!')
             return redirect(reverse('product_detail', args=[product_id]))
         else:
             messages.error(request,
@@ -218,7 +218,7 @@ def update_review(request, review_id, rating_id):
             rating.rating = updated_rating
             rating.save()
             set_rating(product)
-            messages.success(request, 'You Successfully updated your review!')
+            messages.info(request, 'You Successfully updated your review!')
             return redirect(reverse('product_detail', args=[review_id]))
         else:
             return HttpResponse(status=403)
