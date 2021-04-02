@@ -12,7 +12,7 @@ from .models import (
 
 
 def all_products(request):
-    """ A view showing all flowers, including sorting and search queries """
+    # Show All Products, Including Sorting and Search Queries
 
     products = Product.objects.all()
     query = None
@@ -82,7 +82,7 @@ def all_products(request):
 
 
 def product_detail(request, product_id):
-    """ A view to show individual flowers' details """
+    # Show Individual Product Details
 
     product = get_object_or_404(Product, pk=product_id)
     reviews = ProductReview.objects.filter(product=product)
@@ -101,7 +101,8 @@ def product_detail(request, product_id):
 
 @login_required
 def add_product(request):
-    """ Add new flowers to the website """
+    # Add New Products to the Website
+
     if not request.user.is_superuser:
         messages.error(request, 'Sorry! \
             Only Florescence staff can use this function.')
@@ -129,7 +130,8 @@ def add_product(request):
 
 @login_required
 def edit_product(request, product_id):
-    """ Edit flowers within the website """
+    # Edit Products within the Website
+
     if not request.user.is_superuser:
         messages.error(request, 'Sorry! \
             Only Florescence staff can use this function.')
@@ -160,7 +162,8 @@ def edit_product(request, product_id):
 
 @login_required
 def delete_product(request, product_id):
-    """ Delete flowers from the website """
+    # Delete Product from the website
+
     if not request.user.is_superuser:
         messages.error(request, 'Sorry! \
             Only Florescence staff can use this function.')
@@ -174,11 +177,11 @@ def delete_product(request, product_id):
 
 @login_required
 def add_review(request, product_id):
-    """Add a review and rating"""
+    # Add a User Review and Rating
 
     if request.method == 'POST':
         form = ReviewForm(request.POST)
-        product = ProductReview(pk=product_id)
+        product = Product(pk=product_id)
         if form.is_valid():
             review = form.save(commit=False)
             review.user = request.user
@@ -189,19 +192,19 @@ def add_review(request, product_id):
             rating.save()
             set_rating(product)
             messages.success(request, 'Successfully added review!')
-            return redirect(reverse('product_details', args=[product_id]))
+            return redirect(reverse('product_detail', args=[product_id]))
         else:
             messages.error(request,
                            ('Failed to add review.'
                             'Please ensure the form is valid.'))
 
-    return redirect(reverse('product_details', args=[product_id]))
+    return redirect(reverse('product_detail', args=[product_id]))
 
 
 @login_required
 @require_POST
 def update_review(request, review_id, rating_id):
-    # Update User Reivew
+    # Update User Review
 
     try:
         updated_review = request.POST['content']
@@ -209,7 +212,7 @@ def update_review(request, review_id, rating_id):
         review = get_object_or_404(ProductReview, pk=review_id)
         rating = get_object_or_404(ProductRating, pk=rating_id)
         product = get_object_or_404(Product, pk=rating.product_id)
-        if review.author == request.user:
+        if review.user == request.user:
             review.content = updated_review
             review.save()
             rating.rating = updated_rating
@@ -232,7 +235,8 @@ def delete_review(request, review_id):
         product = get_object_or_404(Product, pk=review.product_id)
         review.delete()
         set_rating(product)
-        return HttpResponse(status=200)
+        messages.success(request, 'Successfully deleted review!')
+        return redirect(reverse('product_detail', args=[review_id]))
 
     except Exception as e:
         return HttpResponse(content=e, status=404)
@@ -240,6 +244,7 @@ def delete_review(request, review_id):
 
 def set_rating(product):
     # Set User Rating
+
     rating = ProductRating.objects.filter(product=product)
     if rating.exists():
         product.avg_rating = ProductRating.objects.filter(product=product)\
