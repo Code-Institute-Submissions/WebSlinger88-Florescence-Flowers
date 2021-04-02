@@ -100,6 +100,21 @@
 
         }
     }
+
+    // Delete Review and Remove from DOM
+    $(".delete-review-btn").click(function () {
+        let reviewWrapper = $(this).closest(".modal").prev(".review");
+        let reviewId = $(this).data("review-id");
+        let url = '/products/delete_review/' + reviewId;
+        console.log(url);
+        $.ajax({
+            url: url, success: function (result) {
+                $(reviewWrapper).remove();
+            }, error: function () {
+                location.reload();
+            }
+        });
+    });
 })();
 
 </script>
