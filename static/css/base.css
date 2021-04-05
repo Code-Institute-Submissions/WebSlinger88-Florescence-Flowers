@@ -65,6 +65,10 @@ main {
     text-shadow: 0.04rem 0.04rem #000;
 }
 
+/* Modal Display Curved Corners */
+.modal-content {
+    border-radius: 2rem;
+}
 
 /* BOOTSTRAP TOASTS */
 
