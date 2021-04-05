@@ -46,6 +46,21 @@ main {
     border-radius: 5rem;
 }
 
+.border {
+    border: 1px solid #878DAD!important;
+}
+
+.textarea {
+    border-radius: 2rem!important;
+    border: 0.063rem solid #878DAD;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+
+
 /* BOOTSTRAP TOASTS */
 
 .message-container {
@@ -95,6 +110,7 @@ main {
 .arrow-info {
     border-bottom-color: #17a2b8 !important;
 }
+
 
 /*-----------------------------*/
 /*** NAVIGATION BAR STYLES ***/
@@ -170,19 +186,17 @@ input[name='q']::placeholder {
 
 .inc-quantity {
     border-radius: 0 5rem 5rem 0!important;
-    box-shadow: 0 1px 3px 0 #878DAD;
 }
 
 .dec-quantity {
     border-radius: 5rem 0 0 5rem!important;
-    box-shadow: 0 1px 3px 0 #878DAD;
 }
 
 .form-control {
     border: 1px solid #878DAD;
     border-radius: 5rem;
-    box-shadow: 0 1px 3px 0 #878DAD;
 }
+
 
 /*-----------------------------*/
 /*** SHOPPING BASKET STYLES ***/
@@ -207,6 +221,7 @@ input[name='q']::placeholder {
 .remove-flowers {
     cursor: pointer;
 }
+
 
 /*---------------------*/
 /*** FOOTER STYLES ***/
@@ -237,7 +252,6 @@ input[name='q']::placeholder {
     width: 4rem;
     line-height: 4rem;
     background-color: #878DAD;
-    box-shadow: 0 1px 3px 0 #878DAD;
     color: #FFF;
     border-radius: 50%;
     text-align: center;
@@ -245,6 +259,7 @@ input[name='q']::placeholder {
     position: fixed;
 }
 
+/* Free Delivery Message Styles */
 .free-delivery {
     width: calc(20rem + 0.4rem + 0.125rem);
     height: calc(1.5rem + 0.5rem + 0.125rem);
@@ -257,16 +272,10 @@ input[name='q']::placeholder {
     border-radius: 5rem;
 }
 
-/*--------------------*/
-/*** MEDIA QUERIES ***/
-/*--------------------*/
 
-/* Pushes toast down for mobile devices */
-@media only screen and (max-width: 600px) {
-.message-container {
-    top: 12.5rem;
-  }
-}
+/*-------------------------*/
+/*** ALLAUTH FORM STYLES ***/
+/*------------------------*/
 
 .allauth-form-inner-content p {
     margin-top: 1rem;
@@ -287,9 +296,9 @@ input[name='q']::placeholder {
     color: #aab7c4;
 }
 
+/* Allauth form button */
 .allauth-form-inner-content button,
 .allauth-form-inner-content input[type='submit'] {
-	/* Allauth form button */
 	display: inline-block;
     font-weight: 400;
     color: #fff;
@@ -311,60 +320,14 @@ input[name='q']::placeholder {
     color: #000;
 }
 
-/* Product Form */
 
-.btn-file {
-    position: relative;
-    overflow: hidden;
-    border: 1px solid #878DAD;
-    background-color: #878DAD;
-    color: #FFF;
-    border-radius: 5rem!important;
-    cursor: pointer!important;
-}
+/*--------------------*/
+/*** MEDIA QUERIES ***/
+/*--------------------*/
 
-.btn-file input[type="file"] {
-    position: absolute;
-    border-radius: 5rem!important;
-    top: 0;
-    right: 0;
-    min-width: 100%;
-    min-height: 100%;
-    opacity: 0;
-    cursor: pointer;
-}
-
-.custom-checkbox .custom-control-label::before {
-    border-color: #dc3545;
-}
-
-.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-    background-color: #dc3545;
-    border-color: #dc3545;
-}
-
-.textarea {
-    border-radius: 2rem!important;
-}
-
-input #id_popular {
-    border: none;
-}
-
-.form-check-label {
-    margin-left: -0.9rem;
-    margin-bottom: 1rem;
-}
-
-label {
-    margin-left: 0.4rem;
-    margin-bottom: 0.5rem;
-}
-
-input[type=checkbox] {
-    padding: 0;
-    width: 1rem;
-    height: 2rem;
-    margin-top: 1.5rem;
-    margin-left: -0.4rem;
+/* Pushes toast down for mobile devices */
+@media only screen and (max-width: 600px) {
+.message-container {
+    top: 12.5rem;
+  }
 }
