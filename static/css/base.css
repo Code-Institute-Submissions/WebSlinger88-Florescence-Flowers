@@ -59,6 +59,11 @@ main {
     cursor: pointer;
 }
 
+/* Anchor Tag Hover Styles */
+.link-hover:hover {
+    text-decoration: none;
+    text-shadow: 0.04rem 0.04rem #000;
+}
 
 
 /* BOOTSTRAP TOASTS */
