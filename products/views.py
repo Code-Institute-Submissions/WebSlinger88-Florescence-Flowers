@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_POST
-from django.http import JsonResponse, HttpResponse
+from django.http import HttpResponse
 from .forms import ProductForm, ReviewForm
 from django.db.models import Q, Avg
 from django.db.models.functions import Lower
