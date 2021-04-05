@@ -398,6 +398,34 @@ input:focus, textarea:focus, select:focus, button:focus {
 }
 
 
+/*----------------------------------*/
+/*** REVIEW / RATE PRODUCT STYLES ***/
+/*---------------------------------*/
+
+/* Rating Select Dropdown */
+.stars {
+    border: 1px solid #878DAD;
+    border-radius: 5rem;
+    padding: 0.2rem;
+}
+
+/* Colour of Font Awesome Rating Icons */
+.rating-icon {
+    color: #C5C508;
+}
+
+/* Edit Review Text Box */
+.edit-review-content {
+    width: 100%;
+    border-radius: 5rem;
+    padding: 0.85rem;
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0.063rem 0.125rem #878DAD;
+}
+
+
 /*--------------------*/
 /*** MEDIA QUERIES ***/
 /*--------------------*/
