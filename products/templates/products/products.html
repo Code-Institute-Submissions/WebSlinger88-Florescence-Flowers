@@ -100,8 +100,42 @@
                                             <small>
                                                 <a href="{% url 'edit_product' product.id %}" class="mr-2 black-text link-hover">Update</a>
                                                 <span><i class="fas fa-grip-lines-vertical purple-text"></i></span>
-                                                <a href="{% url 'delete_product' product.id %}" class="ml-2 black-text link-hover">Remove</a>
+                                                <button data-toggle="modal" data-target="#a{{product.id}}" class="ml-2 border-0 bg-white link-hover">Remove</button>
                                             </small>
+                                        </div>
+
+                                        <!--Remove Product Modal -->
+                                        <div class="modal fade" id="a{{ product.id }}" 
+                                            tabindex="-1" aria-labelledby="b{{ product.id }}" 
+                                            aria-hidden="true">
+
+                                            <div class="modal-dialog">
+                                                <div class="modal-content pt-2">
+
+                                                    <!--Remove Modal Header-->
+                                                    <div class="modal-header">
+                                                        <div class="row text-center d-block mx-auto">
+                                                            <h1 class="modal-title flore-font" id="b{{ product.id }}">Remove "{{ product.name }}" from website?</h1>
+                                                        </div>
+                                                    </div>
+
+                                                    <!--Remove Modal Content-->
+                                                    <div class="modal-body text-center">
+                                                        These flowers will be removed from the database. Are you sure you want remove these flowers?
+                                                    </div>
+                                                    
+                                                    <!--Remove / Cancel Modal Buttons-->
+                                                    <div class="modal-footer">
+
+                                                        <button type="button" class="btn rounded-corners back-btn" data-dismiss="modal">
+                                                            <i class="fas fa-arrow-circle-left purple-text mr-1"></i>Cancel</button>
+
+                                                        <a href="{% url 'delete_product' product.id %}" class="btn rounded-corners add-btn">
+                                                            <i class="fas fa-trash-alt gold-text mr-1"></i>Delete</a>
+                                                    </div>
+
+                                                </div>
+                                            </div>
                                         </div>
                                     {% endif %}
                                 </div>
