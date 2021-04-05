@@ -223,6 +223,16 @@ input[name='q']::placeholder {
 }
 
 
+/*--------------------------*/
+/*** LOG IN PAGE STYLES ***/
+/*-------------------------*/
+
+/* Remember User Checkbox Positioning */
+#id_remember {
+    margin-left: 1.9rem;
+}
+
+
 /*---------------------*/
 /*** FOOTER STYLES ***/
 /*--------------------*/
