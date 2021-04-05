@@ -391,6 +391,10 @@ label {
     margin-bottom: 0.5rem;
 }
 
+.form-border-radius {
+    border-radius: 2rem;
+}
+
 
 /* Checkbox Styling & Positioning */
 input[type=checkbox] {
