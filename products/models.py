@@ -31,7 +31,7 @@ class Product(models.Model):
         'Colour', null=True, blank=True, on_delete=models.SET_NULL)
     occasion = models.ForeignKey(
         'Occasion', null=True, blank=True, on_delete=models.SET_NULL)
-    popular = models.BooleanField(default=False)
+    featured = models.BooleanField(default=False)
     avg_rating = models.FloatField(default=0)
     image = models.ImageField(null=True, blank=True)
 
