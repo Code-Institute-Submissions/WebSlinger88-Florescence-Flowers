@@ -76,10 +76,10 @@
 
 <div class="container-fluid">
 
-    <!--Popular Bouquets Heading-->
+    <!--Featured Flowers Heading-->
     <div class="row">
         <div class="col text-center mt-3">
-            <h1 class="flore-font">Popular Bouquets</h1>
+            <h1 class="flore-font">Featured Flowers</h1>
             <hr class="w-50 mb-4" />
         </div>
     </div>
@@ -89,25 +89,25 @@
 
             <div class="row">
 
-                <!--Popular Products-->
+                <!--Featured Flowers-->
                 {% for product in products %}
-                    {% if product.popular %}
+                    {% if product.featured %}
 
                     <div class="col-sm-6 col-md-6 col-lg-3 mb-5">
 
                         <div class="card h-100">
 
-                            <!--Popular Product Image-->
+                            <!--Featured Flower Image-->
                             <a href="{% url 'product_detail' product.id %}">
                                 <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                             </a>
 
-                            <!--Popular Product Name-->
+                            <!--Featured Flower Name-->
                             <div class="card-body pb-0">
                                 <h5 class="mb-0 text-center font-weight-bold">{{ product.name }}</h5>
                             </div>
 
-                            <!--Popular Product Price and Rating-->
+                            <!--Featured Flower Price and Rating-->
                             <div class="card-footer bg-white pt-0 border-0">
                                 <div class="row">
                                     <div class="col">
