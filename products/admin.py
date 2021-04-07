@@ -11,7 +11,7 @@ class ProductAdmin(admin.ModelAdmin):
         'colour',
         'occasion',
         'featured',
-        'avg_rating',
+        'avgRating',
         'image',
     )
 

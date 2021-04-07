@@ -32,7 +32,7 @@ class Product(models.Model):
     occasion = models.ForeignKey(
         'Occasion', null=True, blank=True, on_delete=models.SET_NULL)
     featured = models.BooleanField(default=False)
-    avg_rating = models.FloatField(default=0)
+    avgRating = models.FloatField(default=0)
     image = models.ImageField(null=True, blank=True)
 
     def __str__(self):

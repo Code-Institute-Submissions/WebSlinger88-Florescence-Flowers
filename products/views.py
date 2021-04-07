@@ -40,6 +40,7 @@ def all_products(request):
                     sortkey = f'-{sortkey}'
 
             products = products.order_by(sortkey)
+            print(sortkey, "Hello Alan")
 
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
@@ -248,9 +249,9 @@ def set_rating(product):
 
     rating = ProductRating.objects.filter(product=product)
     if rating.exists():
-        product.avg_rating = ProductRating.objects.filter(product=product)\
+        product.avgRating = ProductRating.objects.filter(product=product)\
             .aggregate(Avg('rating'))['rating__avg']
-        product.save(update_fields=['avg_rating'])
+        product.save(update_fields=['avgRating'])
     else:
-        product.avg_rating = 0
+        product.avgRating = 0
         product.save()
