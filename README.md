@@ -105,3 +105,17 @@ Please note that this website is purely for educational purposes only.
     * [Acknowledgements](#thanks)
 
 ---
+
+## :computer: **LIVE DEMO** <a name="live-demo"></a>
+
+Please feel free to delve into a demo of Florescence Flowers's website.
+
+You can live demo Florescence Flowers's website here: [Florescence Flowers](https://florescence-flowers.herokuapp.com/).
+
+<div align="center">
+
+![Responsive showcase image of Florescence Flowers website](media/ms4-showcase.png "Responsive showcase image of Florescence Flowers website")
+
+</div>
+
+---
