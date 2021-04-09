@@ -26,3 +26,82 @@ Please note that this website is purely for educational purposes only.
 
 ---
 
+## :books: **TABLE OF CONTENTS**
+
+1. [Live Demo](#live-demo)  
+
+2. [UX](#ux)
+    * [User Stories](#stories)
+    * [Strategy](#strategy)
+    * [Scope](#scope)
+    * [Structure](#structure)
+    * [Skeleton](#skeleton)
+        * [Sketches](#sketches)
+        * [Wireframes](#wireframes)
+        * [Mockups](#mockups)
+    * [Surface](#surface)
+
+3. [Information Architecture](#architecture)
+    * [Application Framework](#app-framework)
+    * [CSS Framework](#css-framework)
+    * [Database](#database)
+
+4. [Existing Features](#existing)
+    * [Navigation](#navigation)
+    * [Search Flowers](#search)
+    * [Sort Flowers](#sort)
+    * [Home](#home)
+    * [Featured Flowers](#featured)
+    * [Varieties](#varieties)
+        * [Carnations](#carnations)
+        * [Gerbera](#gerbera)
+        * [Lilies](#lilies)
+        * [Roses](#roses)
+    * [Occasions](#occasions)
+        * [Birthday](#birthday)
+        * [Celebration](#celebration)
+        * [Romantic](#romantic)
+        * [Sympathy](#sympathy)
+        * [Thank You](#thanks)
+    * [Colours](#colours)
+        * [Blue](#blue)
+        * [Orange](#orange)
+        * [Pink](#pink)
+        * [Red](#red)
+        * [White](#white)
+        * [Yellow](#yellow)
+    * [Flower Details](#product-detail)
+    * [Basket](#basket)
+    * [Checkout](#checkout)
+    * [Delivery](#delivery)
+    * [Emails](#email)
+    * [Log In](#log-in)
+    * [Register](#register)
+    * [Profile](#profile)
+    * [Management](#manage)
+        * [Add Flowers](#add-flowers)
+        * [Edit Flowers](#edit-flowers)
+        * [Delete Flowers](#delete-flowers)
+    * [Ratings & Reviews](#review)
+        * [Add Review](#add-review)
+        * [Add Rating](#add-rating)
+        * [Edit Review](#edit-review)
+        * [Delete Review](#delete-review)
+    * [Log Out](#log-out)
+
+5. [Features left to Implement](#features-left)
+
+6. [Technologies](#technologies)
+
+7. [Testing](#testing)
+
+8. [Deployment](#deployment)
+    * [Deployment to Heroku](#heroku)
+    * [Local Deployment](#local)
+
+9. [Credits](#credits)
+    * [Content](#content)
+    * [Media](#media)
+    * [Acknowledgements](#thanks)
+
+---
