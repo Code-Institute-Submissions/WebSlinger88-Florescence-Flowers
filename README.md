@@ -119,3 +119,20 @@ You can live demo Florescence Flowers's website here: [Florescence Flowers](http
 </div>
 
 ---
+
+## :sparkles: **UX** <a name="ux"></a>
+
+<div align="justify">
+
+The user experience (UX) is what a user of a particular product experiences when using that product. A UX designer's job is thus to create a product that 
+provides the best possible user experience. We're going to provide some insight into the UX process here, focusing on the important Who, What and How?
+
+Florescence Flowers, as previously stated, is an ecommerce florist website that's purpose is to provide users with an easy, approachable, stress-free way to 
+shop for flowers, no matter what the occasion, and no matter who the recipitant. The hope is that anyone can visit, browse, purchase, and be satisfied with
+their experience. Users will be able to create accounts and relay their personal experiences in the form of reviews and ratings.
+
+Carry on below and read some of Florescence Flowers's user stories, and get a feel for what people originally wanted out of Florescence Flowers.
+
+</div>
+
+---
