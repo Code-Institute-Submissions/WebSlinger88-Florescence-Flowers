@@ -40,7 +40,6 @@ def all_products(request):
                     sortkey = f'-{sortkey}'
 
             products = products.order_by(sortkey)
-            print(sortkey, "Hello Alan")
 
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
