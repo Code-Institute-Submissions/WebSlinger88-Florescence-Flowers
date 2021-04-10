@@ -185,3 +185,43 @@ want users to be attracted to the layout, the colour scheme, the ease of navigat
 
 ---
 
+### **STRUCTURE** <a name="structure"></a>
+
+<div align="justify">
+
+The structure of Florescence Flowers has been carefully thought-out to provide the best possible user experience. Everything from the layout to the navigation has been
+structured for a friendly, easy to use, attractive approach. Please read below for a description of each page's structure.
+
+* Each page has a Florescence Flowers logo situated at the top center of the screen. Surrounding this, you'll find navigation links which direct the user to each
+page within the Florescence Flowers website. There are seven main navigation links (Home, Varieties, Occasions, Colours, Search, Accounts, Basket), many of which  being hoverable dropdown menus with additional links. When a user logs in, the Account link expands, showing additional links (Profile, Log Out), and with the loss of two links (Register, Log In). Admin users have an additional account option that is 'Manage'. Admin users will be able to add new products to the Florescence Flowers website by navigating to this link. There are eleven main pages in total, each with their own unique features. Each page contains a footer located at the bottom of the page. This footer includes developer information, copyright information, and links to the developer's social media. All pages feature a 'To Top Button' which navigates the user to the top of the page. This button is located in the bottom right-hand side of the screen.
+
+* The Home page consists of bright colourful images and easy to read text. The Home page serves to provide information about the Florescence Flowers website and featured products.
+
+* There are four Variety pages, each enabling the user to view specific flowers related to their respective variety. Each page consists of a navigation bar, a main header, a sort function, free delivery information, and a multitude of flower cards containing an image, a name, a price, and a rating. Admin users have the ability to edit and/or delete products from here.
+
+* As it stands there are currently five different Occasions that our flowers relate to and they are: Birthday, Celebration, Romantic, Sympathy, and Thank You. If a user is looking for Valentines flowers, for example, then navigating to the Romantic Occasion will display flowers such as Red Roses. These occasions have been implemented in order to help the user distinguish between different flowers.
+
+* As it stands there are currently six different Colour categories that our flowers fall into and they are: Blue, Orange, Pink, Red, White, and Yellow. If a user is searching for blue flowers, for example, then navigating to the Blue Colour category will display flowers that are blue and/or have blue in them. These Colour categories have been implemented in order to help the user distinguish between different flowers and to also make searching more efficient.
+
+* The Log In page features a main heading, underneath the heading you'll find a register button for those who do not currently have an account. Below this you'll find a simple form consisting of three elements: Username field, a Password field, and a Log In button. There is a 'Remember me' checkbox and a 'Forgotten Password' link.
+
+* The Register page looks almost identical to the Log In page. It has a few additional fields. It has an email field and a confirmation email/password field. There is a 'Log In' link for those who already have an account.
+
+* The Product Detail page displays a single product (flower) which offers the user product information and the ability to add the product to a shopping basket. Here you will find product prices, ratings, descriptions, quantity selectors and navigation / submit buttons. The submit button adds a product to the basket. The navigation links direct the user to either the previous page or the basket page. The Product Detail page also includes user review forms and displays. When a user is logged into their account they have the ability to create, edit and delete reviews and ratings. Please note that users can only edit and delete their own reviews. Posted reviews are visible to the public at any time. User ratings are accumulated into an average rating which is displayed within each product's card / Product Detail page.
+
+* The Basket page offers the ability to see what products a user has in their basket. Product image, variety, colour, price and quantity are all shown here. The ability to update the product quantity is present here, as well as the ability to remove the item from the basket completely. A Grand Total is displayed at the bottom of the page along with any calculated delivery costs. A user can either navigate to the previous page or navigate on to the checkout page.
+
+* The Checkout page includes all of the information shown in the Basket page but it also includes a Stripe payment form. This form consists of many fields, Name, Email, Phone, Address, Bank Card Number, to name a few... Once the form has been submitted using the 'Complete Order' button, the user is directed to the Checout Complete page.
+
+* The Checkout Complete page holds all of a user's order information. Order Number, Order Date, User Details, Order Details, and Order Costs are all found here. This page and all of it's details are available to view via the user's Profile page.
+
+* The Profile page holds all historical orders that a user has made. Order Number, Date, Product and Cost are all shown here. A user can click on an order number and that order's Checkout Complete page will be generated. A user's delivery details can also be saved here. This makes it much quicker for a user to purchase an item without having to enter their address every time.
+
+* The Management page, or Add Product page, is where an Admin user can add additional products to the website. Upon arrival to the page the admin user is presented with a simple form to complete. This form is comprised of six text fields, a featured checkbox, and a select image button. A cancel button and an Add Flower button are present here.
+
+* There is a simple Log Out page which offers the user an option of whether to log out or not.
+
+</div>
+
+---
+
