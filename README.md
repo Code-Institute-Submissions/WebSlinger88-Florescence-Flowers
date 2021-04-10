@@ -331,3 +331,58 @@ are now a thing of the past! below, you will find links to the original Floresce
 
 </div>
 
+---
+
+### **SURFACE** <a name="surface"></a>
+
+<div align="justify">
+
+The colour scheme chosen for this website offers easy on the eyes, simplistic tones.
+There are five main colours for Florescence Flowers. White, Eggshell, Purple, Gold and Black.
+White and Eggshell are the dominant colours, they are most present in the backgrounds of the webpages, text areas and product cards.
+Purple, Gold and Black are predominantly found within text and icons.
+
+</div>
+
+<div align="center">
+
+Chosen colours for Florescence Flowers Website:
+
+![Website Colour Scheme](media/ms4-colour-scheme.png "Website Colour Scheme")
+
+| **Colour Name**   | **Colour RGB Code**    
+| -------------     |:-------------:| 
+| Purple            |#878DAD
+| White             |#FFF
+| Gold              |#C5C508
+| Eggshell          |#FAFAF0
+| Black             |#000
+
+What really brings the Florescence Flowers' website to life is the additional colours brought to us by the actual product images themselves.
+There are a multitude of products on sale, each with their own unique, colourful image. These images really stand out and give the pages character.
+
+The images used for Florescence Flowers' logo was chosen because it relates to the theme of the website.
+Images for Florescence Flowers were sourced from [PxHere](https://pxhere.com/) and [Klipartz](https://www.klipartz.com/en).<br>
+
+Two fonts are used throughout Florescence Flowers's website: [Google Fonts' - Marck Script](https://fonts.google.com/specimen/Marck+Script?query=marck) and [Google Fonts' - Cinzel](https://fonts.google.com/specimen/Cinzel?query=Cinzel).
+If at any point a browser cannot support these fonts, the browser will fall back on Serif and Cursive.
+
+[Font Awesome](https://fontawesome.com/) icon graphics were used in conjunction with Bootstrap, primarily to support form fields, navigation links and submit buttons.
+
+* Account: [fas fa-user-cog](https://fontawesome.com/icons/user-cog?style=solid)
+* Register: [fas fa-user-plus](https://fontawesome.com/icons/user-plus?style=solid)
+* Home: [fas fa-home](https://fontawesome.com/icons/home?style=solid)
+* Basket: [fas fa-shopping-basket](https://fontawesome.com/icons/shopping-basket?style=solid)
+* Log In: [fas fa-sign-in-alt](https://fontawesome.com/icons/sign-in-alt?style=solid)
+* Log Out: [fas fa-sign-out-alt](https://fontawesome.com/icons/sign-out-alt?style=solid)
+* Shop: [fas fa-store](https://fontawesome.com/icons/store?style=solid)
+* Star: [fas fa-star](https://fontawesome.com/icons/star?style=solid)
+* User: [fas fa-user-circle](https://fontawesome.com/icons/user-circle?style=solid)
+* Back Arrow: [fas fa-arrow-circle-left](https://fontawesome.com/icons/arrow-circle-left?style=solid)
+* Up Arrows: [fas fa-angle-double-up](https://fontawesome.com/icons/angle-double-up?style=solid)
+* Plus: [fas fa-plus](https://fontawesome.com/icons/plus?style=solid)
+* Minus: [fas fa-minus](https://fontawesome.com/icons/minus?style=solid)
+* Lock: [fas fa-user-lock](https://fontawesome.com/icons/user-lock?style=solid)
+* Add: [fas fa-plus-circle](https://fontawesome.com/icons/plus-circle?style=solid)
+
+<br></div>
