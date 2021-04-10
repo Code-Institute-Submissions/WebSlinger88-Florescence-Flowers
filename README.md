@@ -369,20 +369,23 @@ If at any point a browser cannot support these fonts, the browser will fall back
 
 [Font Awesome](https://fontawesome.com/) icon graphics were used in conjunction with Bootstrap, primarily to support form fields, navigation links and submit buttons.
 
-* Account: [fas fa-user-cog](https://fontawesome.com/icons/user-cog?style=solid)
-* Register: [fas fa-user-plus](https://fontawesome.com/icons/user-plus?style=solid)
-* Home: [fas fa-home](https://fontawesome.com/icons/home?style=solid)
-* Basket: [fas fa-shopping-basket](https://fontawesome.com/icons/shopping-basket?style=solid)
-* Log In: [fas fa-sign-in-alt](https://fontawesome.com/icons/sign-in-alt?style=solid)
-* Log Out: [fas fa-sign-out-alt](https://fontawesome.com/icons/sign-out-alt?style=solid)
-* Shop: [fas fa-store](https://fontawesome.com/icons/store?style=solid)
-* Star: [fas fa-star](https://fontawesome.com/icons/star?style=solid)
-* User: [fas fa-user-circle](https://fontawesome.com/icons/user-circle?style=solid)
-* Back Arrow: [fas fa-arrow-circle-left](https://fontawesome.com/icons/arrow-circle-left?style=solid)
-* Up Arrows: [fas fa-angle-double-up](https://fontawesome.com/icons/angle-double-up?style=solid)
-* Plus: [fas fa-plus](https://fontawesome.com/icons/plus?style=solid)
-* Minus: [fas fa-minus](https://fontawesome.com/icons/minus?style=solid)
-* Lock: [fas fa-user-lock](https://fontawesome.com/icons/user-lock?style=solid)
-* Add: [fas fa-plus-circle](https://fontawesome.com/icons/plus-circle?style=solid)
+| **Description**   | **Font Awesome Icon**    
+| -------------     |:-------------:| 
+| Account           |[fas fa-user](https://fontawesome.com/icons/user?style=solid)
+| Register          |[fas fa-user-plus](https://fontawesome.com/icons/user-plus?style=solid)
+| Home              |[fas fa-home](https://fontawesome.com/icons/home?style=solid)
+| Basket            |[fas fa-shopping-basket](https://fontawesome.com/icons/shopping-basket?style=solid)
+| Log In            |[fas fa-sign-in-alt](https://fontawesome.com/icons/sign-in-alt?style=solid)
+| Log Out           |[fas fa-sign-out-alt](https://fontawesome.com/icons/sign-out-alt?style=solid)
+| Shop              |[fas fa-store](https://fontawesome.com/icons/store?style=solid)
+| Star              |[fas fa-star](https://fontawesome.com/icons/star?style=solid)
+| User              |[fas fa-user-circle](https://fontawesome.com/icons/user-circle?style=solid)
+| Back Arrow        |[fas fa-arrow-circle-left](https://fontawesome.com/icons/arrow-circle-left?style=solid)
+| Up Arrows         |[fas fa-angle-double-up](https://fontawesome.com/icons/angle-double-up?style=solid)
+| Plus              |[fas fa-plus](https://fontawesome.com/icons/plus?style=solid)
+| Minus             |[fas fa-minus](https://fontawesome.com/icons/minus?style=solid)
+| Lock              |[fas fa-user-lock](https://fontawesome.com/icons/user-lock?style=solid)
+| Add               |[fas fa-plus-circle](https://fontawesome.com/icons/plus-circle?style=solid)
+
 
 <br></div>
