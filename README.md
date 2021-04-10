@@ -163,3 +163,14 @@ Carry on below and read some of Florescence Flowers's user stories, and get a fe
 
 ---
 
+### **STRATEGY** <a name="strategy"></a>
+
+<div align="justify">
+
+The strategy of the Florescence Flowers website is to provide a highly attractive, user-friendly, responsive ecommerce experience. Any prospective buyer will be able to easily navigate their way to purchasing a product from start to finish. They'll then be able to share their experiences in the form of ratings and reviews, and be able to keep track of their orders via email confirmations and profile pages. Our long term ambition is that Florescence Flowers builds an extensive library of products far beyond the current scope. Extra varieties and occasions will be added in the future as well as FAQs and newsletters. What's most important is that
+people walk away with a feel-good vibe, and are happy with their visit to Florescence Flowers.
+
+</div>
+
+---
+
