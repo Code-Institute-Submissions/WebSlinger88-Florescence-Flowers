@@ -174,3 +174,14 @@ people walk away with a feel-good vibe, and are happy with their visit to Flores
 
 ---
 
+### **SCOPE** <a name="scope"></a>
+
+<div align="justify">
+
+The scope of Florescence Flowers is to provide a flawless user experience straight from the get-go. We want users to be highly engrossed in what they encounter. We
+want users to be attracted to the layout, the colour scheme, the ease of navigation, and the simplicity of the registration process as well as the checkout process. Ultimately we want users to return time and time again, to find a new product and to be impressed with the ease of use.
+
+</div>
+
+---
+
