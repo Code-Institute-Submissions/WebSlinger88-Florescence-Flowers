@@ -358,6 +358,10 @@ Chosen colours for Florescence Flowers Website:
 | Eggshell          |#FAFAF0
 | Black             |#000
 
+</div>
+
+<div align="justify">
+
 What really brings the Florescence Flowers' website to life is the additional colours brought to us by the actual product images themselves.
 There are a multitude of products on sale, each with their own unique, colourful image. These images really stand out and give the pages character.
 
@@ -368,6 +372,10 @@ Two fonts are used throughout Florescence Flowers's website: [Google Fonts' - Ma
 If at any point a browser cannot support these fonts, the browser will fall back on Serif and Cursive.
 
 [Font Awesome](https://fontawesome.com/) icon graphics were used in conjunction with Bootstrap, primarily to support form fields, navigation links and submit buttons.
+
+</div>
+
+<div align="center">
 
 | **Description**   | **Font Awesome Icon**    
 | -------------     |:-------------:| 
@@ -387,5 +395,5 @@ If at any point a browser cannot support these fonts, the browser will fall back
 | Lock              |[fas fa-user-lock](https://fontawesome.com/icons/user-lock?style=solid)
 | Add               |[fas fa-plus-circle](https://fontawesome.com/icons/plus-circle?style=solid)
 
+</div>
 
-<br></div>
