@@ -23,7 +23,7 @@
                     {% csrf_token %}
                     
                     {% for field in form %}
-                        {% if field.name == 'avg_rating' %}
+                        {% if field.name == 'avgRating' %}
                         {% elif field.name != 'image' %}
                             {{ field | as_crispy_field }}
                         {% else %}
