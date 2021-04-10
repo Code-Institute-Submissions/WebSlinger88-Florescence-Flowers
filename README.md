@@ -136,3 +136,30 @@ Carry on below and read some of Florescence Flowers's user stories, and get a fe
 </div>
 
 ---
+
+### **USER STORIES** <a name="stories"></a>
+
+| **As a...**                    | **I want to...**                        | **So I can...**                                                    |
+|:-------------------------------|:----------------------------------------|:-------------------------------------------------------------------|
+| Potential Shopper              | View a selection of products            | Potentially buy some products                                      |
+| Potential Shopper              | Search products                         | Find a specific product I'd like to buy                            |
+| Potential Shopper              | Sort products                           | Find specific prices, ratings etc.                                 |
+| Potential Shopper              | View individual products                | To view prices, descriptions and ratings                           |
+| Potential Shopper              | Easily register an account              | Have a personal account to view order history etc.                 |
+| Potential Shopper              | Easily login or logout                  | Access my personal account                                         |
+| Shopper                        | Purchase a product                      | Own a new product                                                  |
+| Shopper                        | Add reviews                             | Share my experiences                                               |
+| Shopper                        | Edit reviews                            | Change my review if I've made a mistake or changed my mind         |
+| Shopper                        | Delete reviews                          | Remove any unwanted reviews from the site                          |
+| Shopper                        | Rate products                           | Help others easily understand how good a product may or may not be |
+| Shopper                        | Edit ratings                            | Change my rating if my feelings change                             |
+| Shopper                        | Not have others edit/delete my reviews  | Keep my reviews personal and my own                                |
+| Shopper                        | Have my own profile page                | Have my order history and delivery details in one place            |
+| Shopper                        | Recieve email confirmations             | Keep track of my orders and their order numbers / details          |
+| Admin                          | Add a new product                       | Have a new product on the website to sell                          |
+| Admin                          | Edit a product                          | Change any product details that may change                         |
+| Admin                          | Delete a product                        | Remove a product from the website that has been delisted           |
+| Admin                          | Set featured products                   | Display specific products on the home page                         |
+
+---
+
