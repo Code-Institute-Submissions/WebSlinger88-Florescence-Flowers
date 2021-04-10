@@ -246,3 +246,41 @@ Here are links to images of the original sketches used to help develop this proj
 
 </div>
 
+#### *Wireframes* <a name="wireframes"></a>
+
+<div align="justify">
+
+After drawing up the sketches it was time to get them onto the screen. To do this, a wireframe was created using Balsamiq Wireframes 4. 
+Wireframes are used to display what the creator ultimately envisions the website to look like, roughly! It acts as one of the first stepping stones of the journey.
+Here are links to images of the original sketches used to help develop this project:
+
+* [Desktop Home Page](design/wireframes/ms4-wireframe-home.PNG)
+    * [Mobile Home Page](design/wireframes/ms4-mobile-wireframe-home.PNG)
+    * [Mobile Navigation](design/wireframes/ms4-mobile-navigation-wireframe.PNG)
+
+* [Desktop Products Page](design/wireframes/ms4-wireframe-products.PNG)
+    * [Mobile Products Page](design/wireframes/ms4-mobile-wireframe-products.PNG)
+
+* [Desktop Product Detail Page](design/wireframes/ms4-wireframe-productDetail.PNG)
+    * [Mobile Product Detail Page](design/wireframes/ms4-mobile-wireframe-productDetail.PNG)
+
+* [Desktop Basket Page](design/wireframes/ms4-wireframe-basket.PNG)
+    * [Mobile Basket Page](design/wireframes/ms4-mobile-wireframe-basket.PNG)
+
+* [Desktop Checkout Page](design/wireframes/ms4-wireframe-checkout.PNG)
+    * [Mobile Checkout Page](design/wireframes/ms4-mobile-wireframe-checkout.PNG)
+
+* [Desktop Log In Page](design/wireframes/ms4-wireframe-login.PNG)
+    * [Mobile Log In Page](design/wireframes/ms4-mobile-wireframe-login.PNG)
+
+* [Desktop Register Page](design/wireframes/ms4-wireframe-register.PNG)
+    * [Mobile Register Page](design/wireframes/ms4-mobile-wireframe-register.PNG)
+
+* [Desktop Profile Page](design/wireframes/ms4-wireframe-profile.PNG)
+    * [Mobile Profile Page](design/wireframes/ms4-mobile-wireframe-profile.PNG)
+
+* [Desktop Add / Edit Page](design/wireframes/ms4-wireframe-addEdit.PNG)
+    * [Mobile Add / Edit Page](design/wireframes/ms4-mobile-wireframe-addEdit.PNG)
+
+</div>
+
