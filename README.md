@@ -225,3 +225,24 @@ page within the Florescence Flowers website. There are seven main navigation lin
 
 ---
 
+### **SKELETON** <a name="skeleton"></a>
+
+#### *Sketches* <a name="sketches"></a>
+
+<div align="justify">
+
+Florescence Flowers's website started on a piece of paper. Sketches were drawn out and a decent design was soon ready to leap into the digital world.
+Here are links to images of the original sketches used to help develop this project:
+
+* [Home Page Sketch](design/sketches/ms4-sketch-home.PNG)
+* [Products Page Sketch](design/sketches/ms4-sketch-products.PNG)
+* [Product Detail Page Sketch](design/sketches/ms4-sketch-productDetail.PNG)
+* [Basket Page Sketch](design/sketches/ms4-sketch-basket.PNG)
+* [Checkout Page Sketch](design/sketches/ms4-sketch-checkout.PNG)
+* [Log In Page Sketch](design/sketches/ms4-sketch-login.PNG)
+* [Register Page Sketch](design/sketches/ms4-sketch-register.PNG)
+* [Profile Page Sketch](design/sketches/ms4-sketch-profile.PNG)
+* [Add / Edit Page Sketch](design/sketches/ms4-sketch-addEdit.PNG)
+
+</div>
+
