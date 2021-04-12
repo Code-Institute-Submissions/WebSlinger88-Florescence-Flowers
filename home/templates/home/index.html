@@ -27,19 +27,19 @@
         <div class="carousel-inner">
 
             <div class="carousel-item active">
-                <img src="{{ MEDIA_URL }}carousel-img-3.PNG" class="img-fluid d-block mx-auto" alt="Flower Image 1">
+                <img src="{{ MEDIA_URL }}carousel-img-3.PNG" class="img-fluid d-block mx-auto" alt="Flower Image 1" />
             </div>
 
             <div class="carousel-item">
-                <img src="{{ MEDIA_URL }}carousel-img-2.PNG" class="img-fluid d-block mx-auto" alt="Flower Image 2">
+                <img src="{{ MEDIA_URL }}carousel-img-2.PNG" class="img-fluid d-block mx-auto" alt="Flower Image 2" />
             </div>
 
             <div class="carousel-item">
-                <img src="{{ MEDIA_URL }}carousel-img-1.PNG" class="img-fluid d-block mx-auto" alt="Flower Image 3">
+                <img src="{{ MEDIA_URL }}carousel-img-1.PNG" class="img-fluid d-block mx-auto" alt="Flower Image 3" />
             </div>
 
             <div class="carousel-item">
-                <img src="{{ MEDIA_URL }}carousel-img-4.PNG" class="img-fluid d-block mx-auto" alt="Flower Image 4">
+                <img src="{{ MEDIA_URL }}carousel-img-4.PNG" class="img-fluid d-block mx-auto" alt="Flower Image 4" />
             </div>
 
         </div>
@@ -98,9 +98,15 @@
                         <div class="card h-100">
 
                             <!--Featured Flower Image-->
-                            <a href="{% url 'product_detail' product.id %}">
-                                <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                            </a>
+                            {% if product.image %}
+                                <a href="{% url 'product_detail' product.id %}">
+                                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}" />
+                                </a>
+                            {% else %}
+                                <a href="{% url 'product_detail' product.id %}">
+                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}no-image.png" alt="{{ product.name }}" />
+                                </a>
+                            {% endif %}
 
                             <!--Featured Flower Name, Price and Rating-->
                             <div class="card-footer bg-white pt-0 border-0">
