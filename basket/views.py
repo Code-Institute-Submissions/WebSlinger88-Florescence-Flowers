@@ -36,7 +36,7 @@ def update_basket(request, item_id):
     """ Change quantity of flowers within basket """
 
     product = get_object_or_404(Product, pk=item_id)
-    quantity = int(request.POST.get('quantity'))
+    quantity = int(request.POST.get('quantity') or 0)
     basket = request.session.get('basket', {})
 
     if quantity > 0:
