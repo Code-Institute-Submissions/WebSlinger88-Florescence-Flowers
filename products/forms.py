@@ -12,6 +12,8 @@ class ProductForm(forms.ModelForm):
     image = forms.ImageField(
         label='Image', required=False, widget=CustomClearableFileInput)
 
+    avgRating = forms.FloatField(required=False)
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         categories = Category.objects.all()
