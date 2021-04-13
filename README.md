@@ -8,14 +8,13 @@
 
 Thanks for visiting Florescence Flowers!
 
-Florescence Flowers is an ecommerce florist website. Users are able to purchase gorgeous bouquets online and get them delivered straight to their door.
+Florescence Flowers is an e-commerce florist website. Users are able to purchase gorgeous bouquets online and get them delivered straight to their door.
 Users are able to follow the four basic CRUD functions, Create, Read, Update, and Delete. This means that you can register an account, write user reviews,
-add user ratings, view other's reviews / ratings, edit your reviews / ratings, and delete your reviews / ratings. On top of this the user is able to add / 
-remove products to a shopping basket and securely checkout using the Stripe payment processing software and application programming interface.
+add user ratings, view other's reviews/ratings, edit your reviews/ratings, and delete your reviews/ratings. On top of this, the user is able to add/remove products to a shopping basket and securely checkout using the Stripe payment processing software and application programming interface.
 
 Florescence Flowers is intended to provide great value to those who seek that special gift, for any occasion. The idea for Florescence Flowers originated 
 from my love of plants and flowers. There are many plants and flowers within my household, and no matter what mood you're in, flowers always bring happiness
-and joy to those who see and smell them. It is a well known fact that flowers bring cheer to those who're celebrating a special occasion, and flowers bring
+and joy to those who see and smell them. It is a well-known fact that flowers bring cheer to those who're celebrating a special occasion, and flowers bring
 comfort to those who're grieving. Flowers are emotionally diverse, they mean something to everybody, and that is why I have chosen to create Florescence Flowers.
 
 Please browse Florescence Flower's catalogue of beautiful bouquets, we hope that you manage to find something gorgeous to satisfy your friends, family, or work colleague! You're able to purchase a bouquet quickly without the need to register an account, but if you do register, you'll be able to leave valuable reviews and ratings. You'll also be able to keep track of your purchases through your very own profile page.
@@ -170,8 +169,8 @@ Carry on below and read some of Florescence Flowers's user stories, and get a fe
 
 <div align="justify">
 
-The strategy of the Florescence Flowers website is to provide a highly attractive, user-friendly, responsive ecommerce experience. Any prospective buyer will be able to easily navigate their way to purchasing a product from start to finish. They'll then be able to share their experiences in the form of ratings and reviews, and be able to keep track of their orders via email confirmations and profile pages. Our long term ambition is that Florescence Flowers builds an extensive library of products far beyond the current scope. Extra varieties and occasions will be added in the future as well as FAQs and newsletters. What's most important is that
-people walk away with a feel-good vibe, and are happy with their visit to Florescence Flowers.
+The strategy of the Florescence Flowers website is to provide a highly attractive, user-friendly, responsive e-commerce experience. Any prospective buyer will be able to easily navigate their way to purchasing a product from start to finish. They'll then be able to share their experiences in the form of ratings and reviews and be able to keep track of their orders via email confirmations and profile pages. Our long term ambition is that Florescence Flowers builds an extensive library of products far beyond the current scope. Extra varieties and occasions will be added in the future as well as FAQs and newsletters. What's most important is that
+people walk away with a feel-good vibe and are happy with their visit to Florescence Flowers.
 
 </div>
 
@@ -181,8 +180,7 @@ people walk away with a feel-good vibe, and are happy with their visit to Flores
 
 <div align="justify">
 
-The scope of Florescence Flowers is to provide a flawless user experience straight from the get-go. We want users to be highly engrossed in what they encounter. We
-want users to be attracted to the layout, the colour scheme, the ease of navigation, and the simplicity of the registration process as well as the checkout process. Ultimately we want users to return time and time again, to find a new product and to be impressed with the ease of use.
+The scope of Florescence Flowers is to provide a flawless user experience straight from the get-go. We want users to be highly engrossed in what they encounter. We want users to be attracted to the layout, the colour scheme, the ease of navigation, and the simplicity of the registration process as well as the checkout process. Ultimately we want users to return time and time again, to find a new product and to be impressed with the ease of use.
 
 </div>
 
@@ -192,19 +190,19 @@ want users to be attracted to the layout, the colour scheme, the ease of navigat
 
 <div align="justify">
 
-The structure of Florescence Flowers has been carefully thought-out to provide the best possible user experience. Everything from the layout to the navigation has been
+The structure of Florescence Flowers has been carefully thought out to provide the best possible user experience. Everything from the layout to the navigation has been
 structured for a friendly, easy to use, attractive approach. Please read below for a description of each page's structure.
 
-* Each page has a Florescence Flowers logo situated at the top center of the screen. Surrounding this, you'll find navigation links which direct the user to each
-page within the Florescence Flowers website. There are seven main navigation links (Home, Varieties, Occasions, Colours, Search, Accounts, Basket), many of which  being hoverable dropdown menus with additional links. When a user logs in, the Account link expands, showing additional links (Profile, Log Out), and with the loss of two links (Register, Log In). Admin users have an additional account option that is 'Manage'. Admin users will be able to add new products to the Florescence Flowers website by navigating to this link. There are eleven main pages in total, each with their own unique features. Each page contains a footer located at the bottom of the page. This footer includes developer information, copyright information, and links to the developer's social media. All pages feature a 'To Top Button' which navigates the user to the top of the page. This button is located in the bottom right-hand side of the screen.
+* Each page has a Florescence Flowers logo situated at the top center of the screen. Surrounding this, you'll find navigation links that direct the user to each
+page within the Florescence Flowers website. There are seven main navigation links (Home, Varieties, Occasions, Colours, Search, Accounts, Basket), many of which being hoverable dropdown menus with additional links. When a user logs in, the Account link expands, showing additional links (Profile, Log Out), and with the loss of two links (Register, Log In). Admin users have an additional account option that is 'Manage'. Admin users will be able to add new products to the Florescence Flowers website by navigating to this link. There are eleven main pages in total, each with their own unique features. Each page contains a footer located at the bottom of the page. This footer includes developer information, copyright information, and links to the developer's social media. All pages feature a 'To Top Button' which navigates the user to the top of the page. This button is located on the bottom right-hand side of the screen.
 
 * The Home page consists of bright colourful images and easy to read text. The Home page serves to provide information about the Florescence Flowers website and featured products.
 
 * There are four Variety pages, each enabling the user to view specific flowers related to their respective variety. Each page consists of a navigation bar, a main header, a sort function, free delivery information, and a multitude of flower cards containing an image, a name, a price, and a rating. Admin users have the ability to edit and/or delete products from here.
 
-* As it stands there are currently five different Occasions that our flowers relate to and they are: Birthday, Celebration, Romantic, Sympathy, and Thank You. If a user is looking for Valentines flowers, for example, then navigating to the Romantic Occasion will display flowers such as Red Roses. These occasions have been implemented in order to help the user distinguish between different flowers.
+* As it stands there are currently five different Occasions that our flowers relate to and they are: Birthday, Celebration, Romantic, Sympathy, and Thank You. If a user is looking for Valentine's flowers, for example, then navigating to the Romantic Occasion will display flowers such as Red Roses. These occasions have been implemented to help the user distinguish between different flowers.
 
-* As it stands there are currently six different Colour categories that our flowers fall into and they are: Blue, Orange, Pink, Red, White, and Yellow. If a user is searching for blue flowers, for example, then navigating to the Blue Colour category will display flowers that are blue and/or have blue in them. These Colour categories have been implemented in order to help the user distinguish between different flowers and to also make searching more efficient.
+* As it stands there are currently six different Colour categories that our flowers fall into and they are: Blue, Orange, Pink, Red, White, and Yellow. If a user is searching for blue flowers, for example, then navigating to the Blue Colour category will display flowers that are blue and/or have blue in them. These Colour categories have been implemented to help the user distinguish between different flowers and to also make searching more efficient.
 
 * The Log In page features a main heading, underneath the heading you'll find a register button for those who do not currently have an account. Below this you'll find a simple form consisting of three elements: Username field, a Password field, and a Log In button. There is a 'Remember me' checkbox and a 'Forgotten Password' link.
 
@@ -212,17 +210,17 @@ page within the Florescence Flowers website. There are seven main navigation lin
 
 * The Product Detail page displays a single product (flower) which offers the user product information and the ability to add the product to a shopping basket. Here you will find product prices, ratings, descriptions, quantity selectors and navigation / submit buttons. The submit button adds a product to the basket. The navigation links direct the user to either the previous page or the basket page. The Product Detail page also includes user review forms and displays. When a user is logged into their account they have the ability to create, edit and delete reviews and ratings. Please note that users can only edit and delete their own reviews. Posted reviews are visible to the public at any time. User ratings are accumulated into an average rating which is displayed within each product's card / Product Detail page.
 
-* The Basket page offers the ability to see what products a user has in their basket. Product image, variety, colour, price and quantity are all shown here. The ability to update the product quantity is present here, as well as the ability to remove the item from the basket completely. A Grand Total is displayed at the bottom of the page along with any calculated delivery costs. A user can either navigate to the previous page or navigate on to the checkout page.
+* The Basket page offers the ability to see what products a user has in their basket. Product image, variety, colour, price and quantity are all shown here. The ability to update the product quantity is present here, as well as the ability to remove the item from the basket completely. A Grand Total is displayed at the bottom of the page along with any calculated delivery costs. A user can either navigate to the previous page or navigate to the checkout page.
 
-* The Checkout page includes all of the information shown in the Basket page but it also includes a Stripe payment form. This form consists of many fields, Name, Email, Phone, Address, Bank Card Number, to name a few... Once the form has been submitted using the 'Complete Order' button, the user is directed to the Checout Complete page.
+* The Checkout page includes all of the information shown in the Basket page but it also includes a Stripe payment form. This form consists of many fields, Name, Email, Phone, Address, Bank Card Number, to name a few... Once the form has been submitted using the 'Complete Order' button, the user is directed to the Checkout Complete page.
 
-* The Checkout Complete page holds all of a user's order information. Order Number, Order Date, User Details, Order Details, and Order Costs are all found here. This page and all of it's details are available to view via the user's Profile page.
+* The Checkout Complete page holds all of a user's order information. Order Number, Order Date, User Details, Order Details, and Order Costs are all found here. This page and all of its details are available to view via the user's Profile page.
 
 * The Profile page holds all historical orders that a user has made. Order Number, Date, Product and Cost are all shown here. A user can click on an order number and that order's Checkout Complete page will be generated. A user's delivery details can also be saved here. This makes it much quicker for a user to purchase an item without having to enter their address every time.
 
 * The Management page, or Add Product page, is where an Admin user can add additional products to the website. Upon arrival to the page the admin user is presented with a simple form to complete. This form is comprised of six text fields, a featured checkbox, and a select image button. A cancel button and an Add Flower button are present here.
 
-* There is a simple Log Out page which offers the user an option of whether to log out or not.
+* There is a simple Log Out page that offers the user an option of whether to log out or not.
 
 </div>
 
@@ -234,8 +232,7 @@ page within the Florescence Flowers website. There are seven main navigation lin
 
 <div align="justify">
 
-Florescence Flowers's website started on a piece of paper. Sketches were drawn out and a decent design was soon ready to leap into the digital world.
-Here are links to images of the original sketches used to help develop this project:
+Florescence Flowers's website started on a piece of paper. Sketches were drawn out and a decent design was soon ready to leap into the digital world. Here are links to images of the original sketches used to help develop this project:
 
 * [Home Page Sketch](design/sketches/ms4-sketch-home.PNG)
 * [Products Page Sketch](design/sketches/ms4-sketch-products.PNG)
@@ -253,9 +250,7 @@ Here are links to images of the original sketches used to help develop this proj
 
 <div align="justify">
 
-After drawing up the sketches it was time to get them onto the screen. To do this, a wireframe was created using Balsamiq Wireframes 4. 
-Wireframes are used to display what the creator ultimately envisions the website to look like, roughly! It acts as one of the first stepping stones of the journey.
-Here are links to images of the original sketches used to help develop this project:
+After drawing up the sketches it was time to get them onto the screen. To do this, a wireframe was created using Balsamiq Wireframes 4. Wireframes are used to display what the creator ultimately envisions the website to look like, roughly! It acts as one of the first stepping stones of the journey. Here are links to images of the original sketches used to help develop this project:
 
 * [Desktop Home Page](design/wireframes/ms4-wireframe-home.PNG)
     * [Mobile Home Page](design/wireframes/ms4-mobile-wireframe-home.PNG)
@@ -291,9 +286,7 @@ Here are links to images of the original sketches used to help develop this proj
 
 <div align="justify">
 
-Finally with the basics down on paper and screen, it was time to start shaping things up. After wireframes, it's time to take things a little more seriously. 
-Enter Adobe XD. Adobe XD is a powerful piece of software designed to assist artists worldwide. More detailed designs are now progressed, and sketches etc.. 
-are now a thing of the past! below, you will find links to the original Florescence Flowers Mock-Ups. You can clearly see how the project has evolved.
+Finally with the basics down on paper and screen, it was time to start shaping things up. After wireframes, it's time to take things a little more seriously. Enter Adobe XD. Adobe XD is a powerful piece of software designed to assist artists worldwide. More detailed designs are now progressed, and sketches etc.. are now a thing of the past! below, you will find links to the original Florescence Flowers Mock-Ups. You can clearly see how the project has evolved.
 
 * [Desktop Home Page](design/mockups/ms4-mockup-home.PNG)
     * [Mobile Home Page](design/mockups/ms4-mobile-mockup-home.PNG)
@@ -340,10 +333,7 @@ are now a thing of the past! below, you will find links to the original Floresce
 
 <div align="justify">
 
-The colour scheme chosen for this website offers easy on the eyes, simplistic tones.
-There are five main colours for Florescence Flowers. White, Eggshell, Purple, Gold and Black.
-White and Eggshell are the dominant colours, they are most present in the backgrounds of the webpages, text areas and product cards.
-Purple, Gold and Black are predominantly found within text and icons.
+The colour scheme chosen for this website offers easy on the eyes, simplistic tones. There are five main colours for Florescence Flowers. White, Eggshell, Purple, Gold and Black. White and Eggshell are the dominant colours, they are most present in the backgrounds of the webpages, text areas and product cards. Purple, Gold and Black are predominantly found within text and icons.
 
 </div>
 
@@ -366,7 +356,7 @@ Chosen colours for Florescence Flowers Website:
 <div align="justify">
 
 What really brings the Florescence Flowers' website to life is the additional colours brought to us by the actual product images themselves.
-There are a multitude of products on sale, each with their own unique, colourful image. These images really stand out and give the pages character.
+There are a multitude of products on sale, each with their own unique, colourful image. These images really stand out and give the page's character.
 
 The images used for Florescence Flowers' logo was chosen because it relates to the theme of the website.
 Images for Florescence Flowers were sourced from [PxHere](https://pxhere.com/) and [Klipartz](https://www.klipartz.com/en).<br>
@@ -410,8 +400,7 @@ If at any point a browser cannot support these fonts, the browser will fall back
 
 <div align="justify">
 
-Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of Web development, so you can focus on writing your app without needing to reinvent the wheel. It’s free and open source. Django was chosen because
-of it's popularity, ease of use, and it was a prerequisite in the design of this project, according to the project brief. Django is ridiculously fast, reassuringly secure and exceedingly scalable.
+Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of Web development, so you can focus on writing your app without needing to reinvent the wheel. It’s free and open source. Django was chosen because of it's popularity, ease of use, and it was a prerequisite in the design of this project, according to the project brief. Django is ridiculously fast, reassuringly secure and exceedingly scalable.
 
 </div>
 
@@ -421,7 +410,7 @@ of it's popularity, ease of use, and it was a prerequisite in the design of this
 
 <div align="justify">
 
-Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS and (optionally) JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components. Bootstrap is the most popular CSS framework for developers to date. Bootstrap was chosen because of it's attractive design capabilities, its ease of use, its responsivness, and its ability to work with all modern browsers.
+Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS and (optionally) JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components. Bootstrap is the most popular CSS framework for developers to date. Bootstrap was chosen because of its attractive design capabilities, ease of use, responsiveness, and its ability to work with all modern browsers.
 
 </div>
 
@@ -432,9 +421,9 @@ Bootstrap is a free and open-source CSS framework directed at responsive, mobile
 
 <div align="justify">
 
-SQLite is an embeddable open source database. SQLite is designed to be fast, portable, and reliable, whether you’re storing only kilobytes of data or multi-gigabyte blobs. One of SQLite’s greatest advantages is that it can run nearly anywhere. SQLite has been ported to a wide variety of platforms: Windows, MacOS, Linux, iOS, Android, and more. SQLite3 was used for the development of this project on my local machine because multiple processes can be attached with same application file and can read and write without interfering each other. It can be used with all programming languages without any compatibility issue. SQLite3's exceptional because of its versatility, speed, and power.
+SQLite is an embeddable open source database. SQLite is designed to be fast, portable, and reliable, whether you’re storing only kilobytes of data or multi-gigabyte blobs. One of SQLite’s greatest advantages is that it can run nearly anywhere. SQLite has been ported to a wide variety of platforms: Windows, MacOS, Linux, iOS, Android, and more. SQLite3 was used for the development of this project on my local machine because multiple processes can be attached with the same application file and can read and write without interfering with each other. It can be used with all programming languages without any compatibility issue. SQLite3's exceptional because of its versatility, speed, and power.
 
-PostgreSQL is a powerful, open source object-relational database system. PostgreSQL comes with many features aimed to help developers build applications, administrators to protect data integrity and build fault-tolerant environments, and help you manage your data no matter how big or small the dataset. In addition to being free and open source, PostgreSQL is highly extensible. For example, you can define your own data types, build out custom functions, even write code from different programming languages without recompiling your database. PostgreSQL was used to support the full production of the Florescence Flowers website in conjunction with Django because of its data types, integrity, reliability and extensibility.
+PostgreSQL is a powerful, open-source object-relational database system. PostgreSQL comes with many features aimed to help developers build applications, administrators to protect data integrity and build fault-tolerant environments, and help you manage your data no matter how big or small the dataset. In addition to being free and open-source, PostgreSQL is highly extensible. For example, you can define your data types, build out custom functions, even write code from different programming languages without recompiling your database. PostgreSQL was used to support the full production of the Florescence Flowers website in conjunction with Django because of its data types, integrity, reliability and extensibility.
 
 </div>
 
@@ -554,8 +543,7 @@ Within the checkout app, `Order` and `OrderLineItem` models hold the data needed
 
 <div align="justify">
 
-In computer programming, create, read, update, and delete (CRUD) are the four basic functions of persistent storage. Florescence Flowers 
-relies heavily on this concept. Users are able to add reviews/ratings, view products, reviews & ratings, edit reviews/ratings, and delete reviews/ratings. Admin users are also able to add, edit and delete products. Within the information below, you'll find how CRUD has been used and why it has been used. Not to mention many more features.
+In computer programming, create, read, update, and delete (CRUD) are the four basic functions of persistent storage. Florescence Flowers relies heavily on this concept. Users can add reviews/ratings, view products, reviews & ratings, edit reviews/ratings, and delete reviews/ratings. Admin users are also able to add, edit and delete products. Within the information below, you'll find how CRUD has been used and why it has been used. Not to mention many more features.
 
 </div>
 
@@ -565,7 +553,7 @@ relies heavily on this concept. Users are able to add reviews/ratings, view prod
 
 Each page features a top navigation bar which enables the user to navigate to most pages within the Florescence Flowers website.
 
-* The main navigation bar, located at the top of the screen, consists of five main links: `Home`, `Varieties`, `Occasions`, `Colours`, and `Search`. At the top right-hand side of the screen there are two additional links: `Account` and `Basket`.
+* The main navigation bar, located at the top of the screen, consists of five main links: `Home`, `Varieties`, `Occasions`, `Colours`, and `Search`. At the top right-hand side of the screen, there are two additional links: `Account` and `Basket`.
 
 * `Varieties` has five sub-links: `All Flowers`, `Carnations`, `Gerbera`, `Lilies`, and `Roses`.
 
@@ -579,25 +567,25 @@ Each page features a top navigation bar which enables the user to navigate to mo
 
 * Florescence Flowers has a highly responsive design meaning that the website displays perfectly on a mobile device. When under 992px the top navigation bar transforms into a side navigation bar which is displayed when the user clicks on the menu button. The menu button is displayed on the left-hand side of the screen. It has a hamburger menu icon.
 
-* Located at the bottom right hand side of the screen there is a 'To Top Button' which when clicked, automatically takes the user back to the top of the screen. When at the top of the screen, this button disappears. It only reappears when the user scrolls down.
+* Located at the bottom right-hand side of the screen there is a 'To Top Button' which when clicked, automatically takes the user back to the top of the screen. When at the top of the screen, this button disappears. It only reappears when the user scrolls down.
 
-* Throughout the website there are multiple buttons which divert the user to different pages. The Log In page has a Register button, and likewise, the Register page has a Log In button. Most pages have a return/cancel button so that users can navigate back to where they came from. Each page has a button that clearly moves the user to the next stage in the purchasing process. If at any point the user wants to return back to the home page, the `Home` link is avaiable at all times.
+* Throughout the website there are multiple buttons that divert the user to different pages. The Log In page has a Register button, and likewise, the Register page has a Log In button. Most pages have a return/cancel button so that users can navigate back to where they came from. Each page has a button that clearly moves the user to the next stage in the purchasing process. If at any point the user wants to return to the home page, the `Home` link is available at all times.
 
-* The footer has two links which take the user to two seperate external websites. These link to the developers social profiles within GitHub and LinkedIn.
+* The footer has two links that take the user to two separate external websites. These link to the developer's social profiles within GitHub and LinkedIn.
 
 <br>
 
 ### **SEARCH FLOWERS** <a name="search"></a>
 
-* The `Search` feature is a very handy tool which is sure to be of great benefit to users. A user can type anything they wish into the search bar and the products related to the search data will be generated. Depending on what the user types, depends on what is displayed on this page. If the searched words correlate with anything in a product's title or description, that product will be displayed. If there are no search results, the page will indicate that there were zero results found. This short message appears at the left-hand side of the screen. The search bar is present within the main navigation bar.
+* The `Search` feature is a very handy tool that is sure to be of great benefit to users. A user can type anything they wish into the search bar and the products related to the search data will be generated. Depending on what the user types, depends on what is displayed on this page. If the searched words correlate with anything in a product's title or description, that product will be displayed. If there are no search results, the page will indicate that there were zero results found. This short message appears at the left-hand side of the screen. The search bar is present within the main navigation bar.
 
 ### **SORT FLOWERS** <a name="sort"></a>
 
-* The `Sort` feature is also a very handy tool which is going to be highly beneficial to the user. Whilst on any product page, located to the right-hand side of the screen, the user will find a `Sort` dropdown box. A user can select from a multitude of different options: `Price`, `Rating`, `Name`, `Variety`, `Occasion`, and `Colour`. The user has the option of choosing whether to sort via Ascending order or Descending order. Once an option has been chosen, products are populated on the page, depending on what choice was made.
+* The `Sort` feature is also a very handy tool that is going to be highly beneficial to the user. Whilst on any product page, located to the right-hand side of the screen, the user will find a `Sort` dropdown box. A user can select from a multitude of different options: `Price`, `Rating`, `Name`, `Variety`, `Occasion`, and `Colour`. The user has the option of choosing whether to sort via Ascending order or Descending order. Once an option has been chosen, products are populated on the page, depending on what choice was made.
 
 ### **HOME PAGE** <a name="home"></a>
 
-* The Home page is primarily used for the display of information to the user. The Home page gives explanation about Florescence Flowers.
+* The Home page is primarily used for the display of information to the user. The Home page gives an explanation about Florescence Flowers.
 
 * It includes an animated image carousel.
 
@@ -609,11 +597,11 @@ Each page features a top navigation bar which enables the user to navigate to mo
 
 ### **FEATURED FLOWERS** <a name="featured"></a>
 
-* Featured flowers are shown on the Home page. Featured flowers are chosen by the admin user and are primarily displayed in order to promote a specific product. The admin user has the ability to change these featured flowers at any given time via the `Update` product page. The update link is present within each of the product cards as long as the admin user is logged in.
+* Featured flowers are shown on the Home page. Featured flowers are chosen by the admin user and are primarily displayed to promote a specific product. The admin user has the ability to change these featured flowers at any given time via the `Update` product page. The update link is present within each of the product cards as long as the admin user is logged in.
 
 ### **VARIETIES** <a name="varieties"></a>
 
-There are four main varieties of flowers found within the Florescence Flowers website.
+There are four main varieties of flowers found on the Florescence Flowers website.
 
 #### *Carnations* <a name="carnations"></a>
 
@@ -659,11 +647,11 @@ There are currently five occasions for which a user may want to purchase flowers
 
 * When a user clicks on the `Thank You` link, flowers that may be given for that occasion are displayed.
 
-***please note that a user is not bound to these occasions. If a user wishes to purchase flowers within a certain occasion, for a different occasion, this is absolutely fine.***
+***Please note that a user is not bound to these occasions. If a user wishes to purchase flowers within a certain occasion, for a different occasion, this is absolutely fine.***
 
 ### **COLOURS** <a name="colours"></a>
 
-There are six main colours found within the Florescence Flowers website. Although there may be other colours within the bouquets, these are the six main colours found.
+There are six main colours found on the Florescence Flowers website. Although there may be other colours within the bouquets, these are the six main colours found.
 
 #### *Blue* <a name="blue"></a>
 
@@ -693,7 +681,7 @@ There are six main colours found within the Florescence Flowers website. Althoug
 
 * All flowers are displayed on screen, each within a card. Each card has an image, a name, a price, and a rating. Admin users have two additional links: `Update` and `Remove`. These links can either change the flowers' details or remove them from the database completely. A user can simply click on any card to direct them to the product detail page.
 
-* To the left, there is a flower counter. This counter informs the user how many flowers are currently on page.
+* To the left, there is a flower counter. This counter informs the user how many flowers are currently on the page.
 
 * Within the middle of the page, there is a note telling the user that there is free delivery over a specified amount spent.
 
@@ -703,9 +691,9 @@ There are six main colours found within the Florescence Flowers website. Althoug
 
 * Displays one single product. Image, Name, Price, Description, Rating - all found here.
 
-* Admin users are able to `Update` and `Remove` product from this page.
+* Admin users can `Update` and `Remove` product from this page.
 
-* Users are able to adjust the quantity of flower bouquets they wish to add to their basket using a simple quantity form.
+* Users can adjust the quantity of flower bouquets they wish to add to their basket using a simple quantity form.
 
 * Users can `Add to Basket`, `Go Back`, or go to `Basket` by clicking on the available buttons.
 
@@ -713,11 +701,11 @@ There are six main colours found within the Florescence Flowers website. Althoug
 
 * Accepted payment method information is shown.
 
-* Logged in users are able to leave product reviews here.
+* Logged in users can leave product reviews here.
 
-* Logged in users are able to rate products here.
+* Logged in users can rate products here.
 
-* Logged in users are able to edit / delete their own reviews / ratings.
+* Logged in users can edit/delete their own reviews/ratings.
 
 * If no reviews are present, a simple message is displayed informing the user.
 
@@ -727,11 +715,11 @@ There are six main colours found within the Florescence Flowers website. Althoug
 
 * Image, name, variety, colour and price are all shown here.
 
-* Users are able to adjust the product quantity via a quantity field.
+* Users can adjust the product quantity via a quantity field.
 
-* Users can remove the product completely from basket.
+* Users can remove the product completely from the basket.
 
-* Sub totals for products are shown.
+* Subtotals for products are shown.
 
 * Delivery cost is calculated and shown.
 
@@ -745,7 +733,7 @@ There are six main colours found within the Florescence Flowers website. Althoug
 
 * Image, name, variety, colour and price are all shown here.
 
-* Sub totals for products are shown.
+* Subtotals for products are shown.
 
 * Delivery cost is calculated and shown.
 
@@ -753,13 +741,13 @@ There are six main colours found within the Florescence Flowers website. Althoug
 
 * Stripe payment form is present. Users can enter personal & credit details here.
 
-* Save delivery info checkbox is present. This saves delivery info to user's Profile page.
+* Save delivery info checkbox is present. This saves delivery info to the user's Profile page.
 
-* Warning message to user stating grand total will be charged to card is present.
+* Warning message to the user stating grand total will be charged to their card is present.
 
-* Update Basket button returns user to Basket page.
+* Update Basket button returns the user to the Basket page.
 
-* Complete Order button will process order and take payment from card. Checkout Complete page will be rendered.
+* Complete Order button will process the order and take payment from the user's card. The Checkout Complete page will be rendered.
 
 * An email will be sent to the user upon completion. This email holds all relevant order information.
 
@@ -767,7 +755,7 @@ There are six main colours found within the Florescence Flowers website. Althoug
 
 * The Checkout Complete page holds all information relating to a completed order.
 
-* The user will find Order Number, Date Time, Delivery Info, Product Info, and Grand Totals.
+* The user will find Order Number, Date-Time, Delivery Info, Product Info, and Grand Totals.
 
 * There is a message to the user about how Florescence Flowers delivers their products.
 
@@ -781,9 +769,9 @@ There are six main colours found within the Florescence Flowers website. Althoug
 
 * Free delivery threshold is set to £30.
 
-* 15% of order total will be added to grand total if under delivery threshold.
+* 15% of the order total will be added to grand total if under the delivery threshold.
 
-* Message informing users how much to spend in order to recieve free delivery is found in success toasts when a user adds a product to basket.
+* A message informing users how much to spend to receive free delivery is found in success toasts when a user adds a product to basket.
 
 ### **EMAILS** <a name="email"></a>
 
@@ -795,11 +783,11 @@ There are six main colours found within the Florescence Flowers website. Althoug
 
 ### **LOG IN** <a name="login"></a>
 
-* Simple log in form present with username and password fields.
+* A simple login form is present with username and password fields.
 
 * Log in button present which logs the user into their account and renders the Home page.
 
-* Link to register page is present for those who do not have accounts.
+* Link to the register page is present for those who do not have accounts.
 
 * Remember me button for remembering user account.
 
@@ -807,11 +795,11 @@ There are six main colours found within the Florescence Flowers website. Althoug
 
 ### **REGISTER** <a name="register"></a>
 
-* Simple log in form present with username, email, and password fields.
+* A simple login form is present with username, email, and password fields.
 
 * Link to log in page is present for those who already have accounts.
 
-* Register button present to submit form.
+* Register button present to submit the form.
 
 ### **PROFILE** <a name="profile"></a>
 
@@ -837,7 +825,7 @@ As an Admin user, Admins are able to add new products to the website, they're ab
 
 * Featured is a simple checkbox. This adds this specific flower to the `Featured` section located on the Home page.
 
-* There is a `Select Image` button which enables the admin to search their local computer and upload an image to the site.
+* There is a `Select Image` button that enables the admin to search their local computer and upload an image to the site.
 
 * The admin can either cancel adding a product or they can add the product to the website using the `Add Flower` button.
 
@@ -849,7 +837,7 @@ As an Admin user, Admins are able to add new products to the website, they're ab
 
 * The `Edit Flower` functionality is exactly the same as the `Add Flower` functionality. Please see above.
 
-* The only difference is that when the edit page is loaded, fields will be auto populated with the selected products information. This information is then editable and can be saved to be perminantly changed within the database/website.
+* The only difference is that when the edit page is loaded, fields will be auto-populated with the information of the selected products. This information is then editable and can be saved to be permanently changed within the database/website.
 
 #### *Delete Flowers* <a name="delete-flowers"></a>
 
@@ -859,7 +847,7 @@ As an Admin user, Admins are able to add new products to the website, they're ab
 
 * Delete, or `Remove` buttons are located within the cards found in the products page and also within the product details page.
 
-* Clicking the `Remove` link will prompt a modal message to appear. The user can cancel or confirm deletion.
+* Clicking the `Remove` link will prompt a modal message to appear. The user can cancel or confirm the deletion.
 
 * Please be warned that once a product is deleted, you cannot get it back.
 
@@ -875,7 +863,7 @@ Users who have registered an account can leave product reviews and ratings. This
 
 * A text field allows the user to enter a review for publication on the website under that specific products' page.
 
-* A `Add Review` button allows the user to submit thier review.
+* An `Add Review` button allows the user to submit their review.
 
 * Reviews can only be added if the user is logged in with a registered account.
 
@@ -893,7 +881,7 @@ Users who have registered an account can leave product reviews and ratings. This
 
 * Once submitted the rating is shown below with all other review information, as stated above.
 
-* User ratings for each product are calculated into an average rating. This average rating is then displayed within each product's card / product detail page.
+* User ratings for each product are calculated into an average rating. This average rating is then displayed within each product's card/product detail page.
 
 * Ratings can only be added if the user is logged in with a registered account.
 
@@ -905,7 +893,7 @@ Users who have registered an account can leave product reviews and ratings. This
 
 * One of the main CRUD functionalities.
 
-* Users who create reviews are able to edit their review. Users can change the text content or their product rating.
+* Users who create reviews can edit their review. Users can change the text content or their product rating.
 
 * If the user clicks on the edit icon, a new text window appears, as does a rating dropdown box and a submit button.
 
@@ -917,11 +905,11 @@ Users who have registered an account can leave product reviews and ratings. This
 
 * One of the main CRUD functionalities.
 
-* Users who create reviews are able to delete their review.
+* Users who create reviews can delete their review.
 
 * A user can only delete their review and their rating, not one or the other.
 
-* Clicking the delete icon will prompt a modal message to appear. The user can cancel or confirm deletion.
+* Clicking the delete icon will prompt a modal message to appear. The user can cancel or confirm the deletion.
 
 * Deletion is permanent. Please delete with caution.
 
@@ -931,12 +919,11 @@ Users who have registered an account can leave product reviews and ratings. This
 
 ### **LOG OUT** <a name="reviews"></a>
 
-When navigating to the `Log Out` button within the Account menu, once clicked, the Log Out page will be rendered. This is a simple page with two buttons. Click `No` to revert back to the Home page and remain logged in, or click `Yes` to log out of your account and revert to the Home page. Once logged out you will not be able to access your Profile page and you will not be able to leave reviews/ratings. Additionally admin users will not be able to manage products.
+When navigating to the `Log Out` button within the Account menu, once clicked, the Log Out page will be rendered. This is a simple page with two buttons. Click `No` to revert back to the Home page and remain logged in, or click `Yes` to log out of your account and revert to the Home page. Once logged out you will not be able to access your Profile page and you will not be able to leave reviews/ratings. Additionally, admin users will not be able to manage products.
 
 ### **OTHER FEATURES** <a name="other-feat"></a>
 
-Defensive programming has been put in place so users cannot access specific pages if they are not logged in. If for example, if a user is on their profile 
-page and then logs out using the log out button, if they were to click their browser's back button, they wouldn't be able to access their profile page. The log in page automatically renders instead. The same applies for if you were to copy and paste a URL into the search box and/or go through your search history. You will only be able to see your pages if you are logged in.
+Defensive programming has been put in place so users cannot access specific pages if they are not logged in. If for example, if a user is on their profile page and then logs out using the logout button, if they were to click their browser's back button, they wouldn't be able to access their profile page. The login page automatically renders instead. The same applies if you were to copy and paste a URL into the search box and/or go through your search history. You will only be able to see your pages if you are logged in.
 
 <br>
 
@@ -1076,3 +1063,106 @@ implemented. In the near future we hope to implement the following:
 </div>
 
 ---
+
+## :test_tube: **TESTING** <a name="testing"></a>
+
+<div align="justify">
+
+Testing to go here.
+
+</div>
+
+---
+
+## :airplane: **DEPLOYMENT** <a name="deployment"></a>
+
+<div align="justify">
+
+[Heroku](https://www.heroku.com/) has been used to deploy the Florescence Flowers website. Developers use Heroku to deploy, manage, and scale modern apps. 
+The platform is elegant, flexible, and easy to use, offering developers the simplest path to getting their apps to market. The Heroku experience provides services, tools, workflows, and polyglot support — all designed to enhance developer productivity.
+
+### **DEPLOYMENT TO HEROKU** <a name="heroku"></a>
+
+1. Go to [Heroku.com](https://www.heroku.com/) and create an account.
+2. Create a new app within your newly created Heroku account.
+3. Select the region closest to you.
+4. Click the `Resources` tab, find `Add Ons`, search for and select `Heroku Postgres`. Then select the free plan.
+5. Within your IDE of choice's terminal, type: `pip3 install dj_database_url`.
+6. Within your IDE of choice's terminal, type: `pip3 install psycopg2-binary`.
+7. Within your IDE of choice's terminal, type: `pip3 freeze > requirements.txt`.
+8. Within your IDE of choice's terminal, type: `python3 manage.py dumpdata products > prod.json` to create json file containing all products.
+9. Within your settings.py file, type: `import dj_database_url`
+10. Go to `DATABASES` within settings.py and comment out existing data
+11. Replace existing data with Heroku’s Config Var’s database url which is found under the settings tab.
+
+<div align="center">
+
+![Heroku DB URL](media/heroku-db-url.png "Heroku DB URL")
+
+</div>
+
+12. Within your IDE of choice's terminal, type: `python3 manage.py migrate` to migrate changes
+13. Within your IDE of choice's terminal, type: `python3 manage.py loaddata prod.json` to load product data
+14. Within your IDE of choice's terminal, type: `python3 manage.py createsuperuser` to create django super admin user
+15. Uncomment `DATABASES` code from step 9
+
+<div align="center">
+
+![Settings Databases](media/settings-databases.png "Settings Databases")
+
+</div>
+
+16. Move `dj_database_url` above `DATABASES` and place it in an if statement as well as placing the original SQLite3 code into an else statement as shown:
+
+<div align="center">
+
+![Settings Database If Else](media/database-if-else.png "Settings Database If Else")
+
+</div>
+
+17. Within your IDE of choice's terminal, type: `pip3 install gunicorn`
+18. Within your IDE of choice's terminal, type: `pip3 freeze > requirements.txt`
+19. Create a new file within the root of your workspace called: `Procfile`
+20. Within your newly created Procfile, type: `web: gunicorn florescence_flowers.wsgi:application`
+21. Within your IDE of choice's terminal, type: `heroku login -i` and enter your login credentials
+22. Within your IDE of choice's terminal, type: `heroku config:set DISABLE_COLLECTSTATIC=1  --app florescence-flowers` to stop heroku collecting static files
+23. Commit files to Github.
+24. Within your IDE of choice's terminal, type: `heroku git:remote -a florescence-flowers` to initialize heroku git remote
+25. Within your IDE of choice's terminal, type: `git push heroku master`
+26. Go to [Heroku.com](https://www.heroku.com/) again and navigate to the "Deploy" tab.
+27. Set your "Deployment Method" to "Github" and connect to your repository.
+28. Set "Automatic Deploys" to "Enable Automatic Deploys".
+29. Navigate to the "Settings" tab within [Heroku.com](https://www.heroku.com/).
+30. Open Config Vars and enter all Environment Variable data used within the local production of Florescence Flowers.
+
+<div align="center">
+
+![Config Vars](media/config-vars.png "Config Vars")
+
+</div>
+
+31. Congratulations! Florescence Flowers is now deployed to Heroku!
+
+***Note that the AWS variables are only relevant when using AWS S3 for serving static files. For an excellent guide to hosting your static django files at AWS S3, [please click here](https://testdriven.io/blog/storing-django-static-and-media-files-on-amazon-s3/).***
+
+<br>
+
+### **LOCAL DEPLOYMENT** <a name="local"></a>
+
+1. Navigate to the [Repository](https://github.com/WebSlinger88/Florescence-Flowers).
+2. Click  the `Code` dropdown box.
+3. Copy the URL from the dropdown box.
+4. Within your IDE of choice's terminal, type: `git clone https://github.com/WebSlinger88/Florescence-Flowers.git`.
+5. Press Enter.
+6. Within your IDE of choice's terminal, type: `pip install -r requirements.txt`
+6. Install all dependencies from [Requirements](https://github.com/WebSlinger88/Florescence-Flowers/blob/master/requirements.txt) for the app to work.
+
+*You will have to set up an* `env.py` *file in the root directory of your project and set up variables for STRIPE_PUBLIC_KEY, SECRET_KEY, STRIPE_SECRET_KEY, STRIPE_WH_SECRET and DEVELOPMENT. Alternatively you can enter these details into your IDE's Settings' Environment Variables. In addition, you will have to set up the local SQLite database.*
+
+For more information, visit [Cloning a repository](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
+on GitHub.
+
+</div>
+
+---
+
