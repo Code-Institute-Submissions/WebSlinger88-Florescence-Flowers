@@ -70,9 +70,11 @@ Please note that this website is purely for educational purposes only.
         * [Red](#red)
         * [White](#white)
         * [Yellow](#yellow)
+    * [All Flowers](#products)
     * [Flower Details](#product-detail)
     * [Basket](#basket)
     * [Checkout](#checkout)
+    * [Checkout Complete](#complete)
     * [Delivery](#delivery)
     * [Emails](#email)
     * [Log In](#log-in)
@@ -88,6 +90,7 @@ Please note that this website is purely for educational purposes only.
         * [Edit Review](#edit-review)
         * [Delete Review](#delete-review)
     * [Log Out](#log-out)
+    * [Other Features](#other-feat)
 
 5. [Features left to Implement](#features-left)
 
@@ -397,3 +400,152 @@ If at any point a browser cannot support these fonts, the browser will fall back
 
 </div>
 
+---
+
+## :page_facing_up: **INFORMATION ARCHITECTURE** <a name="architecture"></a>
+
+### **APPLICATION FRAMEWORK** <a name="app-framework"></a>
+
+* [Django](https://docs.djangoproject.com/en/3.2/)
+
+<div align="justify">
+
+Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of Web development, so you can focus on writing your app without needing to reinvent the wheel. It’s free and open source. Django was chosen because
+of it's popularity, ease of use, and it was a prerequisite in the design of this project, according to the project brief. Django is ridiculously fast, reassuringly secure and exceedingly scalable.
+
+</div>
+
+### **CSS FRAMEWORK** <a name="css-framework"></a>
+
+* [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+
+<div align="justify">
+
+Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS and (optionally) JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components. Bootstrap is the most popular CSS framework for developers to date. Bootstrap was chosen because of it's attractive design capabilities, its ease of use, its responsivness, and its ability to work with all modern browsers.
+
+</div>
+
+### **DATABASE** <a name="database"></a>
+
+* [SQLite](https://www.sqlite.org/about.html)
+* [PostgresSQL](https://www.postgresql.org/docs/)
+
+<div align="justify">
+
+SQLite is an embeddable open source database. SQLite is designed to be fast, portable, and reliable, whether you’re storing only kilobytes of data or multi-gigabyte blobs. One of SQLite’s greatest advantages is that it can run nearly anywhere. SQLite has been ported to a wide variety of platforms: Windows, MacOS, Linux, iOS, Android, and more. SQLite3 was used for the development of this project on my local machine because multiple processes can be attached with same application file and can read and write without interfering each other. It can be used with all programming languages without any compatibility issue. SQLite3's exceptional because of its versatility, speed, and power.
+
+PostgreSQL is a powerful, open source object-relational database system. PostgreSQL comes with many features aimed to help developers build applications, administrators to protect data integrity and build fault-tolerant environments, and help you manage your data no matter how big or small the dataset. In addition to being free and open source, PostgreSQL is highly extensible. For example, you can define your own data types, build out custom functions, even write code from different programming languages without recompiling your database. PostgreSQL was used to support the full production of the Florescence Flowers website in conjunction with Django because of its data types, integrity, reliability and extensibility.
+
+</div>
+
+The Florescence Flowers database consists of the following Data Models:
+
+#### *UserProfile*
+
+A User model used to support this project is the default standard provided by `django.contrib.auth.models`.
+
+Var                 | Type                  | Option
+--------------------|-----------------------|---------------------------------------------
+user                | models.OneToOneField  | User, on_delete=models.CASCADE
+phone_number        | models.CharField      | max_length=20, null=True, blank=True
+street_address1     | models.CharField      | max_length=80, null=True, blank=True
+street_address2     | models.CharField      | max_length=80, null=True, blank=True
+town_or_city        | models.CharField      | max_length=40, null=True, blank=True
+county              | models.CharField      | max_length=80, null=True, blank=True
+postcode            | models.CharField      | max_length=20, null=True, blank=True
+country             | CountryField          | blank_label='Country', null=True, blank=True
+<br>
+
+#### *Product*
+
+The `Product` app consists of six models.
+
+##### **Product:**
+
+| Var                 | Type                      | Option
+|---------------------|---------------------------|--------------------------------------------------
+| category            | models.OneToOneField      | User, on_delete=models.CASCADE
+| name                | models.CharField          | null=True, blank=True, on_delete=models.SET_NULL
+| description         | models.TextField          |
+| price               | models.DecimalField       | max_digits=6, decimal_places=2
+| colour              | models.ForeignKey         | null=True, blank=True, on_delete=models.SET_NULL
+| occasion            | models.ForeignKey         | null=True, blank=True, on_delete=models.SET_NULL
+| featured            | models.BooleanField       | default=False
+| avgRating           | models.FloatField         | default=0
+| image               | models.ImageField         | null=True, blank=True
+<br>
+
+##### **Category, Colour, Occasion:**
+
+| Name                | Var                       | Type                      | Option
+|---------------------|---------------------------|---------------------------|------------------       
+| Category            | name                      | models.CharField          | max_length=254
+| Colour              | name                      | models.CharField          | max_length=254
+| Occasion            | name                      | models.CharField          | max_length=254
+<br>
+
+##### **ProductReview:**
+
+| Var                 | Type                      | Option
+|---------------------|---------------------------|--------------------------------------------------
+| product             | models.ForeignKey         | null=True, blank=True, on_delete=models.SET_NULL
+| user                | models.ForeignKey         | User, on_delete=models.CASCADE
+| content             | models.TextField          | max_length=2000, blank=True, null=True
+| date_added          | models.DateTimeField      | auto_now_add=True
+<br>
+
+##### **ProductRating:**
+
+| Var                 | Type                      | Option
+|---------------------|---------------------------|--------------------------------------------------
+| product             | models.ForeignKey         | null=True, blank=True, on_delete=models.SET_NULL
+| rating              | PositiveSmallIntegerField |
+| review              | models.OneToOneField      | null=True, blank=True, on_delete=models.CASCADE
+<br>
+
+#### *Checkout*
+
+Within the checkout app, `Order` and `OrderLineItem` models hold the data needed for users to create and pay for their orders.
+
+##### **Order:**
+
+| Var                 | Type                      | Option
+|---------------------|---------------------------|---------------------------------------------------------
+| order_number        | models.CharField          | max_length=32, null=False, editable=False
+| user_profile        | models.ForeignKey         | on_delete=models.SET_NULL, null=True, blank=True
+| full_name           | models.CharField          | max_length=50, null=False, blank=False
+| email               | models.EmailField         | max_length=254, null=False, blank=False
+| phone_number        | models.CharField          | max_length=20, null=False, blank=False
+| country             | CountryField              | blank_label='Country *', null=False, blank=False
+| postcode            | models.CharField          | max_length=20, null=True, blank=True
+| town_or_city        | models.CharField          | max_length=40, null=False, blank=False
+| street_address1     | models.CharField          | max_length=80, null=False, blank=False
+| street_address2     | models.CharField          | max_length=80, null=False, blank=False
+| county              | models.CharField          | max_length=80, null=True, blank=True
+| date                | models.DateTimeField      | auto_now_add=True
+| delivery_cost       | models.DecimalField       | max_digits=6, decimal_places=2, null=False, default=0
+| order_total         | models.DecimalField       | max_digits=10, decimal_places=2, null=False, default=0
+| grand_total         | models.DecimalField       | max_digits=10, decimal_places=2, null=False, default=0
+| original_basket     | models.TextField          | null=False, blank=False, default=''
+| stripe_pid          | models.CharField          | max_length=254, null=False, blank=False, default=''
+
+<br>
+
+* An `Order` model instance is created before any `OrderLineItems`. `OrderLineItems` rely on the `Order` model for a `ForeignKey`.
+
+<br>
+
+##### **OrderLineItem:**
+
+| Var                 | Type                      | Option
+|---------------------|---------------------------|-------------------------------------------------------------------------
+| order               | models.ForeignKey         | null=False, blank=False, on_delete=models.CASCADE
+| product             | models.ForeignKey         | null=False, blank=False, on_delete=models.CASCADE
+| quantity            | models.IntegerField       | null=False, blank=False, default=0
+| lineitem_total      | models.DecimalField       | max_digits=6, decimal_places=2, null=False, blank=False, editable=False
+
+<br>
+
+* An `OrderLineItem` instance is created for each unique product in the users basket, linking a users existing `Order`, product and quantity the user elects to purchase
+
+<br>
