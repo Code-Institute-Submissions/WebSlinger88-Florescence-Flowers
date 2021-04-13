@@ -958,3 +958,121 @@ implemented. In the near future we hope to implement the following:
 </div>
 
 ---
+
+## :cd: **TECHNOLOGIES USED** <a name="technologies"></a>
+
+<div align="justify">
+
+#### *Languages* <a name="languages"></a>
+
+1. [HTML](https://html.spec.whatwg.org/multipage/)
+
+    * The building blocks to everything that is code! Used to create the foundations of Florescence Flowers's website.
+
+2. [CSS](https://www.w3.org/Style/CSS/)
+
+    * Who's got style? Used to style Florescence Flowers's HTML code.
+
+3. [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
+    * Let's get dynamic! Used to bring life into Florescence Flowers's code.
+
+4. [Python](https://www.python.org/)
+
+    * The brains behind it all. Used for backend development and database handling.
+
+
+#### *Libraries* <a name="libraries"></a>
+
+1. [Bootstrap](https://materializecss.com/)
+
+    * Used for Bootstraps's grid system, Navigation, mobile responsiveness etc...
+
+2. [Font Awesome](https://fontawesome.com/start)
+
+    * Used to provide quality icons for Florescence Flowers's forms, buttons, and footer.
+    
+3. [Google Fonts](https://fonts.google.com/)
+
+    * Used to change the font throughout Florescence Flowers's whole website.
+
+4. [jQuery](https://jquery.com/)
+
+    * Used to manipulate the DOM and bring life to Florescence Flowers.
+
+5. [Hover.css](https://ianlunn.github.io/Hover/)
+
+    * Used to provide subtle animation to buttons and links.
+
+
+#### *Tools* <a name="tools"></a>
+
+1. [GitHub](https://github.com/)
+
+    * A code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+
+2. [GitPod](https://www.gitpod.io/docs/)
+
+    * A cloud-based integrated development environment (IDE) that lets you write, run, and debug your code with just a browser.
+
+3. [Git](https://git-scm.com/)
+
+    * A free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+
+4. [AWS S3 Bucket](https://aws.amazon.com/) 
+
+    * Provides a secure cloud based repository in storage for website images.
+
+5. [Django](https://www.djangoproject.com/) 
+
+    * High-level Python Web framework that encourages rapid development and a clean, pragmatic design.
+
+6. [Django-Heroku](https://pypi.org/project/django-heroku/) 
+
+    * Enabling improved deployment of django projects on heroku.
+
+7. [Django-Storages](https://django-storages.readthedocs.io/en/latest/) 
+
+    * Custom storage backending with Django to work with AWS S3 and Boto3
+
+8. [Stripe](https://stripe.com/gb) 
+
+    * A payment platform to validate debit and credit card payments securely.
+
+9. [Gunicorn](https://pypi.org/project/gunicorn/) 
+
+    * Enables deployment of the Django project to heroku via UNXI WSGI HTTP Server
+
+10. [Pillow](https://pillow.readthedocs.io/en/stable/) 
+
+    * A python imaging library enabling image files to store in database.
+
+11. [PIP](https://pip.pypa.io/en/stable/installing/) 
+
+    * Enabling installation of tools and packages required for this project to function correctly.
+
+12. [psycopg2](https://pypi.org/project/psycopg2/) 
+
+    * A PostgreSQL production database adapter for Python.
+
+13. [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) 
+
+    * Enables the creation, configuration and management of AWS S3.
+
+14. [Balsamiq Wireframes 4](https://balsamiq.com/)
+
+    * Used to create Florescence Flowers's Wireframes.
+
+15. [Adobe XD](https://www.adobe.com/uk/products/xd.html)
+
+    * Used to create Florescence Flowers's logos and Mock Ups.
+
+#### *Hosting* <a name="host"></a>
+
+1. [Heroku](https://www.heroku.com/)
+
+    * Used to host the deployed application.
+
+</div>
+
+---
