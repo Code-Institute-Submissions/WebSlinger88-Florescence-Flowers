@@ -1166,3 +1166,29 @@ on GitHub.
 
 ---
 
+## :clapper: **CREDITS** <a name="credits"></a>
+
+<div align="justify">
+
+Various websites were used for Florescence Flowers's website to become what it is today. All content displayed is part of the public domain.
+
+### **CONTENT** <a name="content"></a>
+
+* Florescence Flowers's logo was created and designed by [Lewis Wheeler](https://www.linkedin.com/in/lewis-wheeler-aa91791a0/) - Florescence Flowers's Full Stack Web Developer, using [Adobe XD](https://www.adobe.com/uk/products/xd.html). The flower image for the logo was sourced from [Klipartz](https://www.klipartz.com/en).
+
+* All product imagery on the Florescence Flowers website was acquired from [Serenata Flowers](https://www.serenataflowers.com/).
+* Most textual content on the Florescence Flowers website was acquired from [Serenata Flowers](https://www.serenataflowers.com/).
+
+### **MEDIA** <a name="media"></a>
+
+* Imagery:
+    * [Klipartz](https://www.klipartz.com/en).
+    * [PxHere](https://pxhere.com/).
+    * [Serenata Flowers](https://www.serenataflowers.com/)*
+
+
+* Text:
+    * [Google Fonts](https://fonts.google.com/).
+    * [Font Awesome](https://fontawesome.com/icons?d=gallery&m=free).
+    * [Serenata Flowers](https://www.serenataflowers.com/).
+
