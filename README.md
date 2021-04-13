@@ -549,3 +549,391 @@ Within the checkout app, `Order` and `OrderLineItem` models hold the data needed
 * An `OrderLineItem` instance is created for each unique product in the users basket, linking a users existing `Order`, product and quantity the user elects to purchase
 
 <br>
+
+## :page_facing_up: **EXISTING FEATURES** <a name="existing"></a>
+
+<div align="justify">
+
+In computer programming, create, read, update, and delete (CRUD) are the four basic functions of persistent storage. Florescence Flowers 
+relies heavily on this concept. Users are able to add reviews/ratings, view products, reviews & ratings, edit reviews/ratings, and delete reviews/ratings. Admin users are also able to add, edit and delete products. Within the information below, you'll find how CRUD has been used and why it has been used. Not to mention many more features.
+
+</div>
+
+### **NAVIGATION** <a name="navigation"></a>
+
+<div align="justify">
+
+Each page features a top navigation bar which enables the user to navigate to most pages within the Florescence Flowers website.
+
+* The main navigation bar, located at the top of the screen, consists of five main links: `Home`, `Varieties`, `Occasions`, `Colours`, and `Search`. At the top right-hand side of the screen there are two additional links: `Account` and `Basket`.
+
+* `Varieties` has five sub-links: `All Flowers`, `Carnations`, `Gerbera`, `Lilies`, and `Roses`.
+
+* `Occasions` has five sub-links: `Birthday`, `Celebration`, `Romantic`, `Sympathy`, and `Thank You`.
+
+* `Colours` has six sub-links: `Blue`, `Orange`, `Pink`, `Red`, `White`, and `Yellow`.
+
+* The Account navigation link has different options depending on whether the user is logged in or logged out. If logged out, the `Log In` & `Register` links are available. If logged in, the `Profile` & `Log Out` links are available. Admin users have an additional link: `Manage`.
+
+* The `Basket` link is displayed in the form of a Font Awesome icon and a price display.
+
+* Florescence Flowers has a highly responsive design meaning that the website displays perfectly on a mobile device. When under 992px the top navigation bar transforms into a side navigation bar which is displayed when the user clicks on the menu button. The menu button is displayed on the left-hand side of the screen. It has a hamburger menu icon.
+
+* Located at the bottom right hand side of the screen there is a 'To Top Button' which when clicked, automatically takes the user back to the top of the screen. When at the top of the screen, this button disappears. It only reappears when the user scrolls down.
+
+* Throughout the website there are multiple buttons which divert the user to different pages. The Log In page has a Register button, and likewise, the Register page has a Log In button. Most pages have a return/cancel button so that users can navigate back to where they came from. Each page has a button that clearly moves the user to the next stage in the purchasing process. If at any point the user wants to return back to the home page, the `Home` link is avaiable at all times.
+
+* The footer has two links which take the user to two seperate external websites. These link to the developers social profiles within GitHub and LinkedIn.
+
+<br>
+
+### **SEARCH FLOWERS** <a name="search"></a>
+
+* The `Search` feature is a very handy tool which is sure to be of great benefit to users. A user can type anything they wish into the search bar and the products related to the search data will be generated. Depending on what the user types, depends on what is displayed on this page. If the searched words correlate with anything in a product's title or description, that product will be displayed. If there are no search results, the page will indicate that there were zero results found. This short message appears at the left-hand side of the screen. The search bar is present within the main navigation bar.
+
+### **SORT FLOWERS** <a name="sort"></a>
+
+* The `Sort` feature is also a very handy tool which is going to be highly beneficial to the user. Whilst on any product page, located to the right-hand side of the screen, the user will find a `Sort` dropdown box. A user can select from a multitude of different options: `Price`, `Rating`, `Name`, `Variety`, `Occasion`, and `Colour`. The user has the option of choosing whether to sort via Ascending order or Descending order. Once an option has been chosen, products are populated on the page, depending on what choice was made.
+
+### **HOME PAGE** <a name="home"></a>
+
+* The Home page is primarily used for the display of information to the user. The Home page gives explanation about Florescence Flowers.
+
+* It includes an animated image carousel.
+
+* It displays `Featured Flowers` which can be managed by the site admin user.
+
+* It includes a Shop Now button which directs the user to the All Flowers page.
+
+* Home page is fully responsive.
+
+### **FEATURED FLOWERS** <a name="featured"></a>
+
+* Featured flowers are shown on the Home page. Featured flowers are chosen by the admin user and are primarily displayed in order to promote a specific product. The admin user has the ability to change these featured flowers at any given time via the `Update` product page. The update link is present within each of the product cards as long as the admin user is logged in.
+
+### **VARIETIES** <a name="varieties"></a>
+
+There are four main varieties of flowers found within the Florescence Flowers website.
+
+#### *Carnations* <a name="carnations"></a>
+
+* When a user clicks on the `Carnations` link, all flowers that belong to the Carnation family are displayed.
+* More information about Carnations can be found [here](https://en.wikipedia.org/wiki/Dianthus_caryophyllus).
+
+#### *Gerbera* <a name="gerbera"></a>
+
+* When a user clicks on the `Gerbera` link, all flowers that belong to the Gerbera family are displayed.
+* More information about Gerbera can be found [here](https://en.wikipedia.org/wiki/Gerbera).
+
+#### *Lilies* <a name="lilies"></a>
+
+* When a user clicks on the `Lilies` link, all flowers that belong to the Lily family are displayed.
+* More information about Lilies can be found [here](https://en.wikipedia.org/wiki/Lilium).
+
+#### *Roses* <a name="roses"></a>
+
+* When a user clicks on the `Roses` link, all flowers that belong to the Rose family are displayed.
+* More information about Roses can be found [here](https://en.wikipedia.org/wiki/Rose).
+
+### **OCCASIONS** <a name="occasions"></a>
+
+There are currently five occasions for which a user may want to purchase flowers.
+
+#### *Birthday* <a name="birthday"></a>
+
+* When a user clicks on the `Birthday` link, flowers that may be given for that occasion are displayed.
+
+#### *Celebration* <a name="celebration"></a>
+
+* When a user clicks on the `Celebration` link, flowers that may be given for that occasion are displayed.
+
+#### *Romantic* <a name="romantic"></a>
+
+* When a user clicks on the `Romantic` link, flowers that may be given for that occasion are displayed.
+
+#### *Sympathy* <a name="sympathy"></a>
+
+* When a user clicks on the `Sympathy` link, flowers that may be given for that occasion are displayed.
+
+#### *Thank You* <a name="thanks"></a>
+
+* When a user clicks on the `Thank You` link, flowers that may be given for that occasion are displayed.
+
+***please note that a user is not bound to these occasions. If a user wishes to purchase flowers within a certain occasion, for a different occasion, this is absolutely fine.***
+
+### **COLOURS** <a name="colours"></a>
+
+There are six main colours found within the Florescence Flowers website. Although there may be other colours within the bouquets, these are the six main colours found.
+
+#### *Blue* <a name="blue"></a>
+
+* This category is predominantly made up of blue flowers. When the `Blue` link is selected, all flowers containing the colour blue will be displayed.
+
+#### *Orange* <a name="orange"></a>
+
+* This category is predominantly made up of orange flowers. When the `Orange` link is selected, all flowers containing the colour orange will be displayed.
+
+#### *Pink* <a name="pink"></a>
+
+* This category is predominantly made up of pink flowers. When the `Pink` link is selected, all flowers containing the colour pink will be displayed.
+
+#### *Red* <a name="red"></a>
+
+* This category is predominantly made up of red flowers. When the `Red` link is selected, all flowers containing the colour red will be displayed.
+
+#### *White* <a name="white"></a>
+
+* This category is predominantly made up of white flowers. When the `White` link is selected, all flowers containing the colour white will be displayed.
+
+#### *Yellow* <a name="yellow"></a>
+
+* This category is predominantly made up of yellow flowers. When the `Yellow` link is selected, all flowers containing the colour yellow will be displayed.
+
+### **ALL FLOWERS** <a name="products"></a>
+
+* All flowers are displayed on screen, each within a card. Each card has an image, a name, a price, and a rating. Admin users have two additional links: `Update` and `Remove`. These links can either change the flowers' details or remove them from the database completely. A user can simply click on any card to direct them to the product detail page.
+
+* To the left, there is a flower counter. This counter informs the user how many flowers are currently on page.
+
+* Within the middle of the page, there is a note telling the user that there is free delivery over a specified amount spent.
+
+* Located to the right is the `Sort` dropdown selection box.
+
+### **FLOWER DETAILS** <a name="product-detail"></a>
+
+* Displays one single product. Image, Name, Price, Description, Rating - all found here.
+
+* Admin users are able to `Update` and `Remove` product from this page.
+
+* Users are able to adjust the quantity of flower bouquets they wish to add to their basket using a simple quantity form.
+
+* Users can `Add to Basket`, `Go Back`, or go to `Basket` by clicking on the available buttons.
+
+* Free delivery notice is shown.
+
+* Accepted payment method information is shown.
+
+* Logged in users are able to leave product reviews here.
+
+* Logged in users are able to rate products here.
+
+* Logged in users are able to edit / delete their own reviews / ratings.
+
+* If no reviews are present, a simple message is displayed informing the user.
+
+### **BASKET** <a name="basket"></a>
+
+* The `Basket` page shows all products that a user has chosen for a possible purchase.
+
+* Image, name, variety, colour and price are all shown here.
+
+* Users are able to adjust the product quantity via a quantity field.
+
+* Users can remove the product completely from basket.
+
+* Sub totals for products are shown.
+
+* Delivery cost is calculated and shown.
+
+* Grand total is calculated and shown.
+
+* Users can navigate to checkout or return to all products page.
+
+### **CHECKOUT** <a name="checkout"></a>
+
+* The `Checkout` page shows all products that a user has chosen for a possible purchase.
+
+* Image, name, variety, colour and price are all shown here.
+
+* Sub totals for products are shown.
+
+* Delivery cost is calculated and shown.
+
+* Grand total is calculated and shown.
+
+* Stripe payment form is present. Users can enter personal & credit details here.
+
+* Save delivery info checkbox is present. This saves delivery info to user's Profile page.
+
+* Warning message to user stating grand total will be charged to card is present.
+
+* Update Basket button returns user to Basket page.
+
+* Complete Order button will process order and take payment from card. Checkout Complete page will be rendered.
+
+* An email will be sent to the user upon completion. This email holds all relevant order information.
+
+### **CHECKOUT COMPLETE** <a name="complete"></a>
+
+* The Checkout Complete page holds all information relating to a completed order.
+
+* The user will find Order Number, Date Time, Delivery Info, Product Info, and Grand Totals.
+
+* There is a message to the user about how Florescence Flowers delivers their products.
+
+* There is a link that takes the user back to the All Flowers page.
+
+* If a user if accessing a historical order via their profile page, the all flowers link will instead be a profile link.
+
+* All information found on the checkout complete page can be found in an email sent to the user upon order completion.
+
+### **DELIVERY** <a name="delivery"></a>
+
+* Free delivery threshold is set to £30.
+
+* 15% of order total will be added to grand total if under delivery threshold.
+
+* Message informing users how much to spend in order to recieve free delivery is found in success toasts when a user adds a product to basket.
+
+### **EMAILS** <a name="email"></a>
+
+* An email is sent to the email address provided when a user makes a purchase.
+
+* An email is sent to the email address provided when a user registers an account.
+
+* An email is sent to the email address provided when a user requests a password reset.
+
+### **LOG IN** <a name="login"></a>
+
+* Simple log in form present with username and password fields.
+
+* Log in button present which logs the user into their account and renders the Home page.
+
+* Link to register page is present for those who do not have accounts.
+
+* Remember me button for remembering user account.
+
+* Forgotten password link renders password reset page.
+
+### **REGISTER** <a name="register"></a>
+
+* Simple log in form present with username, email, and password fields.
+
+* Link to log in page is present for those who already have accounts.
+
+* Register button present to submit form.
+
+### **PROFILE** <a name="profile"></a>
+
+* Unique heading containing the user's username is located at the top of the page.
+
+* User's delivery information is located to the left. All fields are editable and there is a submit button to save.
+
+* User's historical purchases are located to the right. Order number, date, product and cost of all purchased products are found here.
+
+* User is able to click on Order Number to render Checkout Complete page which details the complete order.
+
+### **MANAGEMENT** <a name="manage"></a>
+
+As an Admin user, Admins are able to add new products to the website, they're able to edit any current product, and they're able to completely remove any product from the website. Not just anybody can be an admin. Admin rights are only given to people involved in the management and development of Florescence Flowers.
+
+#### *Add Flowers* <a name="add-flowers"></a>
+
+* One of the main CRUD functionalities.
+
+* The `Add Flowers` or, `Manage` page consists of a simple form. There are multiple fields for the admin to fill out.
+
+* Category, Name, Description, Price, Colour, and Occasion are all text / select fields.
+
+* Featured is a simple checkbox. This adds this specific flower to the `Featured` section located on the Home page.
+
+* There is a `Select Image` button which enables the admin to search their local computer and upload an image to the site.
+
+* The admin can either cancel adding a product or they can add the product to the website using the `Add Flower` button.
+
+* If no image is selected, a default "No Image" image will be displayed.
+
+#### *Edit Flowers* <a name="edit-flowers"></a>
+
+* One of the main CRUD functionalities.
+
+* The `Edit Flower` functionality is exactly the same as the `Add Flower` functionality. Please see above.
+
+* The only difference is that when the edit page is loaded, fields will be auto populated with the selected products information. This information is then editable and can be saved to be perminantly changed within the database/website.
+
+#### *Delete Flowers* <a name="delete-flowers"></a>
+
+* One of the main CRUD functionalities.
+
+* The admin user has the ability to completely remove any product from the database/website.
+
+* Delete, or `Remove` buttons are located within the cards found in the products page and also within the product details page.
+
+* Clicking the `Remove` link will prompt a modal message to appear. The user can cancel or confirm deletion.
+
+* Please be warned that once a product is deleted, you cannot get it back.
+
+### **RATINGS & REVIEWS** <a name="reviews"></a>
+
+Users who have registered an account can leave product reviews and ratings. This allows any member of the public to get an insight into what other people think about a specific product. This can ultimately help someone decide whether or not to purchase a product. Leaving reviews/ratings also offers the user interactivity, this can lead to the user experiencing elevated enjoyment.
+
+#### *Add Review* <a name="add-review"></a>
+
+* One of the main CRUD functionalities.
+
+* Located within the product detail page is a review section.
+
+* A text field allows the user to enter a review for publication on the website under that specific products' page.
+
+* A `Add Review` button allows the user to submit thier review.
+
+* Reviews can only be added if the user is logged in with a registered account.
+
+* When a review is posted, the review is added at the bottom of the product detail page.
+
+* Username, Time, Date, Rating and Review will be displayed.
+
+* If the user who posted is logged in, there will be a delete icon and an edit icon. These icons allow the user to either edit or delete their review.
+
+#### *Add Rating* <a name="add-rating"></a>
+
+* One of the main CRUD functionalities.
+
+* A rating dropdown box allows a user to select a rating from one to five, five being the highest rating.
+
+* Once submitted the rating is shown below with all other review information, as stated above.
+
+* User ratings for each product are calculated into an average rating. This average rating is then displayed within each product's card / product detail page.
+
+* Ratings can only be added if the user is logged in with a registered account.
+
+* Ratings can be edited via the edit function. Please see below.
+
+* Ratings are shown in the form of Font Awesome Icons. The Star icon to be precise.
+
+#### *Edit Review* <a name="edit-review"></a>
+
+* One of the main CRUD functionalities.
+
+* Users who create reviews are able to edit their review. Users can change the text content or their product rating.
+
+* If the user clicks on the edit icon, a new text window appears, as does a rating dropdown box and a submit button.
+
+* Reviews can only be edited if the user is logged in with a registered account.
+
+* Reviews can only be edited by the original author.
+
+#### *Delete Review* <a name="delete-review"></a>
+
+* One of the main CRUD functionalities.
+
+* Users who create reviews are able to delete their review.
+
+* A user can only delete their review and their rating, not one or the other.
+
+* Clicking the delete icon will prompt a modal message to appear. The user can cancel or confirm deletion.
+
+* Deletion is permanent. Please delete with caution.
+
+* Reviews can only be deleted if the user is logged in with a registered account.
+
+* Reviews can only be deleted by the original author.
+
+### **LOG OUT** <a name="reviews"></a>
+
+When navigating to the `Log Out` button within the Account menu, once clicked, the Log Out page will be rendered. This is a simple page with two buttons. Click `No` to revert back to the Home page and remain logged in, or click `Yes` to log out of your account and revert to the Home page. Once logged out you will not be able to access your Profile page and you will not be able to leave reviews/ratings. Additionally admin users will not be able to manage products.
+
+### **OTHER FEATURES** <a name="other-feat"></a>
+
+* Defensive programming has been put in place so users cannot access specific pages if they are not logged in. If for example, if a user is on their profile 
+page and then logs out using the log out button, if they were to click their browser's back button, they wouldn't be able to access their profile page. The log in page automatically renders instead. The same applies for if you were to copy and paste a URL into the search box and/or go through your search history. You will only be able to see your pages if you are logged in.
