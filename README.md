@@ -935,5 +935,26 @@ When navigating to the `Log Out` button within the Account menu, once clicked, t
 
 ### **OTHER FEATURES** <a name="other-feat"></a>
 
-* Defensive programming has been put in place so users cannot access specific pages if they are not logged in. If for example, if a user is on their profile 
+Defensive programming has been put in place so users cannot access specific pages if they are not logged in. If for example, if a user is on their profile 
 page and then logs out using the log out button, if they were to click their browser's back button, they wouldn't be able to access their profile page. The log in page automatically renders instead. The same applies for if you were to copy and paste a URL into the search box and/or go through your search history. You will only be able to see your pages if you are logged in.
+
+<br>
+
+---
+
+ ## :pencil2: **FEATURES LEFT TO IMPLEMENT** <a name="features-left"></a>
+
+Florescence Flowers is a big project, and although we are happy with everything that has been done to date, there are still multiple features that are yet to be
+implemented. In the near future we hope to implement the following:
+
+* More varieties - Orchids, Tulips, Peonies, Dahlias.
+* More Occasions - Weddings, Funeral, Mother's Day, Winter Holiday.
+* More Colours - Purple, Green.
+* Social Sharing - Users can share their favourite flowers via Facebook, Instagram, and WhatsApp.
+* Reversing Deletion - Deleted products to be recovered in the event of human error.
+* Frequently Asked Questions
+* Newsletter
+
+</div>
+
+---
