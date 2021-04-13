@@ -1192,3 +1192,29 @@ Various websites were used for Florescence Flowers's website to become what it i
     * [Font Awesome](https://fontawesome.com/icons?d=gallery&m=free).
     * [Serenata Flowers](https://www.serenataflowers.com/).
 
+### **ACKNOWLEDGEMENTS** <a name="thanks"></a>
+
+Inspiration was used in various locations across the world wide web. Please see below some of the key sources used to help develop Florescence Flowers.
+
+* Code Instiute Video Tutorials.
+* [Bootstrap](https://getbootstrap.com/docs/4.1/getting-started/introduction/) Documentation.
+* [w3schools](https://www.w3schools.com/) Documentation.
+* [jQuery](https://jquery.com/) Documentation.
+* [Django](https://docs.djangoproject.com/en/3.2/) Documentation.
+* [Amazon Web Services](https://docs.aws.amazon.com/) Documentation.
+* [Stripe](https://stripe.com/docs) Documentation.
+* [Heroku](https://devcenter.heroku.com/categories/reference) Documentation.
+* [Serenata Flowers](https://www.serenataflowers.com/) Imagery & Text.
+
+</div>
+
+---
+:star: *A special thank you to [Maranatha Ilesanmi](https://github.com/mbilesanmi) Code Institute Mentor and [Paul F_alumni](https://github.com/Spagettileg) for aid, assistance, and much-needed guidance.* :star:
+---
+
+---
+
+***This document is for educational use.***
+
+---
+[:arrow_up: Return to top?](#top)
