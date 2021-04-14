@@ -204,7 +204,7 @@ page within the Florescence Flowers website. There are seven main navigation lin
 
 * As it stands there are currently six different Colour categories that our flowers fall into and they are: Blue, Orange, Pink, Red, White, and Yellow. If a user is searching for blue flowers, for example, then navigating to the Blue Colour category will display flowers that are blue and/or have blue in them. These Colour categories have been implemented to help the user distinguish between different flowers and to also make searching more efficient.
 
-* The Log In page features a main heading, underneath the heading you'll find a register button for those who do not currently have an account. Below this you'll find a simple form consisting of three elements: Username field, a Password field, and a Log In button. There is a 'Remember me' checkbox and a 'Forgotten Password' link.
+* The Log In page features a main heading, underneath the heading you'll find a register button for those who do not currently have an account. Below this you'll find a simple form consisting of three elements: Username field, a Password field, and a Log In button. There is a 'Forgotten Password' link.
 
 * The Register page looks almost identical to the Log In page. It has a few additional fields. It has an email field and a confirmation email/password field. There is a 'Log In' link for those who already have an account.
 
@@ -789,8 +789,6 @@ There are six main colours found on the Florescence Flowers website. Although th
 
 * Link to the register page is present for those who do not have accounts.
 
-* Remember me button for remembering user account.
-
 * Forgotten password link renders password reset page.
 
 ### **REGISTER** <a name="register"></a>
@@ -934,13 +932,17 @@ Defensive programming has been put in place so users cannot access specific page
 Florescence Flowers is a big project, and although we are happy with everything that has been done to date, there are still multiple features that are yet to be
 implemented. In the near future we hope to implement the following:
 
-* More varieties - Orchids, Tulips, Peonies, Dahlias.
-* More Occasions - Weddings, Funeral, Mother's Day, Winter Holiday.
-* More Colours - Purple, Green.
+* Add ability for admin user to add new varieties.
+* Add ability for admin user to add new occasions.
+* Add ability for admin user to add new colours.
+* More varieties - eg. Orchids, Tulips, Peonies, Dahlias.
+* More Occasions - eg. Weddings, Funeral, Mother's Day, Winter Holiday.
+* More Colours - eg. Purple, Green.
 * Social Sharing - Users can share their favourite flowers via Facebook, Instagram, and WhatsApp.
 * Reversing Deletion - Deleted products to be recovered in the event of human error.
 * Frequently Asked Questions
 * Newsletter
+* Pagination
 
 </div>
 
@@ -1068,7 +1070,11 @@ implemented. In the near future we hope to implement the following:
 
 <div align="justify">
 
-Testing to go here.
+Due to the extensive nature of the testing process, test analysis and reporting can be found by clicking on the following links. 
+Here you shall find a separate markdown file as well as two files, one Excel spreadsheet and a downloadable PDF of the same spreadsheet.
+
+* [TESTING.md](https://github.com/WebSlinger88/Florescence-Flowers/blob/master/TESTING.md)
+* [Friendly Digest Testing Docs](https://github.com/WebSlinger88/Florescence-Flowers/tree/master/testing)
 
 </div>
 
