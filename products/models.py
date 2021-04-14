@@ -7,7 +7,7 @@ admin.site.site_header = "Florescence Administration Dashboard"
 
 
 class Category(models.Model):
-
+    """Different varieties of flowers"""
     class Meta:
         verbose_name_plural = 'Categories'
 
@@ -22,6 +22,7 @@ class Category(models.Model):
 
 
 class Product(models.Model):
+    """Product model"""
     category = models.ForeignKey(
         'Category', null=True, blank=True, on_delete=models.SET_NULL)
     name = models.CharField(max_length=254)
@@ -40,7 +41,7 @@ class Product(models.Model):
 
 
 class Colour(models.Model):
-
+    """Different coloured flowers"""
     class Meta:
         verbose_name_plural = 'Colours'
 
@@ -55,7 +56,7 @@ class Colour(models.Model):
 
 
 class Occasion(models.Model):
-
+    """Flowers for different occasions"""
     class Meta:
         verbose_name_plural = 'Occasions'
 
@@ -70,7 +71,7 @@ class Occasion(models.Model):
 
 
 class ProductReview(models.Model):
-
+    """Model allowing users to write product reviews"""
     product = models.ForeignKey(
         'Product', null=True, blank=True, on_delete=models.SET_NULL)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -83,6 +84,7 @@ class ProductReview(models.Model):
 
 
 class ProductRating(models.Model):
+    """Model allowing users to submit product ratings"""
     product = models.ForeignKey(
         'Product', null=True, blank=True, on_delete=models.SET_NULL)
     rating = models.PositiveSmallIntegerField()
