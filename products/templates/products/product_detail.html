@@ -276,7 +276,7 @@
                     </select>
 
                     <!--Edit Review Content Text-->
-                    <textarea class="d-none edit-review-content" title="Review content">{{ review.content }}</textarea>
+                    <textarea class="d-none edit-review-content" title="Review content" placeholder="Write a Review">{{ review.content }}</textarea>
 
                     <!--Edit Review Button-->
                     <button data-product-id="{{ review.id }}" class="btn rounded-corners add-btn mb-3 mt-2 d-none edit">
@@ -286,7 +286,7 @@
                 </div>
 
              <!--Delete review modal -->
-            <div class="modal fade" id="review{{ review.id }}" 
+            <div class="modal fade p-2" id="review{{ review.id }}" 
                 tabindex="-1" aria-labelledby="b{{ review.id }}" 
                 aria-hidden="true">
 
