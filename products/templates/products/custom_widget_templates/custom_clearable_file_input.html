@@ -1,12 +1,15 @@
+<!--Custom Widget Template for Image Field-->
 <div class="p-2">
 {% if widget.is_initial %}
 
     <p>{{ widget.initial_text }}:</p>
 
+    <!--Product Image-->
     <a href="{{ widget.value.url }}">
-        <img width="96" height="96" class="rounded shadow-sm" src="{{ widget.value.url }}">
+        <img width="96" height="96" class="rounded shadow-sm" src="{{ widget.value.url }}" alt="Product Image" />
     </a>
 
+    <!--Checkbox-->
     {% if not widget.required %}
         <div class="custom-control custom-checkbox mt-2">
             <input class="custom-control-input" type="checkbox" name="{{ widget.checkbox_name }}" id="{{ widget.checkbox_id }}">
@@ -19,8 +22,10 @@
 {% endif %}
 </div>
 
+<!--Select Image button-->
 <span class="btn btn-file">
     Select Image <input id="new-image" type="{{ widget.type }}" name="{{ widget.name }}"{% include "django/forms/widgets/attrs.html" %} />
 </span>
 
+<!--Image Selected Message to User-->
 <p class="text-danger font-weight-bold" id="filename"></p>

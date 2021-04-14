@@ -5,6 +5,7 @@
 
 <div class="container p-3">
 
+    <!--Page Heading-->
     <div class="row">
         <div class="col">
             <h1 class="flore-font text-center mb-2">Florescence Management</h1>
@@ -15,13 +16,13 @@
 
 
     <div class="row">
-
         <div class="col-12 col-md-6 offset-md-3 border bg-white">
             <div class="pt-3">
                 <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2" enctype="multipart/form-data">
 
                     {% csrf_token %}
                     
+                    <!--Edit Product Form-->
                     {% for field in form %}
                         {% if field.name == 'avgRating' %}
                         {% elif field.name != 'image' %}
@@ -33,6 +34,7 @@
 
                     <div class="text-center text-md-right">
 
+                        <!--Return Button-->
                         <a href="{% url 'products' %}" class="btn rounded-corners back-btn mb-3 mt-2">
                             <span>
                                 <i class="far fa-arrow-alt-circle-left purple-text"></i>
@@ -40,6 +42,7 @@
                             <span>Return</span>
                         </a>
 
+                        <!--Update submit button-->
                         <button id="submit-button" class="btn rounded-corners add-btn mb-3 mt-2">
                             <span class="mr-1"><i class="fas fa-plus-circle gold-text"></i></span>
                             <span class="text-white checkout-btn">Update Flower</span>
@@ -54,6 +57,7 @@
 
 {% block postloadjs %}
     {{ block.super }}
+    <!--New uploaded image message-->
     <script type="text/javascript">
         $('#new-image').change(function() {
             var file = $('#new-image')[0].files[0];
