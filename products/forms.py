@@ -25,7 +25,7 @@ class ProductForm(forms.ModelForm):
 
 
 class ReviewForm(forms.ModelForm):
-
+    """Form for product reviews"""
     class Meta:
         model = ProductReview
         exclude = ('product', 'user', 'date_added',)
