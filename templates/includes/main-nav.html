@@ -1,16 +1,20 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <div id="drop-width">
         <ul class="navbar-nav w-auto mx-auto">
+
+            <!--Home Page Link-->
             <li class="nav-item">
                 <a class="nav-link black-text" href="{% url 'home' %}">Home</a>
             </li>
 
+            <!--Varieties Link-->
             <li class="nav-item dropdown">
                 <a class="nav-link black-text" href="#" id="mobile-varieties-drop" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
                     Varieties
                 </a>
 
+                <!--Varieties Dropdown Links-->
                 <div class="dropdown-menu" aria-labelledby="mobile-varieties-drop">
                     <a class="dropdown-item" href="{% url 'products' %}">All Flowers</a>
                     <hr>
@@ -21,12 +25,14 @@
                 </div>
             </li>
 
+            <!--Occasions Link-->
             <li class="nav-item dropdown">
                 <a class="nav-link black-text" href="#" id="mobile-occasions-drop" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
                     Occasions
                 </a>
 
+                <!--Occasions Dropdown Links-->
                 <div class="dropdown-menu" aria-labelledby="mobile-occasions-drop">
                     <a class="dropdown-item" href="{% url 'products' %}?occasion=Birthday">Birthday</a>
                     <a class="dropdown-item" href="{% url 'products' %}?occasion=Celebration">Celebration</a>
@@ -36,12 +42,14 @@
                 </div>
             </li>
 
+            <!--Colours Link-->
             <li class="nav-item dropdown">
                 <a class="nav-link black-text mr-3" href="#" id="mobile-colours-drop" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
                     Colours
                 </a>
 
+                <!--Colours Dropdown Links-->
                 <div class="dropdown-menu" aria-labelledby="mobile-colours-drop">
                     <a class="dropdown-item" href="{% url 'products' %}?colour=Blue">Blue</a>
                     <a class="dropdown-item" href="{% url 'products' %}?colour=Orange">Orange</a>

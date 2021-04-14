@@ -1,9 +1,11 @@
+    <!--Search Dropdown-->
     <li class="list-inline-item dropdown">
         <a class="nav-link black-text d-block d-lg-none p-0" href="#" id="mobile-search-drop" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
             <div><i class="fas fa-search purple-text"></i></div>
         </a>
 
+        <!--Search Button-->
         <div class="dropdown-menu" aria-labelledby="mobile-search-drop">
             <form class="form-inline" method="GET" action="{% url 'products' %}">
                 <input class="form-control mx-2 mb-2" type="text" name="q" placeholder="Search" aria-label="Search">
@@ -12,6 +14,7 @@
         </div>
     </li>
 
+    <!--Account Dropdown-->
     <li class="list-inline-item dropdown">
         <a class="nav-link black-text d-block d-lg-none p-0" href="#" id="mobile-account-dropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
@@ -20,6 +23,7 @@
             </div>
         </a>
         
+        <!--Account Dropdown Links-->
         <div class="dropdown-menu" aria-labelledby="mobile-account-dropdown">
             {% if request.user.is_authenticated %}
             {% if request.user.is_superuser %}
@@ -34,6 +38,7 @@
         </div>
     </li>
 
+    <!--Basket Link-->
     <li class="list-inline-item">
         <a class="{% if grand_total %}font-weight-bold{% else %}black-text{% endif %} nav-link d-block d-lg-none p-0"
             href="{% url 'view_basket' %}">
