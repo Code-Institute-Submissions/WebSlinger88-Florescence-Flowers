@@ -619,3 +619,41 @@ It is worth mentioning that the Florescence Flowers favicon image displays withi
 
 ---
 
+## :heavy_check_mark: **CODE VALIDATION** <a name="validation"></a>
+
+<div align="justify">
+
+Florescence Flowers's code has been tested via the [W3C Markup Validation Service](https://validator.w3.org/), [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/), [JS Hint](https://jshint.com/), and [PEP8 Online](http://pep8online.com/).
+
+* Duplicate attribute ID error was found during W3C Markup Validation. Found within the Add/Edit Product page. This error comes from the custom_clearable_file_input.html file which was part of the Boutique Ado videos. I tried removing #new-image id within custom_clearable_file_input.html and both add/edit.html files' javascript. It removed the error but the change image message disappeared completely. I returned the IDs to how they were and logging the error here.
+
+There were no other reported problems using the HTML CSS, JS, & Python validation services.
+
+
+***Further insight into the code validation process is documented in an external file located [here.](#)***
+
+</div>
+
+---
+
+## :memo: **OTHER** <a name="other"></a>
+
+<div align="justify">
+
+### **IMAGE SIZE REDUCTION** <a name="size"></a>
+
+* Much care was taken to reduce the image size of all images used in the Florescence Flowers website. All images were reduced in size using the [Tiny PNG](https://tinypng.com/) service.
+
+### **SPELLING & GRAMMAR** <a name="spell"></a>
+
+All of Florescence Flowers's textual content, including this Readme file, has been run through [Grammarly](https://www.grammarly.com) to check for any spelling and grammar mistakes.
+
+</div>
+
+---
+
+***This document is for educational use***
+
+---
+
+[:arrow_up: Return to top?](#top)
