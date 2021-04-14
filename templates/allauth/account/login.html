@@ -7,6 +7,7 @@
 
 {% block inner_content %}
 
+    <!--Page Heading-->
     <h1 class="flore-font mb-4 mt-md-4">{% trans "Log In" %}</h1>
 
     {% get_providers as socialaccount_providers %}
@@ -32,6 +33,7 @@
     {% include "socialaccount/snippets/login_extra.html" %}
 
     {% else %}
+    <!--Register link-->
         <p class="mb-3 black-text">{% blocktrans %}Don't have an account yet? Please
         <a class="purple-text link-hover" href="{{ signup_url }}">register</a> now!{% endblocktrans %}</p>
     {% endif %}
@@ -39,18 +41,21 @@
             <form class="login" method="POST" action="{% url 'account_login' %}">
 
                 {% csrf_token %}
+
+                <!--Login Form-->
                 {{ form|crispy }}
 
                 {% if redirect_field_value %}
                     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                 {% endif %}
                 
+                <!--Login Button-->
                 <button class="primaryAction btn rounded-corners text-white add-btn checkout-btn mt-2" type="submit">
                     <span><i class="fas fa-sign-in-alt gold-text mr-1"></i></span>
                     {% trans "Log In" %}
                 </button>
 
-                                <p>
+                <p><!--Forgotten Password Link-->
                     <a class="purple-text link-hover" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
                 </p>
 
