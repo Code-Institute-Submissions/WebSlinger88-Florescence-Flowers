@@ -9,7 +9,7 @@
         var addDisabled = currValue > 98;
         $(`#dec-quantity_${itemId}`).prop('disabled', removeDisabled);
         $(`#inc-quantity_${itemId}`).prop('disabled', addDisabled);
-    }
+    };
 
     // Make sure proper enabling/disabling of inputs on page load
     var allQuantityInputs = $('.qty_input');
