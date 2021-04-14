@@ -627,6 +627,8 @@ Florescence Flowers's code has been tested via the [W3C Markup Validation Servic
 
 * Duplicate attribute ID error was found during W3C Markup Validation. Found within the Add/Edit Product page. This error comes from the custom_clearable_file_input.html file which was part of the Boutique Ado videos. I tried removing #new-image id within custom_clearable_file_input.html and both add/edit.html files' javascript. It removed the error but the change image message disappeared completely. I returned the IDs to how they were and logging the error here.
 
+* "Element `li` not allowed as child of element `nav` in this context." was found during W3C Markup Validation. It is an error recieved within the mobile-top-header. Another nice navbar from Boutique Ado, but unfortunately another nice error! Tried wrapping the list items in `ul`, `div` and `span` but the positioning was totally off. I've opted to keep the error due to time frames.
+
 There were no other reported problems using the HTML CSS, JS, & Python validation services.
 
 
