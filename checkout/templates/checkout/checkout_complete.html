@@ -44,22 +44,22 @@
 
                 <p><i class="fas fa-home purple-text mr-2"></i><strong>Your Details</strong></p>
                 <small class="font-weight-bold">Name:</small>
-                <li>{{ order.full_name }}</li>
+                <p class="mb-0">{{ order.full_name }}</p>
                 <small class="font-weight-bold">Number:</small>
-                <li>{{ order.phone_number }}</li>
+                <p>{{ order.phone_number }}</p>
                 <small class="font-weight-bold">Address:</small>
-                <li>{{ order.street_address1 }}</li>
+                <p class="mb-0">{{ order.street_address1 }}</p>
                 {% if order.street_address2 %}
-                <li>{{ order.street_address2 }}</li>
+                <p class="mb-0">{{ order.street_address2 }}</p>
                 {% endif %}
-                <li>{{ order.town_or_city }}</li>
+                <p class="mb-0">{{ order.town_or_city }}</p>
                 {% if order.county %}
-                <li>{{ order.county }}</li>
+                <p class="mb-0">{{ order.county }}</p>
                 {% endif %}
                 {% if order.postcode %}
-                <li>{{ order.postcode }}</li>
+                <p class="mb-0">{{ order.postcode }}</p>
                 {% endif %}
-                <li class="mb-4">{{ order.country }}</li>
+                <p class="mb-4">{{ order.country }}</p>
 
             </div>
         </div>
