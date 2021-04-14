@@ -585,3 +585,37 @@ You can also find an Excel spreadsheet (saved as PDF) containing extensive test 
 
 ---
 
+## :tv: **DISPLAY TESTING** <a name="display-test"></a>
+
+<div align="justify">
+
+The Florescence Flowers website has been tested using an 18" Dell XPS laptop with Windows 10 + on an external 30" display as well as the following devices:
+
+</div>
+
+| **Browser Platform**                       | **Version**    
+| -------------------------------------------|:---------------------------------------------:| 
+| Google Chrome (Official Build) (64-bit)    | 89.0.4389.128
+| Firefox (Windows 10)                       | 87.0
+| Opera (Windows 10)                         | 75.0.3969.149
+| Edge (Windows 10)                          | 89.0.774.75
+| Google Chrome Android (Samsung Galaxy S8+) | 90.0.4430.66
+| Google Chrome Android (OnePlus 7T Pro)     | 90.0.4430.66
+| Safari iOS (Apple iPhone 7 Plus)           | 14.0
+| Silk Android (Amazon Kindle Fire 5)        | 83.3.19.4103.106.30
+| Internet Explorer 10                       | [Cloud Browser](https://www.ieonchrome.com/)
+| Internet Explorer 11                       | [Cloud Browser](https://www.ieonchrome.com/)
+
+<div align="justify">
+
+All tests were positive and no issues found apart from Internet Explorer 10 & 11. Both browsers had extreme lag and many things didn't work and/or were 
+displayed incorrectly. This is not a problem because Internet Explorer is now obsolete.
+
+It is worth mentioning that the Florescence Flowers favicon image displays within the browser's tab for all HTML pages.
+
+***Further insight into the display testing process is documented in an external file located [here.](#)***
+
+</div>
+
+---
+
