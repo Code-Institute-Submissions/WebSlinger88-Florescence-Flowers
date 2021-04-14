@@ -9,6 +9,7 @@
 
 <div class="container p-5">
 
+    <!--Page Heading-->
     <div class="row">
         <div class="col">
             <h1 class="flore-font text-center mb-5">Thank you for your order!</h1>
@@ -17,6 +18,7 @@
 
     <div class="row border bg-white">
 
+        <!--Order Number-->
         <div class="col-12 col-md-6">
             <div class="pt-3 pl-md-3">
                 <p class=" text-md-left">
@@ -26,6 +28,7 @@
             </div>
         </div>
 
+        <!--Order Date-Time-->
         <div class="col-12 col-md-6">
             <div class="pt-3 pr-3">
                 <p class="text-md-right">
@@ -42,35 +45,43 @@
         <div class="col-12 col-md-6 border bg-white mt-4">
             <div class=" pt-3 pl-3">
 
-                <p><i class="fas fa-home purple-text mr-2"></i><strong>Your Details</strong></p>
+                <!--Delivery Details-->
+                <p><i class="fas fa-home purple-text mr-2"></i>
+                    <strong>Your Details</strong></p>
+
                 <small class="font-weight-bold">Name:</small>
-                <p class="mb-0">{{ order.full_name }}</p>
+                 <p class="mb-0">{{ order.full_name }}</p>
+
                 <small class="font-weight-bold">Number:</small>
-                <p>{{ order.phone_number }}</p>
+                 <p>{{ order.phone_number }}</p>
+
                 <small class="font-weight-bold">Address:</small>
                 <p class="mb-0">{{ order.street_address1 }}</p>
+
                 {% if order.street_address2 %}
-                <p class="mb-0">{{ order.street_address2 }}</p>
+                    <p class="mb-0">{{ order.street_address2 }}</p>
                 {% endif %}
-                <p class="mb-0">{{ order.town_or_city }}</p>
+                    <p class="mb-0">{{ order.town_or_city }}</p>
                 {% if order.county %}
-                <p class="mb-0">{{ order.county }}</p>
+                    <p class="mb-0">{{ order.county }}</p>
                 {% endif %}
                 {% if order.postcode %}
-                <p class="mb-0">{{ order.postcode }}</p>
+                    <p class="mb-0">{{ order.postcode }}</p>
                 {% endif %}
-                <p class="mb-4">{{ order.country }}</p>
+                    <p class="mb-4">{{ order.country }}</p>
 
             </div>
         </div>
 
         <div class="col-12 col-md-5 offset-md-1 border bg-white mt-4">
 
+            <!--Order Details-->
             <p class="pt-3 pl-2">
                 <i class="fas fa-shopping-basket purple-text mr-2"></i>
                 <strong>Your Order:</strong>
             </p>
 
+            <!--Product Image-->
             <div class="row">
                 {% for item in order.lineitems.all %}
                 <div class="col-4 pl-4 mb-3">
@@ -81,6 +92,7 @@
                     {% endif %}
                 </div>
 
+                <!--Product Name, Quantity, Price-->
                 <div class="col-8 p-md-3 mb-2">
                     <p class="my-0"><strong>{{ item.product.name }}</strong></p>
                     <p class="my-0 small">Qty: {{ item.quantity }}</p>
@@ -98,12 +110,14 @@
 
         <div class="col-12 col-md-6 border bg-white mt-4">
 
+            <!--Order Cost-->
             <p class="pt-4 pl-3"><strong>Order Total:</strong><span class="ml-2">£{{ order.order_total }}</span></p>
             <p class="pl-3"><strong>Delivery:</strong><span class="ml-2">£{{ order.delivery_cost }}</span></p>
             <p class="pl-3"><strong>Grand Total:</strong><span class="ml-2">£{{ order.grand_total }}</span></p>
 
         </div>
 
+        <!--Delivery Info-->
         <div class="col-12 col-md-5 offset-md-1 border bg-white mt-4">
             <p class="text-justify pt-3">We post all of our flowers via Royal Mail Next Day Delivery so you can expect
                 your gorgeous bouquet to arrive tomorrow!
