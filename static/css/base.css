@@ -311,6 +311,10 @@ input[name='q']::placeholder {
     display: none;
 }
 
+#div_id_remember {
+    display: none;
+}
+
 .allauth-form-inner-content input::placeholder {
     color: #aab7c4;
 }
