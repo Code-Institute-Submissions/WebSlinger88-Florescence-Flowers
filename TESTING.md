@@ -10,7 +10,7 @@
 
 Within this markdown file, you shall find extensive test analysis and reporting for the Florescence Flowers website. This has been added in a separate file for its readability and user-friendly approach. You can return to Florescence Flowers's main readme file here: [README](https://github.com/WebSlinger88/Florescence-Flowers/blob/master/README.md).
 
-You can also find an Excel spreadsheet (saved as PDF) containing extensive test analysis and reporting. This spreadsheet is intended to provide a more visual report. You can find a link to the Excel spreadsheet and downloadable PDF report here: [Florescence Flowers Testing Docs](#).
+You can also find an Excel spreadsheet (saved as PDF) containing extensive test analysis and reporting. This spreadsheet is intended to provide a more visual report. You can find a link to the Excel spreadsheet and downloadable PDF report here: [Florescence Flowers Testing Docs](https://github.com/WebSlinger88/Florescence-Flowers/tree/master/testing).
 
 </div>
 
@@ -613,7 +613,7 @@ displayed incorrectly. This is not a problem because Internet Explorer is now ob
 
 It is worth mentioning that the Florescence Flowers favicon image displays within the browser's tab for all HTML pages.
 
-***Further insight into the display testing process is documented in an external file located [here.](#)***
+***Further insight into the display testing process is documented in an external file located [here.](https://github.com/WebSlinger88/Florescence-Flowers/tree/master/testing)***
 
 </div>
 
@@ -632,7 +632,7 @@ Florescence Flowers's code has been tested via the [W3C Markup Validation Servic
 There were no other reported problems using the HTML CSS, JS, & Python validation services.
 
 
-***Further insight into the code validation process is documented in an external file located [here.](#)***
+***Further insight into the code validation process is documented in an external file located [here.](https://github.com/WebSlinger88/Florescence-Flowers/tree/master/testing)***
 
 </div>
 
