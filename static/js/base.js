@@ -20,7 +20,7 @@ $(document).ready(function () {
 
             window.location.replace(currentUrl);
         }
-    })
+    });
 
     // Copyright date will be automatically updated every year without user input.
     $("#copyright").text(new Date().getFullYear());
@@ -44,6 +44,6 @@ $(document).ready(function () {
     $(document).ready(function () {
         setTimeout(function () {
             $('.toast').hide('fade');
-        }, 5000)
+        }, 5000);
     });
-})
+});
