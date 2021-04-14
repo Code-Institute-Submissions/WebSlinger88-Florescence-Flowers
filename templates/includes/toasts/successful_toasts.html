@@ -5,6 +5,7 @@
 
     <div class="w-100 toast-cap bg-success"></div>
 
+    <!--Toast Heading-->
     <div class="toast-header bg-white">
         <strong class="mr-auto">Awesome!</strong>
         <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
@@ -12,6 +13,7 @@
         </button>
     </div>
 
+    <!--Toast Message-->
     <div class="toast-body bg-white">
         <div class="row">
             <div class="col">
@@ -26,6 +28,7 @@
                 {% for item in basket_items %}
                     <div class="row">
 
+                        <!--Product Image-->
                         <div class="col-3 my-1">
                             {% if item.product.image %}
                                 <img class="w-100" src="{{ item.product.image.url }}" alt="{{ item.product.name }}" />
@@ -34,6 +37,7 @@
                             {% endif %}
                         </div>
 
+                        <!--Product Name, Variety, Colour, Quantity-->
                         <div class="col-9">
                             <p class="my-0"><strong>{{ item.product.name }}</strong></p>
                             <p class="my-0 small">Variety: {{ item.product.category }}</p>
@@ -47,23 +51,26 @@
             <div class="row">
                 <div class="col">
 
-                    <strong>
-                        <p class="mt-3 mb-1">
-                            Total{% if almost_free_delivery > 0 %} (Exc. delivery){% endif %}: 
-                            <span class="float-right">£{{ total|floatformat:2 }}</span>
-                        </p>
-                    </strong>
+                    <!--Delivery Message-->
+                    <p class="mt-3 mb-1 font-weight-bold">
+                        Total{% if almost_free_delivery > 0 %} (Exc. delivery){% endif %}: 
+                        <span class="float-right font-weight-bold">£{{ total|floatformat:2 }}</span>
+                    </p>
 
+                    <!--Almost Free Delivery Message-->
                     {% if almost_free_delivery > 0 %}
                         <p class="mb-0 mt-2 p-2 gold-bg rounded-corners text-center">
                             Spend <strong>£{{ almost_free_delivery }}</strong> more to get free delivery!
                         </p>
                     {% else %}
+                        
+                    <!--Free Delivery Obtained Message-->
                         <p class="mb-0 mt-2 p-2 white-bg border-success border rounded-corners text-center">
                             You have qualified for free delivery!
                         </p>
                     {% endif %}
 
+                    <!--Checkout Button-->
                     <a href="{% url 'checkout' %}" class="btn rounded-corners mt-3 add-btn text-center w-100">
                         <span><i class="fas fa-lock gold-text"></i></span>
                         <span class="text-white checkout-btn">Secure Checkout</span>
