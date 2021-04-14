@@ -56,11 +56,15 @@
                     <li class="nav-item list-inline-item dropdown">
                         <a class="nav-link mr-3 hvr-hang" href="#" id="account-dropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            
+                            <!--Account Link-->
                             <p class="my-0">
                                 <i class="fas fa-user fa-lg purple-text mr-1"></i>
                                 Account
                             </p>
                         </a>
+
+                        <!--Account Dropdown Links-->
                         <div class="dropdown-menu" aria-labelledby="account-dropdown">
                             {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
@@ -75,6 +79,8 @@
                         </div>
                     </li>
                     <li class="nav-item list-inline-item">
+
+                        <!--Basket Link-->
                         <a class="{% if grand_total %}font-weight-bold{% else %}black-text{% endif %} nav-link hvr-hang mr-3"
                             href="{% url 'view_basket' %}">
                             <div class="text-center">
@@ -92,21 +98,27 @@
                 </ul>
             </div>
 
+            <!--Florescence Flowers Logo-->
             <div class="col-12">
                 <img src="{{ MEDIA_URL }}florescence-logo.png" class="img-fluid d-block mx-auto logo" alt="Florescence Flowers Logo" />
             </div>
 
             <div class="col-12">
                 <ul class="list-inline mt-2 text-center">
+
+                    <!--Home Link-->
                     <li class="nav-item list-inline-item">
                         <a class="nav-link black-text mr-3 hvr-hang" href="{% url 'home' %}">Home</a>
                     </li>
 
+                    <!--Varieties Link-->
                     <li class="nav-item list-inline-item dropdown">
                         <a class="nav-link black-text mr-3 hvr-hang" href="#" id="varieties-drop" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Varieties
                         </a>
+
+                        <!--Varieties Dropdown Links-->
                         <div class="dropdown-menu" aria-labelledby="varieties-drop">
                             <a class="dropdown-item" href="{% url 'products' %}">All Flowers</a>
                             <hr>
@@ -117,12 +129,14 @@
                         </div>
                     </li>
 
+                    <!--Occasions Link-->
                     <li class="nav-item list-inline-item dropdown">
                         <a class="nav-link black-text mr-3 hvr-hang" href="#" id="occasions-drop" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Occasions
                         </a>
 
+                        <!--Occasions Dropdown Links-->
                         <div class="dropdown-menu" aria-labelledby="occasions-drop">
                             <a class="dropdown-item" href="{% url 'products' %}?occasion=Birthday">Birthday</a>
                             <a class="dropdown-item" href="{% url 'products' %}?occasion=Celebration">Celebration</a>
@@ -132,12 +146,14 @@
                         </div>
                     </li>
 
+                    <!--Colours Link-->
                     <li class="nav-item list-inline-item dropdown">
                         <a class="nav-link black-text mr-3 hvr-hang" href="#" id="colours-drop" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Colours
                         </a>
 
+                        <!--Colours Dropdown Links-->
                         <div class="dropdown-menu" aria-labelledby="colours-drop">
                             <a class="dropdown-item" href="{% url 'products' %}?colour=Blue">Blue</a>
                             <a class="dropdown-item" href="{% url 'products' %}?colour=Orange">Orange</a>
@@ -148,12 +164,14 @@
                         </div>
                     </li>
 
+                    <!--Search Link-->
                     <li class="nav-item list-inline-item dropdown">
                         <a class="nav-link black-text hvr-hang" href="#" id="search-drop" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Search
                         </a>
 
+                        <!--Search Bar-->
                         <div class="dropdown-menu" aria-labelledby="search-drop">
                             <form class="form-inline" method="GET" action="{% url 'products' %}">
 
